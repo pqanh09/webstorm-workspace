@@ -10,6 +10,5 @@
   controllerFunction.$inject = ['$scope', '$routeParams'];
 
   function controllerFunction($scope, $routeParams){
-    console.log("VideoManagerController");
   }
 })();

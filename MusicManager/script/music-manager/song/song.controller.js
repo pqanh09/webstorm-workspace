@@ -1,22 +1,36 @@
 (function(){
   'use strict';
 
-  angular.module('music.song.manager').controller('MusicSongController', controllerFunction);
+  angular.module('music.song.manager').controller('musicSongController', controllerFunction);
 
-  controllerFunction.$inject = ['$scope', 'songService'];
+  controllerFunction.$inject = ['songService'];
 
-  function controllerFunction($scope, songService){
-    console.log("MusicSongController");
-    $scope.titleSong = 'All Songs';
-    $scope.data = songService.findAll();
-    $scope.listCol = songService.getCols();
-    $scope.listIdsSelected = {};
-    $scope.listIdsSelected.list = new Set();
-    $scope.listIdsSelected.list.add('aaa');
-    $scope.listIdsSelected.str = 'aaa';
+  function controllerFunction(songService){
+    var vm = this;
+    vm.titleSong = 'All Songs';
+    vm.listObject = songService.findAll();
+    vm.listCol = songService.getCols();
+    vm.listIdsSelected = {};
+    vm.listIdsSelected.list = new Set([]);
+    vm.listIdsSelected.str = 'aaa';
+    vm.songManagerView = 'script/music-manager/song/allSong.html';
 
+    vm.createSong = function(){
+      vm.songManagerView = 'script/music-manager/song/createSong.html';
+    }
+    vm.editSong = function(){
+      vm.songManagerView = 'script/music-manager/song/editSong.html';
+    }
+    vm.deleteSong = function(){
+      var str = '';
+      vm.listIdsSelected.list.forEach(function(value) {
+        str = str + value;
+      });
+      console.log(str);
+      vm.listIdsSelected.str = str;
 
-
+      vm.songManagerView = 'script/music-manager/song/deleteSong.html';
+    }
 
   }
 })();

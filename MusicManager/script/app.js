@@ -20,10 +20,6 @@
 
   function HomeRoute($routeProvider) {
     $routeProvider
-      /*.when('/#', {
-        templateUrl: 'script/home.html',
-        controller: "HomeController"
-      })*/
       .otherwise({
         templateUrl: 'script/home.html',
         controller: "HomeController"

@@ -1,37 +1,47 @@
-(function(){
+(function () {
   'use strict';
 
   angular.module('directive.table').controller('tableController', controllerFunction);
 
-  controllerFunction.$inject = ['$scope'];
+  controllerFunction.$inject = [];
 
-  function controllerFunction($scope){
-//    var vm = this;
-//    vm.isCheck = true;
-      $scope.change = function () {
-          console.log($scope);
+  function controllerFunction() {
+    var vm = this;
+    var listISelected = vm.listIdsSelected;
+    vm.isCheck = false;
+    vm.checkOne = checkOne;
+    vm.checkAll = checkAll;
 
-          console.log('A:'+'listIdsSelected.list:');
-          console.log($scope.listIdsSelected.list);
-          angular.forEach($scope.listObject, function (song) {
-              var checkbox = document.getElementById(song.id);
-              if (!checkbox.checked) {
-                  $scope.listIdsSelected.list.add(song.id);
-              } else {
-                  $scope.listIdsSelected.list.delete(song.id);
-              }
-          });
 
-          console.log('B:'+'listIdsSelected:');
-          console.log($scope.listIdsSelected.list);
-          var listStr = '';
-          angular.forEach($scope.listIdsSelected.list, function (id) {
-              listStr += id + ' ';
-          });
-          console.log(listStr);
-          $scope.listSelected = listStr;
-          $scope.listIdsSelected.str = listStr;
-          console.log($scope);
-      };
+
+    ////////
+
+    function checkAll() {
+      var list = vm.listObject;
+
+      for (var i = 0; i < list.length; i++) {
+        list[i].checked = vm.isCheck;
+        if(vm.isCheck){
+          listISelected.list.add(list[i].id);
+        } else {
+          listISelected.list.delete(list[i].id);
+        }
+      }
+    }
+
+    function checkOne() {
+      var list = vm.listObject;
+      var checkAll = true;
+
+      for (var i = 0; i < list.length; i++) {
+        if (list[i].checked) {
+          listISelected.list.add(list[i].id);
+        } else {
+          checkAll = false;
+          listISelected.list.delete(list[i].id);
+        }
+      }
+      vm.isCheck = checkAll;
+    }
   }
 })();

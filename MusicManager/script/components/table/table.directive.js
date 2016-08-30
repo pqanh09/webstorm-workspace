@@ -20,7 +20,8 @@
         keyCol: '=keyCol',
         listObject: '=listObject',
         listIdsSelected: '=listIdsSelected'
-      }
+      },
+      bindToController: true
     }
   }
 })();

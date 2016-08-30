@@ -1,12 +1,19 @@
 (function(){
   'use strict';
 
-  angular.module('music.playlist.manager').controller('music-playList-controller', controllerFunction);
+  angular.module('music.playlist.manager').controller('musicPlayListController', controllerFunction);
 
-  controllerFunction.$inject = ['$scope'];
+  controllerFunction.$inject = [];
 
-  function controllerFunction($scope){
-    console.log("Music - PlayList - Controller");
-    $scope.title = 'All PlayLists';
+  function controllerFunction(){
+    var vm = this;
+
+    vm.createSong = createSong;
+
+
+
+    /////
+    function checkAll() {
+    }
   }
 })();

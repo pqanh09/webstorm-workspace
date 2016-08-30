@@ -18,9 +18,9 @@
       {key : 'id', value: 'Name'}
     ];
     service.songList = [
-      {id : '001', name: 'Song 1', artist: 'A ', viewCount: 0, url:'music/001.mp3'},
-      {id : '002', name: 'Song 2', artist: 'B ', viewCount: 99, url:'music/002.mp3'},
-      {id : '003', name: 'Song 3', artist: 'C ', viewCount: 999, url:'music/003.mp3'}
+      {id : '001', name: 'Song 1', artist: 'A ', viewCount: 0, url:'music/001.mp3', checked: false},
+      {id : '002', name: 'Song 2', artist: 'B ', viewCount: 99, url:'music/002.mp3', checked: false},
+      {id : '003', name: 'Song 3', artist: 'C ', viewCount: 999, url:'music/003.mp3', checked: false}
     ];
     service.findAll = function (){
       return service.songList;
