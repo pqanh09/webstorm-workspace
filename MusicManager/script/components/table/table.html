@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+    <div class="panel-heading" style="height: 45px"><p style="font-size: large">{{title}}</p></div>
+    <div class="panel-body">
+        <input type="text" class="form-control" placeholder="Search" ng-model="search.$">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th ng-repeat="col in listCol">
+                    <div ng-if="!col.visible">
+                        <input type="checkbox" ng-model="vm.isCheck" ng-change="change()">
+                    </div>
+                    <div ng-if="col.visible">
+                        {{col.value}}
+                    </div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="obj in listObject |filter:search">
+                <td ng-repeat="col in listCol">
+                    <div ng-if="!col.visible">
+                        <input id="{{obj[col.key]}}" type="checkbox" ng-checked="vm.isCheck" >
+                    </div>
+                    <div ng-if="col.visible">
+                        {{obj[col.key]}}
+                    </div>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer">Scope parent: <p ng-bind="listIdsSelected.str"></div>
+    <div class="panel-footer">Child: <p ng-bind="listSelected"></p></div>
+
+</div>
