@@ -1,5 +1,5 @@
 (function(){
   'use strict';
 
-  angular.module('music.song.manager', ['directives']);
+  angular.module('music.manager.song', ['directives']);
 })();

@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('music.manager').controller('MusicManagerController', controllerFunction);
+  angular.module('music.manager').controller('musicManagerController', controllerFunction);
 
   controllerFunction.$inject = ['$scope', '$routeParams'];
 

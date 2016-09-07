@@ -4,5 +4,5 @@
 (function(){
   'use strict';
 
-  angular.module('music.playlist.manager', []);
+  angular.module('music.manager.playlist', []);
 })();

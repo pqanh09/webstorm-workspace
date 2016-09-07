@@ -4,7 +4,7 @@
 (function(){
   'use strict';
 
-  angular.module('music.song.manager').service('songService', function() {
+  angular.module('music.manager.song').service('songService', function() {
     var service = {};
     service.colList = [
      {key : 'id', value: 'Id', visible: false},

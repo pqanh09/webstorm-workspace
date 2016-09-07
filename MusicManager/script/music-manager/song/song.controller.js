@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('music.song.manager').controller('musicSongController', controllerFunction);
+  angular.module('music.manager.song').controller('musicSongController', controllerFunction);
 
   controllerFunction.$inject = ['songService'];
 

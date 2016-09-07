@@ -8,8 +8,7 @@
   function routeFunction($routeProvider){
     var routeManager = '/music-manager';
     var configManger = {
-      templateUrl:'script/music-manager/music-manager.html',
-      controller : "MusicManagerController"
+      template:'<music-manager></music-manager>'
     };
     $routeProvider.when(routeManager, configManger)
       .when(routeManager + '/:route*', configManger);

@@ -1,5 +1,5 @@
 (function(){
   'use strict';
 
-  angular.module('music.manager', ['music.song.manager','music.playlist.manager']);
+  angular.module('music.manager', ['music.manager.song','music.manager.playlist']);
 })();

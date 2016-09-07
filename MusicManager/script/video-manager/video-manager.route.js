@@ -8,8 +8,7 @@
   function routeFunction($routeProvider){
     var routeManager = '/video-manager';
     var configManger = {
-      templateUrl:'script/video-manager/video-manager.html',
-      controller : "VideoManagerController"
+        template: '<video-manager></video-manager>'
     };
     $routeProvider.when(routeManager, configManger)
       .when(routeManager + '/:route*', configManger);

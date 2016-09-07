@@ -1,30 +1,31 @@
 (function () {
-  'use strict';
+    'use strict';
 
-  //module
-  angular.module('myApp', ['ngRoute', 'music.manager', 'video.manager']);
+    //module
+    angular.module('myApp', ['ngRoute', 'music.manager', 'video.manager']);
 
-  //controller
-  angular.module('myApp').controller('HomeController', HomeController);
+    //controller
+    angular.module('myApp').controller('homeController', homeController);
 
-  HomeController.$inject = ['$scope'];
+    homeController.$inject = [];
 
-  function HomeController($scope) {
+    function homeController() {
+        var vm = this;
+        vm.title = 'Hello world';
+    }
 
-  }
+    //routing
+    angular.module('myApp').config(HomeRoute);
 
-  //routing
-  angular.module('myApp').config(HomeRoute);
+    HomeRoute.$inject = ['$routeProvider'];
 
-  HomeRoute.$inject = ['$routeProvider'];
+    function HomeRoute($routeProvider) {
+        $routeProvider
+            .otherwise({
+                templateUrl: 'script/home.html',
+                controller: "homeController"
+            });
 
-  function HomeRoute($routeProvider) {
-    $routeProvider
-      .otherwise({
-        templateUrl: 'script/home.html',
-        controller: "HomeController"
-      });
-
-  }
+    }
 
 })();

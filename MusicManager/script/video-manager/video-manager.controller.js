@@ -5,10 +5,11 @@
 (function(){
   'use strict';
 
-  angular.module('video.manager').controller('VideoManagerController', controllerFunction);
+  angular.module('video.manager').controller('videoManagerController', controllerFunction);
 
-  controllerFunction.$inject = ['$scope', '$routeParams'];
+  controllerFunction.$inject = [];
 
-  function controllerFunction($scope, $routeParams){
+  function controllerFunction(){
+      var vm = this;
   }
 })();
