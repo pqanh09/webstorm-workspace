@@ -1,0 +1,23 @@
+<div class="panel-view panel-info-view">
+    <div class="panel-heading-view">
+        <table>
+            <tr>
+                <th><h3 class="panel-title-view">Song Manager</h3></th>
+                <th>
+                    <input type="button" ng-click="vm.createSong()" value="Add">
+                    <input type="button" ng-click="vm.editSong()" value="Edit">
+                    <input type="button" ng-click="vm.deleteSong()" value="Remove">
+                </th>
+            </tr>
+        </table>
+    </div>
+    {{vm.listIdsSelected.str}}
+    <br>
+    {{vm.listIdsSelected.size}}
+    <div ng-if="vm.songManagerView">
+        <song-view list-ids-selected="vm.listIdsSelected"></song-view>
+    </div>
+    <!--<div ng-include src="vm.songManagerView"></div>-->
+
+</div>
+
