@@ -1,0 +1,25 @@
+<br>
+{{vmModify.action}} Song
+<br>
+<div ng-if="vmModify.action == 'Create'">
+    Name: <input type="text" ng-model="vmModify.songModify.name"><p style="color: #AA0000" >{{vmModify.invalid}}</p>
+    <br>
+    Artist: <input type="text" ng-model="vmModify.songModify.artist">
+
+</div>
+<div ng-if="vmModify.action == 'Edit'">
+    {{vmModify.songObj.name}}
+    <br>
+    {{vmModify.songObj.artist}}
+    <br>
+    Name: {{vmModify.songModify.name}}
+    <br>
+    Artist: <input type="text" ng-model="vmModify.songModify.artist">
+
+</div>
+<br>
+<input ng-click="vmModify.apply()" type="button" ng-disabled='vmModify.applyBtn' value="Apply"><input ng-click="vmModify.viewAll()" type="button" value="Back">
+<!--
+Song: {{vmModify.songObj.name}}
+<br>
+<br>-->
