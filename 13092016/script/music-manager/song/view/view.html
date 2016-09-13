@@ -1,0 +1,12 @@
+<div ng-if="vmView.viewAll">
+    <ov-table title="vmView.title" list-col="vmView.listCol" list-object="vmView.listObject" list-selected="vmView.listSelected" view-detail="vmView.viewDetail()"></ov-table>
+</div>
+<div ng-if="!vmView.viewAll">
+    Name: {{vmView.listSelected.song.name}}
+    <br>
+    Artist: {{vmView.listSelected.song.artist}}
+    <br>
+    View Count: {{vmView.listSelected.song.viewCount}}
+    <br>
+    <input ng-click="vmView.back()" type="button" value="Back">
+</div>

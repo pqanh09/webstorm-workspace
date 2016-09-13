@@ -1,0 +1,16 @@
+<br>
+{{vmModify.action}} Song
+<br>
+
+    Name: <input type="text" ng-model="vmModify.songModify.name"><p style="color: #AA0000" >{{vmModify.invalid}}</p>
+    <br>
+    Artist: <input type="text" ng-model="vmModify.songModify.artist">
+
+
+<br>
+<input ng-click="vmModify.apply()" type="button" ng-disabled='vmModify.disApplyBtn' value="Apply">
+<input ng-click="vmModify.viewAll()" type="button" value="Cancel">
+<!--
+Song: {{vmModify.songObj.name}}
+<br>
+<br>-->

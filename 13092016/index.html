@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2408</title>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" href="docs/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="docs/css/docs.min.css"/>
+    <link rel="stylesheet" href="docs/css/bootstrap-table.css"/>
+    <script type="text/javascript" src="docs/js/angular.js"></script>
+    <script type="text/javascript" src="docs/js/angular-route.js"></script>
+    <script type="text/javascript" src="docs/js/angular-aria.js"></script>
+    <script type="text/javascript" src="docs/js/angular-animate.js"></script>
+    <script type="text/javascript" src="docs/js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="docs/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="docs/js/angular-bootstrap.js"></script>
+    <script type="text/javascript" src="docs/css/bootstrap.min.css"></script>
+    <script type="text/javascript" src="docs/js/angular-bootstrap-prettify.js"></script>
+
+
+    <script type="text/javascript" src="script/components/table/table.module.js"></script>
+    <script type="text/javascript" src="script/components/table/table.controller.js"></script>
+    <script type="text/javascript" src="script/components/table/table.directive.js"></script>
+
+    <script type="text/javascript" src="script/components/test/test.module.js"></script>
+    <script type="text/javascript" src="script/components/test/test.controller.js"></script>
+    <script type="text/javascript" src="script/components/test/test.directive.js"></script>
+
+    <script type="text/javascript" src="script/components/component.module.js"></script>
+
+
+    <script type="text/javascript" src="script/music-manager/song/view/view.module.js"></script>
+    <script type="text/javascript" src="script/music-manager/song/view/view.controller.js"></script>
+    <script type="text/javascript" src="script/music-manager/song/view/view.directive.js"></script>
+
+    <script type="text/javascript" src="script/music-manager/song/modify/modify.module.js"></script>
+    <script type="text/javascript" src="script/music-manager/song/modify/modify.controller.js"></script>
+    <script type="text/javascript" src="script/music-manager/song/modify/modify.directive.js"></script>
+
+    <script type="text/javascript" src="script/music-manager/song/song.module.js"></script>
+
+    <script type="text/javascript" src="script/music-manager/song/song.controller.js"></script>
+    <script type="text/javascript" src="script/music-manager/song/song.directive.js"></script>
+    <script type="text/javascript" src="script/music-manager/song/song.route.js"></script>
+    <script type="text/javascript" src="script/music-manager/playlist/playlist.module.js"></script>
+    <script type="text/javascript" src="script/music-manager/playlist/playlist.controller.js"></script>
+    <script type="text/javascript" src="script/music-manager/playlist/playlist.directive.js"></script>
+    <script type="text/javascript" src="script/music-manager/playlist/playlist.route.js"></script>
+    <script type="text/javascript" src="script/music-manager/music-manager.module.js"></script>
+    <script type="text/javascript" src="script/music-manager/music-manager.service.js"></script>
+    <script type="text/javascript" src="script/music-manager/music-manager.controller.js"></script>
+    <script type="text/javascript" src="script/music-manager/music-manager.directive.js"></script>
+    <script type="text/javascript" src="script/music-manager/music-manager.route.js"></script>
+    <script type="text/javascript" src="script/app.js"></script>
+
+
+</head>
+<body ng-app="myApp">
+<div>
+    <h3 class="music-manager-home">
+        Music Manager
+    </h3>
+
+    <ul class="nav nav-pills music-manager-menu">
+        <li role="presentation"><a href="#/music-manager/song">Songs</a></li>
+        <li role="presentation"><a href="#/music-manager/playlist">Playlist</a></li>
+    </ul>
+</div>
+
+<div ng-view></div>
+
+</body>
+
+</html>

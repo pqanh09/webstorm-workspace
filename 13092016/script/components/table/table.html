@@ -1,0 +1,38 @@
+<div class="panel panel-default">
+    <div class="panel-heading" style="height: 45px"><p style="font-size: large">{{vmTable.title}}</p></div>
+    <div class="panel-body">
+        <input type="text" class="form-control" placeholder="Search" ng-model="search.$">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th ng-repeat="col in vmTable.listCol">
+                    <div ng-if="!col.visible">
+                        <input type="checkbox" ng-model="vmTable.isCheck" ng-click="vmTable.checkAll()">
+                    </div>
+                    <div ng-if="col.visible">
+                        {{col.value}}
+                    </div>
+                </th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="obj in vmTable.listObject |filter:search">
+                <td ng-repeat="col in vmTable.listCol">
+                    <div ng-if="!col.visible">
+                        <input id="{{obj[col.key]}}" type="checkbox"  ng-click="vmTable.checkOne(obj)" ng-model="obj.checked" >
+                    </div>
+                    <div ng-if="col.visible">
+                        {{obj[col.key]}}
+                    </div>
+                </td>
+                <td>
+                    <input ng-click="vmTable.viewObj(obj)" type="button" value="View">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer">&nbsp</div>
+
+</div>
