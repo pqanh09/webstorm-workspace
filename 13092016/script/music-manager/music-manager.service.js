@@ -30,7 +30,7 @@
     };
     service.deleteSongs = function (listId){
       listId.forEach(function(value) {
-        var song = service.find(value);
+        var song = service.findSongById(value);
         if(song){
           service.songList.splice(song, 1);
           listId.delete(value)

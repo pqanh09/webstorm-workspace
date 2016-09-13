@@ -6,9 +6,9 @@
 
   angular.module('music.manager.song.view').controller('musicSongViewController', controllerFunction);
 
-  controllerFunction.$inject = [];
+  controllerFunction.$inject = ['$scope'];
 
-  function controllerFunction() {
+  function controllerFunction($scope) {
     var vmView = this;
     vmView.title = 'All Songs';
 

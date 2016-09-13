@@ -1,24 +1,23 @@
 /**
  * Created by pqanh09 on 9/7/16.
  */
-(function(){
-    'use strict';
+(function () {
+  'use strict';
 
-    angular.module('music.manager').directive('musicManager', directiveFunction);
+  angular.module('music.manager').directive('musicManager', directiveFunction);
 
-    directiveFunction.$inject = [];
+  directiveFunction.$inject = [];
 
-    function directiveFunction(){
-        return {
-            templateUrl : 'script/music-manager/music-manager.html',
-            restrict: 'EA',
-            controller: 'musicManagerController',
-            controllerAs: 'vm',
-            scope: true
-          /*,
-            bindToController: {
+  function directiveFunction() {
+    return {
+      templateUrl: 'script/music-manager/music-manager.html',
+      restrict: 'EA',
+      controller: 'musicManagerController',
+      controllerAs: 'vm',
+      scope: {},
+      bindToController: {
 
-            }*/
-        }
+      }
     }
+  }
 })();

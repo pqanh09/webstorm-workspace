@@ -16,7 +16,7 @@
             controller: 'musicSongController',
             controllerAs: 'vmSong',
             scope: {},
-            bindToController: false
+            bindToController: {}
         }
     }
 })();

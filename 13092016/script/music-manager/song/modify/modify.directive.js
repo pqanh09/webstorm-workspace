@@ -14,7 +14,7 @@
       restrict: 'EA',
       controller: 'musicSongModifyController',
       controllerAs: 'vmModify',
-      scope: true,
+      scope: {},
       bindToController: {
         action: '=',
         songObj: '=',

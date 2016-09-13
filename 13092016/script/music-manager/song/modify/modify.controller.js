@@ -19,7 +19,7 @@
         vmModify.apply = apply;
 
 
-        var listObject = musicManagerService.findAll();
+        var listObject = musicManagerService.findAllSongs();
 
         if (vmModify.action == 'Edit') {
             vmModify.songModify.id = vmModify.songObj.id;
@@ -75,27 +75,6 @@
                     }
                 }
 
-
-                /*        if (newVal == oldVal && 0 == newVal.length) {
-                 vmModify.disApplyBtn = false;
-                 vmModify.invalid = "";
-                 return;
-                 }
-                 newVal.trim();
-                 if ((0 == newVal.length)  // empty
-                 || !(isValid(newVal)) // invalid
-                 ) {
-                 // -> disable apply button
-                 vmModify.disApplyBtn = true;
-                 vmModify.invalid = "Invalid";
-                 return;
-                 }
-                 // equal oldName
-                 if (vmModify.action == 'Edit' && newVal == vmModify.songObj.name) {
-                 vmModify.disApplyBtn = vmModify.disApplyBtn? true : false;
-                 }
-                 vmModify.disApplyBtn = false;
-                 vmModify.invalid = "";*/
             });
         $scope.$watch(
             'vmModify.songModify.artist',

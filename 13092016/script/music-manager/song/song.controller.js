@@ -52,7 +52,7 @@
       // convert set to plain Array (with Array comprehensions)
       var listId = Array.from(vmSong.listSelected.list);
       for (var i = 0; i < listId.length; i++) {
-        var song = musicManagerService.find(listId[i]);
+        var song = musicManagerService.findSongById(listId[i]);
         if(song){
           if( i > 0){
             names = names + ', ';

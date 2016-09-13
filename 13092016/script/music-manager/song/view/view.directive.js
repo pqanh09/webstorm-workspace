@@ -14,7 +14,7 @@
             restrict: 'EA',
             controller: 'musicSongViewController',
             controllerAs: 'vmView',
-            scope: false,
+            scope: {},
             bindToController: {
               listObject: '=',
               listCol: '=',
