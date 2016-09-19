@@ -1,0 +1,11 @@
+<div class="layout-column vs-list">
+  <!--header-->
+  <div ng-include="vm.config.headerTemplateUrl"></div>
+  <!--item-->
+  <div class="vs-list-group" vs-repeat="{{::vm.config.rowHeight}}">
+    <div class="vs-list-item-wrapper" ng-repeat="item in vm.listItems | filter: vm.filter | filter: vm.config.customFilter track by $index" ng-init="itemIndex = $index"
+         ng-include="vm.config.itemTemplateUrl" ng-click="vm.onClick(item)"
+         ng-class="{'vs-list-item-children': vm.isChildren(item), 'vs-list-item-parent': vm.isParent(item)}" ></div>
+  </div>
+  <div class="vs-list-no-data" ng-if="( vm.listItems | filter: vm.filter | filter: vm.config.customFilter).length === 0">{{vm.config.emptyMessage | i18next}}</div>
+</div>

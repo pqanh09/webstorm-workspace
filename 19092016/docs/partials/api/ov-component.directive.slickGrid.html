@@ -1,0 +1,60 @@
+<h1><code ng:non-bindable="">slickGrid</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-slickgrid-page"><p>The component help to show data as tabular mode</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY slick-grid
+     grid-view-id="{string}"
+     grid-columns="{array}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>gridViewId</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-slickgrid-page"><p>component id</p>
+</div></td></tr><tr><td>gridColumns</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-directive-page ov-component-directive-slickgrid-page"><p>array column</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-slickgrid-page"><pre class="prettyprint linenums">
+//HTML
+&lt;div slick-grid
+         grid-view-id="vm.gridViewId"
+         grid-columns="vm.gridColumns"&gt;
+&lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+//In JS
+vm.gridViewId='component-id';
+
+
+vm.data = [
+   {
+     key1: 'value1',
+     key2: 'value2'
+   }
+];
+
+var attrs = {
+   column1: {
+     key: 'key1',
+     i18nKey: 'i18nKey1'
+   },
+   column2: {
+     key: 'key2',
+     i18nKey: 'i18nKey2'
+   }
+};
+vm.gridColumns = ovDataViewService.getColumnList(attrs);
+
+$scope.$on('onGridInit', function (event, gridElm, grid, dataView) {
+   if (gridElm[0].id === vm.gridViewId) {
+       vm.grid = grid;
+       vm.dataView = dataView;
+
+       vm.dataView.setItems(vm.data, 'instanceid');
+   }
+});
+</pre>
+</div></div>
+</div>

@@ -1,0 +1,38 @@
+<h1><code ng:non-bindable="">repeatDone</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-repeatdone-page"><p>Working together with ngRepeat, repeatDone directive executes given callback function right after finishing repeating.
+It also adds <code>repeat-done</code> CSS class to the parent element in case user needs to apply custom CSS</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY repeat-done="{function}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>repeatDone</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-directive-page ov-component-directive-repeatdone-page"><p>Callback function to execute</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-repeatdone-page"><p><strong>Basic example:</strong></p>
+<pre class="prettyprint linenums">
+  // HTML
+  &lt;div&gt;
+    &lt;div&gt;{{ctrl1.repeatDone.status}}&lt;/div&gt;
+    &lt;div ng-repeat="item in ctrl1.repeatDone.itemList track by $index" repeat-done="ctrl1.repeatDone.onDone()"&gt;
+      {{item.name}}
+    &lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+  // JS
+  ctrl1.repeatDone = {
+    status: 'Repeating...',
+    itemList: [{name: 'Item 1'}, {name: 'Item 2'}, {name: 'Item 3'}, {name: 'Item 4'}, {name: 'Item 5'}],
+    onDone: function () {
+      this.status = 'Done repeating';
+    }
+  };
+</pre>
+</div></div>
+</div>

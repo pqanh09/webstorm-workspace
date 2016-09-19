@@ -1,0 +1,61 @@
+.vs-list {
+  border: 1px solid #ddd;
+}
+.vs-list-group {
+  max-height: 40rem;
+  overflow: auto;
+}
+.vs-list-item-wrapper {
+  width: 100%;
+}
+.vs-list-item {
+  padding: 0 1rem;
+  height: 5rem;
+}
+.vs-list-item-children .vs-list-item {
+  padding-left: 3rem !important;
+}
+.vs-list-item-parent:hover {
+  cursor: pointer;
+}
+.vs-list-item-header {
+  padding: 0 1rem;
+}
+.vs-list-item:hover {
+  background-color: #f5f5f5;
+}
+.vs-list-item-heading {
+  font-size: 1.6rem;
+}
+.vs-list-item-center {
+  padding: 0 0.5rem;
+}
+.vs-list-item-text {
+  color: #555;
+}
+.vs-list-search {
+  position: relative;
+  padding: 0.5rem 0;
+}
+.vs-list-search input {
+  padding-left: 3rem;
+}
+.vs-list-search i.fa-search {
+  position: absolute;
+  padding: 1rem 1.2rem;
+  pointer-events: none;
+}
+.vs-list-search .vs-list-search-delete {
+  position: absolute;
+  padding: 0.8rem 1rem;
+  right: 1rem;
+  top: 0.4rem;
+}
+.vs-list-sort-by {
+  min-width: 10rem;
+  padding: 0 0.5rem;
+}
+.vs-list-no-data {
+  padding: 1rem;
+  color: #999;
+}

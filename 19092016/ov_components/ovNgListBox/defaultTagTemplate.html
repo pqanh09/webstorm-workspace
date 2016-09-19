@@ -1,0 +1,11 @@
+<div>
+  <small ng-if="item.disabled" class="ov-tag-item ov-tag-down">
+    {{ 'common.deviceStatus.down' | i18next }}
+  </small>
+  <small ng-if="!item.disabled" class="ov-tag-item ov-tag-up">
+    {{ 'common.deviceStatus.up' | i18next }}
+  </small>
+  <small ng-if="item.assigned && config.showAssignedTag" class="ov-tag-item ov-tag-assigned">
+    {{ 'common.deviceStatus.assigned' | i18next }}
+  </small>
+</div>

@@ -1,0 +1,323 @@
+@import '../../../node_modules/nib'
+
+ov-ng-list-box
+  display block
+  height 100%
+
+.ovNgListBox .detail-content
+  margin 0
+  background white
+
+.ovNgListBox .paging
+  background linear-gradient(to bottom, #fff, #e6e6e6)
+  height: auto
+  overflow hidden
+  border 1px solid #cccccc
+  border-top none
+.ovNgListBox .detail-content .header
+  border-bottom 0.2rem solid #cccccc
+  padding 1rem
+  overflow inherit
+  min-height 6.1rem
+
+
+.ovNgListBox .paging .summary
+  display inline-block
+  line-height 6rem
+  margin-left 1rem
+.ovNgListBox .paging .ovPagination
+  display inline-block
+  float right
+  margin 0
+  padding 1.2rem 1rem 1rem 1rem
+.ovNgListBox .ovPagination .input-group .form-control
+  z-index auto
+
+//Responsive ov-ng-list-box
+.ovNgListBox .prevent-select
+   user-select none
+
+.ovNgListBox .circleButton
+  border-radius 2rem
+
+.ovNgListBox .none-pointer
+  cursor default !important
+
+.ovNgListBox .clear-ms-search::-ms-clear
+  display none
+
+.ovNgListBox .ov-ng-list-box-sort-wrapper
+  display inline-block
+  text-align left
+  padding 0.5rem 0 0.5rem 0
+  float left !important
+
+.ovNgListBox .ov-ng-list-box-sort-min
+  vertical-align middle
+  display none
+
+.ovNgListBox .ov-ng-list-box-sort-min > button
+  max-height 3.5rem
+  max-width 4rem
+
+.ovNgListBox .ov-ng-list-box-sort-min > button > i
+  font-size 1.8rem
+
+.ovNgListBox .ov-ng-list-box-label
+  display inline-block
+  position relative
+
+.ovNgListBox .ov-ng-list-box-sort-box-content
+  display inline-block
+  vertical-align middle
+  min-width 17rem
+  max-width 34rem
+
+.ovNgListBox .ov-ng-list-box-sort-box-content .btn-ux-select-left
+  text-overflow clip
+
+.ovNgListBox .ov-ng-list-box-sort-box-order
+  cursor pointer
+  display inline-block
+  position relative
+
+.ovNgListBox .ov-ng-list-box-sort-box-order i
+  vertical-align middle
+  font-size 2rem
+  color #428bca
+  cursor pointer
+
+.ovNgListBox .ov-ng-list-box-search-wrapper
+  display inline-block
+  padding 0.5rem 0 0.5rem 0
+  float right
+  height 4.5rem
+
+.ovNgListBox .ov-ng-list-box-search-min
+  display none
+  position relative
+  text-align right
+
+.ovNgListBox .ov-ng-list-box-search-min > button
+  border-radius 2rem
+
+.ovNgListBox .ov-ng-list-box-search-box
+  float right !important
+  position relative
+
+.ovNgListBox .ov-ng-list-box-search-box input.search
+  width 100%
+  height 3rem
+  border-radius 1.5rem
+  box-shadow inset 0 1px 1px #aaa
+  padding 0.6rem 2.8rem 0.5rem 1.2rem
+  line-height normal
+  font-size 1.2rem
+  border 1px solid #CCCCCC
+  display inline-block
+
+.ovNgListBox .ov-ng-list-box-search-box a
+  cursor pointer !important
+  position absolute
+  right 1rem
+  top 0.5rem
+
+.ovNgListBox .ov-ng-list-box-search-box .fa-times-circle-o
+  color #808080
+
+.ovNgListBox .ov-ng-list-box-item-wrapper
+  display inline-block
+  width 100%
+  position relative
+
+.ovNgListBox .ov-ng-list-box-item-content
+  display inline-block
+  vertical-align middle
+  text-overflow ellipsis
+  overflow hidden
+  width calc(100% - 5rem)
+
+.ovNgListBox .ov-ng-list-box-item-content .ov-ng-list-box-title
+  display block
+  font-weight 600
+  color #428bca
+  font-size 2rem
+  text-overflow ellipsis
+  overflow hidden
+  margin-bottom 0.5rem
+  white-space nowrap
+
+.ov-ng-list-box-tag-list
+  padding: 0.2rem 1rem 0.5rem
+  min-height 1rem
+
+.ov-ng-list-box-tag-list .tag-down
+  color: white
+  background-color: #f00
+  padding: 0.4rem 0.5rem
+  border-radius: 0.5rem
+  border: 0.2rem solid white
+  margin-right: 0.5rem
+  display inline-block
+  line-height 1
+
+.action-btn-label
+  font-weight 700
+  text-decoration underline
+
+.ovNgListBox .selected-item .ov-ng-list-box-action a
+  color white !important
+  text-decoration underline
+
+.ov-ng-list-box-item-content-wrapper
+  position: relative; padding: 1rem 1rem 0
+
+.ovNgListBox .selected-item .ov-ng-list-box-item-content .ov-ng-list-box-title
+  color white !important
+
+.detail-content .list-item .ovNgListBoxItem.disabled-item
+  background-color #ffffff !important
+  opacity 0.5
+  cursor default !important
+
+  .ov-ng-list-box-title
+  small
+    color #000 !important
+
+  .ovNgListBox-checkbox > span
+    cursor default !important
+
+.ovNgListBox
+  .ov-ng-list-box-result-item-header
+    color #428bca
+  .ov-ng-list-box-result-item .ov-ng-list-box-min-width
+    color #428bca
+    display none
+  .ov-ng-list-box-result-item-header .name,
+  .ov-ng-list-box-result-col,
+  .ov-ng-list-box-result-item .ov-ng-list-box-min-width,
+  .ov-ng-list-box-result-item .ov-ng-list-box-content-min-width
+    vertical-align top
+  .ov-ng-list-box-result-col
+    display inline-block
+    word-wrap break-word
+    padding 0.2rem
+
+.ovNgListBox-single-select-wrapper
+  .ovNgListBox .ov-ng-list-box-item-content
+    width 100%
+
+.ovNgListBox-mini-form-wrapper
+  .detail-content .header
+    min-height 3.5rem
+    padding 0 1rem 0 1rem
+  .ov-ng-list-box-sort-wrapper
+    line-height 3rem
+    vertical-align middle
+  .ov-ng-list-box-item-content-wrapper
+    padding 0.5rem 1rem 0
+  .ov-ng-list-box-item-content .ov-ng-list-box-title
+    margin-bottom 0
+    font-size 1.6rem
+  .ov-ng-list-box-action
+    font-size 1.2rem
+  .ov-ng-list-box-tag-list
+    padding 0
+  .ov-ng-list-box-tag-list
+    min-height 0.5rem
+  .ov-ng-list-box-sort-box-order .fa
+    font-size 1.6rem
+  .ov-ng-list-box-search-wrapper
+    line-height 3.5rem
+  .ov-ng-list-box-search-wrapper .circleButton
+    padding 0.5rem 1rem
+  .paging .summary
+    line-height 4rem
+    font-size 1.2rem
+  .paging .ovPagination
+    padding 0.5rem
+  .ov-ng-list-box-search-box a
+    top 0.2rem
+
+@media (max-width: 640px){
+  .ovNgListBox .small-screen-visible{
+    display inline-block !important
+  }
+
+  .ovNgListBox .small-screen-max-width{
+    width 100%
+  }
+
+  .ovNgListBox .small-screen-hidden{
+    display none !important
+  }
+
+  .ovNgListBox  .ov-ng-list-box-sort-min{
+    display inline-block
+  }
+
+  .ovNgListBox .ov-ng-list-box-sort-title{
+    display none
+  }
+
+  .ovNgListBox .ov-ng-list-box-sort-box-content{
+    min-width 0
+    width 48%
+  }
+
+  .ovNgListBox .ov-ng-list-box-search-min {
+    display inline-block
+  }
+
+  .ovNgListBox .ov-ng-list-box-search-min .input-search{
+    width 90%
+  }
+
+  .ovNgListBox .ov-ng-list-box-result-item-header .name {
+    display none
+  }
+
+  .ovNgListBox .ov-ng-list-box-result-item .ov-ng-list-box-result-col {
+    width 100% !important
+  }
+
+  .ovNgListBox .ov-ng-list-box-result-item .ov-ng-list-box-min-width {
+    display inline-block
+    width 30%
+  }
+
+  .ovNgListBox .ov-ng-list-box-result-item .ov-ng-list-box-content-min-width {
+    display inline-block
+    width 68%
+  }
+}
+
+@media (max-width: 480px) {
+  .ovNgListBox .ov-ng-list-box-result-item .ov-ng-list-box-min-width,
+  .ovNgListBox .ov-ng-list-box-result-item .ov-ng-list-box-content-min-width {
+    display block
+    width 100%
+  }
+
+  .ovNgListBox .ov-ng-list-box-result-item .ov-ng-list-box-content-min-width {
+    margin-bottom 1rem
+  }
+}
+
+//override css for report app
+@media print and (max-width: 640px) {
+  .ovNgListBox .header {
+    display: none
+  }
+}
+
+@media print {
+  .ovNgListBox .ov-ng-list-box-item-content .ov-ng-list-box-title {
+    color #428bca !important
+  }
+
+  .ovNgListBox .header {
+    background-image none
+    background-color #fafafa
+  }
+}

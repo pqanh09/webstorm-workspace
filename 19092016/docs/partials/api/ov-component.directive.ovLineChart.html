@@ -1,0 +1,256 @@
+<h1><code ng:non-bindable="">ovLineChart</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovlinechart-page"><p>Displays a line graph based on the given data.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-line-chart
+       chart-data="{Array}"
+       chart-config="{Object}"
+       [on-line-click:="{function}"]
+       [on-drag-left:="{function}"]
+       [on-drag-right:="{function}"]&gt;
+&lt;/ov-line-chart&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>chartData</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovlinechart-page"><p>Chart data. Each item in the array represents as a line data</p>
+</div></td></tr><tr><td>chartConfig</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovlinechart-page"><p>Chart config.</p>
+<ul>
+<li><strong>properties</strong> <code>object</code>: properties<ul>
+<li><strong>yTicks</strong> (optional) <code>integer</code>: number of ticks on y-axis (default <code>10</code>).</li>
+<li><strong>width</strong> <code>string</code> or <code>integer</code> : width of the chart by value (px) or percent.</li>
+<li><strong>height</strong> <code>string</code> or <code>integer</code>: height of the chart by value (px) or percent.</li>
+<li><strong>colors</strong> <code>string</code> or <code>array</code>: colors to be used in charts, can be array of color code or d3 colors collection name</li>
+<li><strong>pointStrokeColor</strong> <code>string</code>: stroke color of the data points</li>
+<li><strong>margin</strong> <code>object</code>: define margin for the chart</li>
+<li><strong>pointRadius</strong> <code>integer</code>: radius of each data point</li>
+<li><strong>gridColor</strong> <code>string</code>: color for grid lines</li>
+<li><strong>showPointsTexts</strong> (optional) <code>boolean</code>: show value on each data point (default <code>false</code>)</li>
+<li><strong>tickFormat</strong> (optional) <code>function</code>: a callBack used to format the x-ticks, will be called with (data, index, xIntervalType), should return the formatted string.</li>
+<li><strong>yLabel</strong> (optional) <code>string</code>:  label will appear on the y-axis (default <code>null</code>)</li>
+<li><strong>zoom</strong> (optional) <code>boolean</code>: allows zoom in and zoom out the chart using mouse scroll (default <code>false</code>)</li>
+</ul>
+</li>
+<li><strong>mapping</strong> <code>object</code>: define map values<ul>
+<li><strong>name</strong> <code>string</code>: property name can be used to get name of the line</li>
+<li><strong>xValue</strong> <code>string</code>: property name can be used to get x-axis value of the data point</li>
+<li><strong>yValue</strong> <code>string</code>: property name can be used to get y-axis value of the data point</li>
+</ul>
+</li>
+<li><strong>label</strong> <code>object</code>: define properties for chart&#39;s labels<ul>
+<li><strong>color</strong> <code>string</code>: label text color</li>
+<li><strong>fontFamily</strong> <code>string</code>: label text font</li>
+<li><strong>fontSize</strong> <code>string</code>: label text font-size</li>
+</ul>
+</li>
+<li><strong>multiset</strong> (optional) <code>boolean</code>: draw many set of chart (default false)</li>
+</ul>
+</div></td></tr><tr><td>onLineClick: <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-directive-page ov-component-directive-ovlinechart-page"><p>a callback function will be called when click on a line. Line data and index will be passed as arguments</p>
+</div></td></tr><tr><td>onDragLeft: <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-directive-page ov-component-directive-ovlinechart-page"><p>a callback function will be called when click on a label</p>
+</div></td></tr><tr><td>onDragRight: <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-directive-page ov-component-directive-ovlinechart-page"><p>a callback function will be called when click on a label</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovlinechart-page"><p><strong>Basic Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-line-chart data="ctrl.lineChartData" chart-config="ctrl.lineChartConfig"&gt;&lt;/ov-line-chart&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ ctrl.lineChartConfig = {
+    properties: {
+      xIntervalType: 'hours',
+      xInterval: 1,
+      yTicks: 5,
+      width: '100%',
+      height: '100%',
+      colors: 'colorScale20'
+      pointStrokeColor: '#ffffff',
+      margin: {
+        top: 15,
+        right: 70,
+        bottom: 110,
+        left: 110
+      },
+      pointRadius: 3,
+      gridColor: '#e5e5e5',
+      showPointsTexts: false,
+      yLabel: 'Resource Utilization Index',
+      zoom: true
+    },
+    label: {
+      color: 'gray',
+      fontFamily: 'Arial',
+      fontSize: '12px'
+    },
+    mapping: {
+      name: 'displayName',
+      xValue: 'time',
+      yValue: 'value'
+    }
+  };
+
+ ctrl.lineChartData = [
+ {
+   "name": "10.1.1.106",
+   "color": "#2ca02c",
+   "displayName": "10.1.1.106",
+   "data": [
+     {
+       "time": 1459011600000,
+       "value": 61
+     },
+     {
+       "time": 1459015200000,
+       "value": 62
+     },
+     {
+       "time": 1459022400000,
+       "value": 62
+     },
+     {
+       "time": 1459026000000,
+       "value": 57
+     },
+     {
+       "time": 1459036800000,
+       "value": 58
+     },
+     {
+       "time": 1459040400000,
+       "value": 63
+     },
+     {
+       "time": 1459044000000,
+       "value": 62
+     },
+     {
+       "time": 1459051200000,
+       "value": 65
+     },
+     {
+       "time": 1459054800000,
+       "value": 65
+     },
+     {
+       "time": 1459065600000,
+       "value": 64
+     },
+     {
+       "time": 1459069200000,
+       "value": 61
+     },
+     {
+       "time": 1459072800000,
+       "value": 62
+     },
+     {
+       "time": 1459076400000,
+       "value": 64
+     },
+     {
+       "time": 1459087200000,
+       "value": 65
+     },
+     {
+       "time": 1459090800000,
+       "value": 57
+     }
+   ]
+ },
+ {
+   "name": "10.1.1.126",
+   "color": "#aec7e8",
+   "displayName": "10.1.1.126",
+   "data": [
+     {
+       "time": 1459011600000,
+       "value": 85
+     },
+     {
+       "time": 1459015200000,
+       "value": 91
+     },
+     {
+       "time": 1459018800000,
+       "value": 93
+     },
+     {
+       "time": 1459026000000,
+       "value": 91
+     },
+     {
+       "time": 1459029600000,
+       "value": 91
+     },
+     {
+       "time": 1459033200000,
+       "value": 88
+     },
+     {
+       "time": 1459040400000,
+       "value": 92
+     },
+     {
+       "time": 1459044000000,
+       "value": 86
+     },
+     {
+       "time": 1459047600000,
+       "value": 91
+     },
+     {
+       "time": 1459051200000,
+       "value": 93
+     },
+     {
+       "time": 1459058400000,
+       "value": 92
+     },
+     {
+       "time": 1459062000000,
+       "value": 94
+     },
+     {
+       "time": 1459065600000,
+       "value": 90
+     },
+     {
+       "time": 1459069200000,
+       "value": 91
+     },
+     {
+       "time": 1459072800000,
+       "value": 93
+     },
+     {
+       "time": 1459076400000,
+       "value": 87
+     },
+     {
+       "time": 1459080000000,
+       "value": 90
+     },
+     {
+       "time": 1459083600000,
+       "value": 90
+     },
+     {
+       "time": 1459087200000,
+       "value": 90
+     },
+     {
+       "time": 1459090800000,
+       "value": 88
+     },
+     {
+       "time": 1459094400000,
+       "value": 92
+     }
+   ]
+ }
+ ];
+</pre>
+</div></div>
+</div>

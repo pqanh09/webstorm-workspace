@@ -1,0 +1,263 @@
+.ov-load-spinner {
+  position: relative;
+  height: 70px;
+  width: 70px;
+}
+
+.ghost-spinner {
+  position: absolute;
+  top: 50%;
+  left: 42%;
+}
+
+.ghost-spinner i:nth-child(1) {
+  -webkit-transform: rotate(30deg) translateX(21px);
+  -webkit-animation-delay: 0.16667s;
+
+  -moz-transform: rotate(30deg) translateX(21px);
+  -moz-animation-delay: 0.16667s;
+
+  -o-transform: rotate(30deg) translateX(21px);
+  -o-animation-delay: 0.16667s;
+
+  transform: rotate(30deg) translateX(21px);
+  animation-delay: 0.16667s;
+}
+
+.ghost-spinner i:nth-child(2) {
+  -webkit-transform: rotate(60deg) translateX(21px);
+  -webkit-animation-delay: 0.33333s;
+
+  -moz-transform: rotate(60deg) translateX(21px);
+  -moz-animation-delay: 0.33333s;
+
+  -o-transform: rotate(60deg) translateX(21px);
+  -o-animation-delay: 0.33333s;
+
+  transform: rotate(60deg) translateX(21px);
+  animation-delay: 0.33333s;
+}
+
+.ghost-spinner i:nth-child(3) {
+  -webkit-transform: rotate(90deg) translateX(21px);
+  -webkit-animation-delay: 0.5s;
+
+  -moz-transform: rotate(90deg) translateX(21px);
+  -moz-animation-delay: 0.5s;
+
+  -o-transform: rotate(90deg) translateX(21px);
+  -o-animation-delay: 0.5s;
+
+  transform: rotate(90deg) translateX(21px);
+  animation-delay: 0.5s;
+}
+
+.ghost-spinner i:nth-child(4) {
+  -webkit-transform: rotate(120deg) translateX(21px);
+  -webkit-animation-delay: 0.66667s;
+
+  -moz-transform: rotate(120deg) translateX(21px);
+  -moz-animation-delay: 0.66667s;
+
+  -o-transform: rotate(120deg) translateX(21px);
+  -o-animation-delay: 0.66667s;
+
+  transform: rotate(120deg) translateX(21px);
+  animation-delay: 0.66667s;
+}
+
+.ghost-spinner i:nth-child(5) {
+  -webkit-transform: rotate(150deg) translateX(21px);
+  -webkit-animation-delay: 0.83333s;
+
+  -moz-transform: rotate(150deg) translateX(21px);
+  -moz-animation-delay: 0.83333s;
+
+  -o-transform: rotate(150deg) translateX(21px);
+  -o-animation-delay: 0.83333s;
+
+  transform: rotate(150deg) translateX(21px);
+  animation-delay: 0.83333s;
+}
+
+.ghost-spinner i:nth-child(6) {
+  -webkit-transform: rotate(180deg) translateX(21px);
+  -webkit-animation-delay: 1s;
+
+  -moz-transform: rotate(180deg) translateX(21px);
+  -moz-animation-delay: 1s;
+
+  -o-transform: rotate(180deg) translateX(21px);
+  -o-animation-delay: 1s;
+
+  transform: rotate(180deg) translateX(21px);
+  animation-delay: 1s;
+}
+
+.ghost-spinner i:nth-child(7) {
+  -webkit-transform: rotate(210deg) translateX(21px);
+  -webkit-animation-delay: 1.16667s;
+
+  -moz-transform: rotate(210deg) translateX(21px);
+  -moz-animation-delay: 1.16667s;
+
+  -o-transform: rotate(210deg) translateX(21px);
+  -o-animation-delay: 1.16667s;
+
+  transform: rotate(210deg) translateX(21px);
+  animation-delay: 1.16667s;
+}
+
+.ghost-spinner i:nth-child(8) {
+  -webkit-transform: rotate(240deg) translateX(21px);
+  -webkit-animation-delay: 1.33333s;
+
+  -moz-transform: rotate(240deg) translateX(21px);
+  -moz-animation-delay: 1.33333s;
+
+  -o-transform: rotate(240deg) translateX(21px);
+  -o-animation-delay: 1.33333s;
+
+  transform: rotate(240deg) translateX(21px);
+  animation-delay: 1.33333s;
+}
+
+.ghost-spinner i:nth-child(9) {
+  -webkit-transform: rotate(270deg) translateX(21px);
+  -webkit-animation-delay: 1.5s;
+
+  -moz-transform: rotate(270deg) translateX(21px);
+  -moz-animation-delay: 1.5s;
+
+  -o-transform: rotate(270deg) translateX(21px);
+  -o-animation-delay: 1.5s;
+
+  transform: rotate(270deg) translateX(21px);
+  animation-delay: 1.5s;
+}
+
+.ghost-spinner i:nth-child(10) {
+  -webkit-transform: rotate(300deg) translateX(21px);
+  -webkit-animation-delay: 1.66667s;
+
+  -moz-transform: rotate(300deg) translateX(21px);
+  -moz-animation-delay: 1.66667s;
+
+  -o-transform: rotate(300deg) translateX(21px);
+  -o-animation-delay: 1.66667s;
+
+  transform: rotate(300deg) translateX(21px);
+  animation-delay: 1.66667s;
+}
+
+.ghost-spinner i:nth-child(11) {
+  -webkit-transform: rotate(330deg) translateX(21px);
+  -webkit-animation-delay: 1.83333s;
+
+  -moz-transform: rotate(330deg) translateX(21px);
+  -moz-animation-delay: 1.83333s;
+
+  -o-transform: rotate(330deg) translateX(21px);
+  -o-animation-delay: 1.83333s;
+
+  transform: rotate(330deg) translateX(21px);
+  animation-delay: 1.83333s;
+}
+
+.ghost-spinner i:nth-child(12) {
+  -webkit-transform: rotate(360deg) translateX(21px);
+  -webkit-animation-delay: 2s;
+
+  -moz-transform: rotate(360deg) translateX(21px);
+  -moz-animation-delay: 2s;
+
+  -o-transform: rotate(360deg) translateX(21px);
+  -o-animation-delay: 2s;
+
+  transform: rotate(360deg) translateX(21px);
+  animation-delay: 2s;
+}
+
+.ghost-spinner i {
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  background: rgba(0, 153, 255, 0.49);
+  opacity: 0.2;
+
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+
+  -webkit-animation-name: spin2;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+
+  -moz-animation-name: spin2;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease;
+
+  -o-animation-name: spin2;
+  -o-animation-duration: 2s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: ease;
+
+  animation-name: spin2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+/*.ghost-spinner i:after {*/
+  /*content: '';*/
+  /*display: block;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*opacity: 0.8;*/
+  /*border-radius: 2px;*/
+  /*box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2), 0px 0px 10px rgba(255, 255, 255, 0.2) inset;*/
+  /*background: transparent;*/
+  /*-webkit-transform: translateX(160px) scale(8);*/
+  /*-webkit-filter: blur(1px);*/
+/*}*/
+
+/* Why spin2 ?? Unknown bug with safari ?*/
+
+@-webkit-keyframes spin2{
+  30% {
+    opacity: 1;
+    background: #0099FF;
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 134, 255, 0.74);
+    box-shadow: 0px 0px 6px rgba(0, 134, 255, 0.74);
+  }
+}
+
+@-moz-keyframes spin2 {
+  30% {
+    opacity: 1;
+    background: #0099FF;
+    -moz-box-shadow: 0px 0px 6px rgba(0, 134, 255, 0.74);
+    box-shadow: 0px 0px 6px rgba(0, 134, 255, 0.74);
+  }
+}
+
+@-o-keyframes spin2 {
+  30% {
+    opacity: 1;
+    background: #0099FF;
+    -o-box-shadow: 0px 0px 6px rgba(0, 134, 255, 0.74);
+    box-shadow: 0px 0px 6px rgba(0, 134, 255, 0.74);
+  }
+}
+
+@keyframes spin2 {
+  30% {
+    opacity: 1;
+    background: #0099FF;
+    box-shadow: 0px 0px 6px rgba(0, 134, 255, 0.74);
+  }
+}

@@ -1,0 +1,37 @@
+.ovPagination .textbox-type-pagination {
+  display: table;
+}
+.ovPagination .textbox-type-pagination .previous-pagination {
+  border-right-width: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  display: table-cell;
+}
+.ovPagination .textbox-type-pagination .next-pagination {
+  border-left-width: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  display: table-cell;
+}
+.ovPagination .textbox-type-pagination .textbox-pagination {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  display: table-cell;
+  text-align: center;
+  height: 3.4rem;
+}
+.ovPagination .textbox-type-pagination .textbox-pagination::-ms-clear {
+  display: none;
+}
+.ovPagination .textbox-type-pagination .first-pagination {
+  border-right: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  display: table-cell;
+}
+.ovPagination .textbox-type-pagination .last-pagination {
+  border-left: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  display: table-cell;
+}

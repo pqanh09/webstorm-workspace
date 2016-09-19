@@ -1,0 +1,80 @@
+<div ng-controller="ovResultTableCtrl as vm">
+  <div class="ov-rs-wrapper">
+    <div ov-alert="vm.ovAlert" alert-id="vm.rsConfig.config.appId"></div>
+    <div class="panel panel-default">
+      <div>
+        <div class="panel-body">
+          <fieldset>
+            <!----------Title---------->
+            <div class="header-text">
+              <div class="pull-left">
+              <span
+                ng-if="vm.app.isTaskRunning"> {{vm.app.config.title}} {{'ovResultTable.isInProgress'|i18next }}</span>
+              <span ng-if="!vm.app.isTaskRunning">
+                <div ov-ellipsis="{{vm.app.config.title}} {{'ovResultTable.completedWith'|i18next}}
+                                    {{vm.mapResultCountingToHeaderText('success')}}
+                                    {{vm.mapResultCountingToHeaderText('error')}}
+                                      {{vm.mapResultCountingToHeaderText('warning')}}
+                                      {{vm.mapResultCountingToHeaderText('other')}}">
+                  <!--ng-if="!vm.isShowFilterByStatus"-->
+                  {{vm.app.config.title}}
+                  <span>{{'ovResultTable.completedWith'|i18next}}</span>
+                    <span class="status-filter">
+                        <span ng-repeat="d in vm.app.resultTextArray"><span class="{{vm.getResultCssClass(d.status)}}">{{d.text}}</span><span>{{$last ? '' :($index===vm.app.resultTextArray.length-2)?' and ':', ' }}</span></span>
+                      </span>
+                </div>
+                <!--<span ng-if="vm.isShowFilterByStatus">-->
+                     <!--<span class="pull-left back-tag" ng-click="vm.backToMainPage()">-->
+                      <!--<span class="ov-nav-btn">-->
+                        <!--<a href="" class="ov-nav-btn-link">-->
+                          <!--<i class="ov-nav-icon fa fa-2x fa-angle-left"></i>-->
+                          <!--<span class="ov-nav-label">{{'common.back'|i18next}}</span>-->
+                        <!--</a>-->
+                      <!--</span>-->
+                     <!--</span>-->
+                    <!--{{vm.filterByStatusText}}-->
+                <!--</span>-->
+              </span>
+              </div>
+              <div class="pull-right csv-button"
+                   ng-class="{'csv-disabled':vm.app.isTaskRunning}">
+                <ov-export-csv csv-data="vm.app.resultTableExportCsv.data"
+                               csv-config="vm.app.resultTableExportCsv.config"></ov-export-csv>
+              </div>
+            </div>
+            <!----------Content----------->
+            <div class="ov-rs-listbox-wrapper">
+              <div class="clearfix detail-header" ng-if="vm.isVisibleBackBtn">
+              <span class="pull-left back-tag" ng-click="vm.backToMainPage()">
+                  <span class="ov-nav-btn">
+                    <a href="" class="ov-nav-btn-link">
+                      <i class="ov-nav-icon fa fa-2x fa-angle-left"></i>
+                      <span class="ov-nav-label">{{'common.back'|i18next}}</span>
+                    </a>
+                  </span>
+              </span>
+
+                <div class="pull-left operation-on">
+                <span ng-if="!item.hasDependency">
+                 {{'ovResultTable.operationOn'|i18next:{friendlyName:item.friendlyName} }}
+                </span>
+                <span ng-if="item.hasDependency">
+                  {{item.friendlyName}} {{'ovResultTable.hasFollowingReference'|i18next}}
+                </span>
+                </div>
+              </div>
+
+              <ov-ng-list-box ng-if="!vm.isShowCustomDetailTemplate" function-list="vm.listBoxConfig.functionList"
+                              list-item="vm.listBoxData" config="vm.listBoxConfig.config"
+                              on-selected-function="vm.listBoxConfig.onSelected"></ov-ng-list-box>
+              <div ng-if="vm.isShowCustomDetailTemplate">
+                <div ng-include="vm.listBoxConfig.config.detailTemplate"></div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

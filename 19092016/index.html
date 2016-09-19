@@ -1,0 +1,333 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta>
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!--Inject your libraries-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+
+    <!-- Inject your components-->
+    <link rel="stylesheet" href="styles/fonts/ffClanFont.css">
+
+    <!--slick-grid-->
+    <link rel="stylesheet" href="ov_components/ovSlickGrid/slick.grid.css"/>
+    <link rel="stylesheet" href="ov_components/ovSlickGrid/controls/slick.columnpicker.css">
+    <link rel="stylesheet" href="ov_components/ovSlickGrid/controls/slick.pager.css">
+    <link rel="stylesheet" href="ov_components/ovSlickGrid/nmsGrid.css">
+    <link rel="stylesheet" href="ov_components/ovSlickGrid/css/mySlickGrid.css">
+    <link rel="stylesheet" href="ov_components/ovSlickGrid/slick.grid.css"/>
+    <link rel="stylesheet" href="ov_components/ovSlickGrid/slick.grid.bootstrap.css">
+    <!--end-slick-grid-->
+
+    <!--slick-grid-directive-->
+    <link rel="stylesheet" href="ov_components/ovSlickGrid/jquery-ui-1.10.0.custom.css"/>
+    <link rel="stylesheet" href="ov_components/ovSlickGrid/css/mySlickGrid.css">
+    <link rel="stylesheet" href="ov_components/ovSlickGrid/slickGridCustom.css">
+    <!--end-slick-grid-directive-->
+
+    <link rel="stylesheet" href="ov_components/ovTooltipService/ovTooltip.css">
+
+    <!--ov-bread-crumbs-->
+    <link rel="stylesheet" href="ov_components/ovUtility/ov-breadcrumb.css">
+    <!--end-ov-bread-crumbs-->
+
+    <!--ov-slick-menu-->
+    <link rel="stylesheet" href="ov_components/ovSlickMenu/ovSlickMenu.css"/>
+    <!--end-ov-slick-menu-->
+
+    <!--ov-validator-->
+    <link rel="stylesheet" href="ov_components/ovValidator/ovValidator.css"/>
+    <!--end-ov-validator-->
+
+    <!--ov-dialog-->
+    <link rel="stylesheet" href="ov_components/ovDialog/ovDialog.css"/>
+    <!--end-ov-dialog-->
+
+    <!--ov-pagination-->
+    <link rel="stylesheet" href="ov_components/ovPagination/ovPagination.css"/>
+    <!--end-ov-pagination-->
+
+    <!--ov-ng-list-box-->
+    <link rel="stylesheet" href="ov_components/ovNgListBox/ovNgList.css"/>
+    <link rel="stylesheet" href="ov_components/ovNgListBox/ovNgListBox.css"/>
+    <!--end-ov-ng-list-box-->
+
+    <!--ov-data-view-->
+    <link rel="stylesheet" href="ov_components/ovDataView/ovDataView.css"/>
+    <!--end-ov-data-view-->
+
+    <!--ov-ux-select-->
+    <link rel="stylesheet" href="ov_components/ovUxSelect/ovUxSelect.css"/>
+    <!--end-ov-ux-select-->
+
+    <!--ov-app-skeleton-->
+    <link rel="stylesheet" href="ov_components/ovAppSkeleton/ovAppSkeleton.css"/>
+    <!--end-ov-app-skeleton-->
+
+    <!--ov-nested-list-->
+    <link rel="stylesheet" href="ov_components/ovNestedList/ovNestedList.css"/>
+    <!--end-ov-nested-list-->
+
+    <!--ov-card-->
+    <link rel="stylesheet" href="ov_components/ovCards/ovCards.css"/>
+    <!--end-ov-card-->
+
+    <!--ov-slick-double-list-->
+    <link rel="stylesheet" href="ov_components/ovInfinityList/ovInfinityList.css"/>
+    <link rel="stylesheet" href="ov_components/ovSlickDoubleList/ovSlickDoubleList.css"/>
+    <!--end-ov-slick-double-list-->
+
+    <!--ov-result-table-->
+    <link rel="stylesheet" href="ov_components/ovVsList/ovVsList.css"/>
+    <link rel="stylesheet" href="ov_components/ovResultTable/ovResultTable.css"/>
+    <!--end-ov-result-table-->
+
+    <!-- Inject your apps-->
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/theme.css"/>
+    <link rel="stylesheet" href="scripts/sample-app/sample-app.css"/>
+
+</head>
+<body ng-app="TrainingApp">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a title="{{ 'appTitle' | i18next }}" href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<header class="navbar navbar-default"> <!-- navbar-fixed-top-->
+  <div class="nav-branding">
+    <a class="" href="#/" title="{{ 'appTitle' | i18next }}"><img src="styles/imgs/al-logo-white.png"></a>
+  </div>
+
+  <div class="topbar">
+    <div class="responsive clearfix">
+      <button id="main-menu-caretdown-topbar" class="trigger fa fa-caret-down"
+              ng-click="showTopBarMenu = !showTopBarMenu;"
+              ng-init="showTopBarMenu = true"></button>
+      <ul class="nav navbar-nav pull-right" bs3-collapse="showTopBarMenu">
+        <li><a href="" id="main-menu-home"><span class="fa fa-home"></span> Home </a></li>
+        <li>
+          <a href id="main-menu-username" class="username">
+            <span class="fa fa-user"></span> admin
+          </a>
+        </li>
+        <li>
+          <a href id="main-menu-help" ng-click="openHelp('getting_started.home')">
+            <span class="fa fa-question"></span> Help
+          </a>
+        </li>
+        <li id="main-menu-about">
+          <a href="">
+            <span class="fa fa-info-circle"></span> About
+          </a>
+        </li>
+        <li id="main-menu-logout">
+          <a href="">
+            <span class="fa fa-sign-out"></span> Logout
+          </a>
+        </li>
+        <li id="main-menu-caretup-topbar" class="trigger" ng-click="showTopBarMenu = !showTopBarMenu"><a href=""><span
+          class="fa fa-caret-up"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div>
+    <div ng-view=""></div>
+</div>
+
+<footer class="footer-area navbar navbar-default navbar-fixed-bottom">
+
+</footer>
+
+<!--Inject yibraries-->
+<script src="bower_components/jquery/jquery.js"></script>
+
+<script
+ src="bower_components/jquery-ui/ui/jquery-ui.js">
+
+</script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/i18next/i18next.js"></script>
+<script src="bower_components/ng-i18next/dist/ng-i18next.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/velocity/jquery.velocity.js"></script>
+<script src="bower_components/ng-file-upload/angular-file-upload.js"></script>
+<script src="bower_components/oboe/dist/oboe-browser.js"></script>
+
+<script src="scripts/app.js"></script>
+
+<!-- Inject your components-->
+
+<!--ov-constant-->
+<script src="ov_components/ovConstant/ovConstant.js"></script>
+<!--end-ov-constant-->
+
+<!--slick-grid-->
+<script src="ov_components/ovSlickGrid/lib/jquery.event.drag-2.2.js"></script>
+<script src="ov_components/ovSlickGrid/lib/jquery.event.drop-2.2.js"></script>
+<script src="ov_components/ovSlickGrid/lib/jquery.mousewheel.js"></script>
+<script src="ov_components/ovSlickGrid/slick.core.js"></script>
+<script src="ov_components/ovSlickGrid/slick.editors.js"></script>
+<script src="ov_components/ovSlickGrid/slick.dataview.js"></script>
+<script src="ov_components/ovSlickGrid/slick.grid.js"></script>
+<script src="ov_components/ovSlickGrid/slick.formatters.js"></script>
+<script src="ov_components/ovSlickGrid/slick.groupitemmetadataprovider.js"></script>
+<script src="ov_components/ovSlickGrid/controls/slick.columnpicker.js"></script>
+<script src="ov_components/ovSlickGrid/plugins/slick.checkboxselectcolumn.js"></script>
+<script src="ov_components/ovSlickGrid/plugins/slick.autotooltips.js"></script>
+<script src="ov_components/ovSlickGrid/plugins/slick.cellrangedecorator.js"></script>
+<script src="ov_components/ovSlickGrid/plugins/slick.cellrangeselector.js"></script>
+<script src="ov_components/ovSlickGrid/plugins/slick.cellcopymanager.js"></script>
+<script src="ov_components/ovSlickGrid/plugins/slick.cellselectionmodel.js"></script>
+<script src="ov_components/ovSlickGrid/plugins/slick.rowselectionmodel.js"></script>
+<script src="ov_components/ovSlickGrid/plugins/slick.rowmovemanager.js"></script>
+<script src="ov_components/ovSlickGrid/plugins/ovdataview.checkboxselectionmodel.js"></script>
+<script src="ov_components/ovSlickGrid/plugins/ovdataview.rowselectionmodel.js"></script>
+<script src="ov_components/ovSlickGrid/plugins/table-to-csv.js"></script>
+<script src="ov_components/ovSlickGrid/plugins/FileSaver.js"></script>
+<script src="ov_components/ovSlickGrid/myPager.js"></script>
+<!--end-slick-grid-->
+
+<!--slick-grid-directive-->
+<script src="ov_components/ovSlickGrid/slickGridDirective.js"></script>
+<!--end-slick-grid-directive-->
+
+<!--ov-slick-menu-->
+<script src="ov_components/ovSlickMenu/ovSlickMenu.js"></script>
+<script src="ov_components/ovSlickMenu/ovSlickMenuBuilder.js"></script>
+<!--end-ov-slick-menu-->
+
+<!--ov-dottie-->
+<script src="ov_components/ovDottie/dottie.js"></script>
+<script src="ov_components/ovDottie/ovDottieSrv.js"></script>
+<!--end-ov-dottie-->
+
+<script src="ov_components/ovUtility/ovUtility.js"></script>
+
+<!--ov-validator-->
+<script src="ov_components/ovValidator/ovValidator.js"></script>
+<script src="ov_components/ovValidator/ovValidatorServices.js"></script>
+<!--end-ov-validator-->
+
+<!--ov-dialog-->
+<script src="ov_components/ovDialog/ovDialog.js"></script>
+<!--end-ov-dialog-->
+
+<!--ov-pagination-->
+<script src="ov_components/ovPagination/ovPagination.js"></script>
+<!--end-ov-pagination-->
+
+<!--ov-ng-list-box-->
+<script src="ov_components/ovNgListBox/ovNgListBox.js"></script>
+<!--end-ov-ng-list-box-->
+
+<!--ov-data-view-->
+<script src="ov_components/ovDataView/ovDataView.js"></script>
+<script src="ov_components/ovDataView/ovDataViewConstants.js"></script>
+<script src="ov_components/ovDataView/ovDataViewService.js"></script>
+<!--end-ov-data-view-->
+
+<!--ov-ux-select-->
+<script src="ov_components/ovUxSelect/ovUxSelect.js"></script>
+<!--end-ov-ux-select-->
+
+<!--ov-alert-->
+<script src="ov_components/ovAlert/ovAlert.js"></script>
+<!--end-ov-alert-->
+
+<!--ov-title-->
+<script src="ov_components/ovTitle/ovTitle.service.js"></script>
+<script src="ov_components/ovTitle/ovTitle.directive.js"></script>
+<!--end-ov-title-->
+
+<!--ov-app-skeleton-->
+<script src="ov_components/ovAppSkeleton/ovAppSkeletonDirective.js"></script>
+<script src="ov_components/ovAppSkeleton/ovAppSkeletonCacheService.js"></script>
+<!--end-ov-app-skeleton-->
+
+<!--ov-app-state-->
+<script src="ov_components/ovAppState/ovAppState.js"></script>
+<!--end-ov-app-state-->
+
+<!--ov-container-->
+<script src="ov_components/ovContainer/ovContainer.directive.js"></script>
+<!--end-ov-container-->
+
+<!--ov-task-flow-->
+<script src="ov_components/ovTaskFlow/ovTaskFlowServices.js"></script>
+<!--end-ov-task-flow-->
+
+<!--ov-nested-list-->
+<script src="ov_components/ovNestedList/ovNestedList.js"></script>
+<!--end-ov-nested-list-->
+
+<!--ov-cards-->
+<script src="ov_components/ovCards/ovCards.constant.js"></script>
+<script src="ov_components/ovCards/ovCard.directive.js"></script>
+<script src="ov_components/ovCards/ovCards.directive.js"></script>
+<!--end-ov-cards-->
+
+<!--ov-select-show-->
+<script src="ov_components/ovSelectShow/ovSelectShow.js"></script>
+<!--end-ov-select-show-->
+
+<!--ov-slick-double-list-->
+<script src="ov_components/ovInfinityList/ovInfinityList.js"></script>
+<script src="ov_components/ovSlickDoubleList/ovSlickDoubleList.js"></script>
+<!--end-ov-slick-double-list-->
+
+<!--ov-oboe-->
+<script src="ov_components/ovOboe/ovOboe.js"></script>
+<!--end-ov-oboe-->
+
+<!--ov-result-table-->
+<script src="ov_components/ovResultTable/ovResultTable.js"></script>
+<script src="ov_components/ovResultTable/ovResultTableConstant.js"></script>
+<script src="ov_components/ovResultTable/ovResultTableService.js"></script>
+<!--end-ov-result-table-->
+
+<!-- Inject your apps-->
+
+<!--sample-app-->
+<script src="scripts/sample-app/sample-app.module.js"></script>
+<script src="scripts/sample-app/sample-app.route.js"></script>
+<script src="scripts/sample-app/sample-app.constant.js"></script>
+<script src="scripts/sample-app/sample-app.service.js"></script>
+<script src="scripts/sample-app/sample-app.controller.js"></script>
+<script src="scripts/sample-app/sample-app.component.js"></script>
+
+<script src="scripts/sample-app/sample-home/sample-home.module.js"></script>
+<script src="scripts/sample-app/sample-home/sample-home.controller.js"></script>
+<script src="scripts/sample-app/sample-home/sample-home.component.js"></script>
+
+<script src="scripts/sample-app/sample-one/sample-one.module.js"></script>
+<script src="scripts/sample-app/sample-one/sample-one.service.js"></script>
+<script src="scripts/sample-app/sample-one/sample-one.controller.js"></script>
+<script src="scripts/sample-app/sample-one/sample-one.component.js"></script>
+
+<script src="scripts/sample-app/sample-one/view/sample-one-view.decorator.js"></script>
+<script src="scripts/sample-app/sample-one/action/sample-one-action.decorator.js"></script>
+
+<!--end-sample-app-->
+
+<!--music-manager-->
+<script src="scripts/music-manager/music-manager.module.js"></script>
+<script src="scripts/music-manager/music-manager.route.js"></script>
+<script src="scripts/music-manager/music-manager.controller.js"></script>
+<script src="scripts/music-manager/music-manager.component.js"></script>
+<!--end-music-manager-->
+
+</body>
+</html>

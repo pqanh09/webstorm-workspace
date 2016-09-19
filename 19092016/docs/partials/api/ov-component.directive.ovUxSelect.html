@@ -1,0 +1,160 @@
+<h1><code ng:non-bindable="">ovUxSelect</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovuxselect-page"><p>Displays a select box with single and multiple selection, bound to an ng-model.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-ux-select
+       ng-model="{string}"
+       ov-ng-options="{string}"
+       [ov-select-setting="{object}"]
+       [select-none="{string}"]
+       [ux-select-id="{string}"]
+       [ng-change="{expression}"]
+       [disabled]
+       [ov-auto-focus="{expression}"]&gt;
+&lt;/ov-ux-select&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ngModel</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovuxselect-page"><p>Assignable angular expression to data-bind to</p>
+</div></td></tr><tr><td>ovNgOptions</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovuxselect-page"><p>sets the options that the select is populated with and defines what is set on the model on selection.</p>
+<ul>
+<li><code>modelValue</code> <strong><code>for</code></strong> <code>item</code> <strong><code>in</code></strong> <code>collection</code></li>
+<li><code>modelValue</code> <strong><code>as</code></strong> <code>label</code> <strong><code>for</code></strong> <code>item</code> <strong><code>in</code></strong> <code>collection</code></li>
+</ul>
+</div></td></tr><tr><td>ovSelectSetting <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovuxselect-page"><p>setting for custom select box</p>
+<ul>
+<li><strong>search</strong>(optional) <code>boolean</code>: show/hide search box (default false)</li>
+<li><strong>sort</strong> (optional) <code>boolean</code>: show/hide sort button (default false)</li>
+<li><strong>multiple</strong> (optional) <code>boolean</code>: enable/disable multiple selection (default false)</li>
+<li><strong>btnCheckAll</strong> (optional) <code>boolean</code>: show/hide check all, un-check all buttons, only work with multiple selection (default false)</li>
+<li><strong>selectUrl</strong> (optional) <code>string</code>: custom select template url</li>
+<li><strong>dropDownMenuUrl</strong> (optional): <code>string</code>: custom dropdown template url</li>
+<li><strong>itemTemplate</strong> (optional) <code>string</code>: custom item template url</li>
+</ul>
+</div></td></tr><tr><td>selectNone <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovuxselect-page"><p>Add an item with undefined value in top of the dropdown list e.g. select-none=&quot;[None]&quot;.</p>
+</div></td></tr><tr><td>uxSelectId <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovuxselect-page"><p>An ID to be added to the element to support automation test  e.g. ux-select-id=&quot;test&quot;</p>
+</div></td></tr><tr><td>ngChange <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-expression">expression</a></td><td><div class="ov-component-directive-page ov-component-directive-ovuxselect-page"><p>Angular expression to be executed when selected option(s) changes due to user interaction with the select element.</p>
+</div></td></tr><tr><td>disabled <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-expression">expression</a></td><td><div class="ov-component-directive-page ov-component-directive-ovuxselect-page"><p>Determines whether or not to disable the component</p>
+</div></td></tr><tr><td>ovAutoFocus <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-expression">expression</a></td><td><div class="ov-component-directive-page ov-component-directive-ovuxselect-page"><p>Set the focus to the element in HTML form</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovuxselect-page"><p><strong>Basic Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-ux-select
+ ng-model="ctrl.selected"
+ ov-ng-options="item.value as item.name for item in ctrl.items"&gt;
+ &lt;/ov-ux-select&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ ctrl.items = [
+ {name: 'One', value: 1},
+ {name: 'Two', value: 2}
+ ];
+ ctrl.selected = 1;
+</pre>
+<p><strong>Disable select box Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-ux-select
+ ng-model="ctrl.selected"
+ ov-ng-options="item.value as item.name for item in ctrl.items"
+ disabled="ctrl.disableSelect"&gt;
+ &lt;/ov-ux-select&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ ctrl.items = [
+ {name: 'One', value: 1},
+ {name: 'Two', value: 2}
+ ];
+ ctrl.selected = 1;
+ ctrl.disableSelect = true;
+</pre>
+<p><strong>Disable a item Example:</strong>
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ ctrl.items = [
+ {name: 'One', value: 1, disabled: true},
+ {name: 'Two', value: 2}
+ ];
+</pre>
+<p><strong>ov-ng-options Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-ux-select
+ ng-model="ctrl.selected"
+ ov-ng-options="item as item.name for item in ctrl.items"&gt;
+ &lt;/ov-ux-select&gt;
+ //ctrl.selected will be a object
+</pre>
+<em>Array</em>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-ux-select
+ ng-model="ctrl.selected"
+ ov-ng-options="value for value in ctrl.items"&gt;
+ &lt;/ov-ux-select&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ ctrl.items = [1, 2];
+ ctrl.selected = 1;
+</pre>
+<p><strong>select-none Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-ux-select
+ ng-model="ctrl.selected"
+ ov-ng-options="item as item.name for item in ctrl.items"
+ select-none="[None]"&gt;
+ &lt;/ov-ux-select&gt;
+</pre>
+<p><strong>Search, Sort Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-ux-select
+ ng-model="ctrl.selected"
+ ov-ng-options="item.value as item.name for item in ctrl.items"
+ ov-select-setting="ctrl.selectSetting"&gt;
+ &lt;/ov-ux-select&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ ctrl.items = [
+  {name: 'One', value: 1},
+  {name: 'Two', value: 2}
+ ];
+ ctrl.selected = 1;
+ ctrl.selectSetting = {
+  search: true,
+  sort: true
+ }
+</pre>
+<p> <strong>Multiple selection Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-ux-select
+ ng-model="ctrl.selected"
+ ov-ng-options="item.value as item.name for item in ctrl.items"
+ ov-select-setting="ctrl.selectSetting"&gt;
+ &lt;/ov-ux-select&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ ctrl.items = [
+ {name: 'One', value: 1},
+ {name: 'Two', value: 2}
+ ];
+ ctrl.selected = [1];
+ ctrl.selectSetting = {
+   multiple:true,
+   btnCheckAll:true
+ }
+</pre>
+</div></div>
+</div>

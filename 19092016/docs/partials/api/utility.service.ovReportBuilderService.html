@@ -1,0 +1,40 @@
+<h1><code ng:non-bindable="">ovReportBuilderService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">utility</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="utility-service-page utility-service-ovreportbuilderservice-page"><p>Service that allows user to add a directive or custom controller/templateUrl to report app</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addtoreport">addToReport($scope, reportWidget)</h3>
+<div class="addtoreport"><h5 id="methods_addtoreport_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$scope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="utility-service-page utility-service-ovreportbuilderservice-addtoreport-page"><p>$scope object of controller</p>
+</div></td></tr><tr><td>reportWidget</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="utility-service-page utility-service-ovreportbuilderservice-addtoreport-page"><p>config object</p>
+<ul>
+<li><strong>title</strong> – <code>{string}</code> - Report&#39;s title</li>
+<li><strong>id</strong> – <code>{string}</code> - directive tag name ex: ov-chart</li>
+<li><strong>controller</strong> – <code>{string}</code> - controller name</li>
+<li><strong>templateUrl</strong> – <code>{string}</code> - template url</li>
+</ul>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="utility-service-page utility-service-ovreportbuilderservice-page"><p><strong>Existing directive and need to add to report:</strong>
+<pre class="prettyprint linenums">
+  ovReportBuilderService.addToReport($scope, {
+     title: 'Report title',
+     id: 'directive-tag-name'
+  }
+</pre>
+<strong>Don&#39;t want to write a directive but have a controller and a template:</strong>
+<pre class="prettyprint linenums">
+  ovReportBuilderService.addToReport($scope, {
+     title: 'Report title',
+     controller: 'yourController',
+     templateUrl: 'yourTemplateUrl'
+  }
+</pre>
+</div></div>
+</div>

@@ -1,0 +1,13 @@
+<button ng-attr-id="{{vm.menuConfig.idPrefix}}{{icon.id}}"
+        ng-attr-title="{{icon.name}}"
+        ng-click="icon.onClick()"
+        ng-disabled="icon.disabled"
+        class="{{icon.btnClass}} {{icon.groupId}}"
+        ng-show="icon.isShow"
+        ov-select-show="icon.ovSelectShow"
+        hide-list="icon.hideList"
+        show-list="icon.showList"
+        finish-callback="icon.finishCallback">
+  <i class="{{icon.iconClass}}"></i>
+  <span class="ov-slick-menu-icon-title" ng-show="icon.name"> {{icon.name}}</span>
+</button>

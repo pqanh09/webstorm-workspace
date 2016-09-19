@@ -1,0 +1,53 @@
+<div class="{{vm.menuConfig.overrideCss}}">
+  <div ng-if="vm.isShowSmallMode()" class="pull-right ov-slick-menu-wrapper">
+    <span>
+    <div ng-if="vm.menuConfig.openHelpStr.length > 0"
+         class="toolbar pull-right icon-help">
+      <i ng-attr-id="{{vm.idPrefix}}-mini-help"
+         ng-attr-title="{{ 'button-label.help' | i18next}}"
+         class="toolbar-icon app-help fa fa-question-circle"
+         ng-click="vm.openHelp(menuConfig.openHelpStr)"></i>
+      {{vm.showMenuButton.openHelpStr}}
+    </div>
+    <div ng-include="vm.menuConfig.toggleButtonTemplate"></div>
+    <ul class="ov-slick-menu-ul {{vm.ulOverrideCss}}" ng-if="vm.menuList.getState()">
+      <li ng-repeat="item in vm.menuData"
+          ng-class="{'ov-slick-menu-li-disabled':item.disabled,
+       'ov-slick-menu-li-group-selected': item.groupActive || item.checkGroupActive(),
+       'ov-slick-menu-li-group': item.groupId,
+       'ov-slick-menu-item-hidden': item.isHidden()}">
+        <div get-item-template item="item" ng-if="vm.isShowInSmallScreen(item)"></div>
+      </li>
+    </ul>
+    </span>
+  </div>
+
+  <div class="ov-slick-menu-full-wrapper" ng-if="vm.isShowLargeMode()">
+    <div class="ov-slick-menu-icon-bar pull-right">
+      <div ng-if="vm.menuConfig.openHelpStr.length > 0" class="toolbar pull-right icon-help">
+        <i ng-attr-id="{{vm.idPrefix}}-help"
+           ng-attr-title="{{ 'button-label.help' | i18next}}"
+           class="toolbar-icon app-help fa fa-question-circle"
+           ng-click="vm.openHelp(menuConfig.openHelpStr)"></i>
+      </div>
+
+      <!--      <ul class=" {{vm.ulOverrideCss}}" ng-show="!vm.isShowMenuList" doc-click="vm.isShowMenuList = false">-->
+      <div ng-repeat="item in vm.menuData" class="ov-slick-display-inline-block">
+        <div get-item-template item="item" button="true" ng-if="vm.isShowInLargeScreen(item)"></div>
+      </div>
+      <!--      </ul>-->
+
+      <!--      <span ng-repeat="icon in vm.menuData">
+              <button id="{{vm.idPrefix}}{{icon.id}}"
+                      title="{{icon.titleI18key | i18next}}" ng-click="icon.onClick()"
+                      ng-disabled="icon.disabled" class="{{icon.btnClass}} {{icon.groupId}}"
+                      slick-menu-finish-render="wrapBtnGroup()">
+                <i class="{{icon.iconClass}}"></i>
+                <span class="ov-slick-menu-icon-title" ng-show="icon.name"> {{icon.titleI18key | i18next}}</span>
+              </button>
+            </span>-->
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<h1><code ng:non-bindable="">dashboardSrv</code>
+<div><span class="hint">service in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-service-page ov-component-service-dashboardsrv-page"><p>Support adding more widgets</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addwidgets">addWidgets(widgets)</h3>
+<div class="addwidgets"><div class="addwidgets-page"><ul>
+<li>add more widgets to dashboard</li>
+<li>this function must be call in run function</li>
+</ul>
+</div><h5 id="methods_addwidgets_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>widgets</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="addwidgets-page"><p>contain all widgets object</p>
+<ul>
+<li>widget object<ul>
+<li>appId {string} - used to check permission</li>
+<li>title {string} - title of the widget</li>
+<li>content {string} - path of the widget template</li>
+<li>description {string} - description of the widget</li>
+<li>imgUrl {string} - path of the sample image</li>
+<li>ctrl {string} - widget controller name</li>
+<li>refresh {boolean} - show/hide refresh button</li>
+<li>close {boolean} - show/hide close button</li>
+<li>movable {boolean} - enable/disable movable functionality</li>
+</ul>
+</li>
+</ul>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-service-page ov-component-service-dashboardsrv-page"><p><strong>Example:</strong>
+<pre class="prettyprint linenums">
+
+ (function () {
+  'use strict';
+  angular.module('wma.widget')
+    .run(runFunction);
+
+  runFunction.$inject = ['dashboardSrv', 'wmaWidgetConstant'];
+
+  function runFunction(dashboardSrv, wmaWidgetConstant) {
+    //add widgets
+    var widgets = {
+        wmaWidgetSample: {
+          //appId: 'wma',//use to check permission
+          title: 'WMA',
+          content: 'wma/wma-apps/wma-widget/wma-widget-sample/wma-widget-sample.html',
+          description: 'WMA description',
+          imgUrl: 'path/sample.png',
+          ctrl: 'WMAWidgetSampleController as ctrl',
+          refresh: true,
+          close: true,
+          movable: true
+        }
+      }
+    dashboardSrv.addWidgets(widgets);
+  }
+})();
+
+</pre>
+</div></div>
+</div>

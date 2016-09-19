@@ -1,0 +1,78 @@
+<h1><code ng:non-bindable="">ovAppSkeleton</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="component-directive-page component-directive-ovappskeleton-page"><p>Provide skeleton for new app, It provides sidebar, breadcrumbs and cached the last visited page.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="api/ng.$i18next">$i18next</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="api/ng.$location">$location</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="api/ovTaskFlow">ovTaskFlow</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="api/ng.$routeParams">$routeParams</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="api/OvTreeModel">OvTreeModel</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="api/ng.$log">$log</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="api/ng.$transition">$transition</a></code>
+</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-app-skeleton
+       app-id="{String}"
+       cached-object="{Object}"
+       app-root-url="{String}"
+       [redirect-url]="{String}"
+       nav-data="{String}"
+       side-bar-menu="{String}"
+       content-wrapper-css="{String}"&gt;
+&lt;/ov-app-skeleton&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;div ov-app-skeleton
+     app-id="{String}"
+     cached-object="{Object}"
+     app-root-url="{String}"
+     [redirect-url]="{String}"
+     nav-data="{String}"
+     side-bar-menu="{String}"
+     content-wrapper-css="{String}"&gt;
+   ...
+&lt;/div&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>appId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="component-directive-page component-directive-ovappskeleton-page"><p>ID used to</p>
+</div></td></tr><tr><td>cachedObject</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="component-directive-page component-directive-ovappskeleton-page"><p>Used to cached last visited page</p>
+</div></td></tr><tr><td>appRootUrl</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="component-directive-page component-directive-ovappskeleton-page"><p>Root URL</p>
+</div></td></tr><tr><td>[redirectUrl]</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="component-directive-page component-directive-ovappskeleton-page"><p>If child route isn&#39;t found in sideBarMenu redirect to this URL</p>
+</div> <p><em>(default: appRootUrl)</em></p></td></tr><tr><td>navData</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="component-directive-page component-directive-ovappskeleton-page"><p>Breadcrumb model</p>
+</div></td></tr><tr><td>sideBarMenu</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="component-directive-page component-directive-ovappskeleton-page"><p>SideBarMenu Model</p>
+</div></td></tr><tr><td>contentWrapperCss</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="component-directive-page component-directive-ovappskeleton-page"><p>name of wrapper css class name</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="component-directive-page component-directive-ovappskeleton-page"><pre><code class="lang-tips">//tips
+   You can refer to these files for real app:
+   app/scripts/vxlans/wrapper.html
+   app/scripts/vxlans/vxlansWrapperCtrl.js
+   app/scripts/vxlans/services/vxlansWrapper.js
+</code></pre>
+<pre><code class="lang-html">//html
+   &lt;ov-app-skeleton app-id=&quot;vxlans&quot; app-root-url=&quot;vm.appRootUrl&quot; redirect-url=&quot;vm.redirectUrl&quot;
+   cached-object=&quot;vm.cachedObject&quot; side-bar-menu=&quot;vm.sideBarMenu&quot;
+   nav-data=&quot;vm.navData&quot; content-wrapper-css=&quot;vm.contentWrapperCss&quot;&gt;&lt;/ov-app-skeleton&gt;
+</code></pre>
+<pre><code class="lang-js">//js
+   vm.sideBarMenu = vxlansWrapperService.getSideBarMenuData();
+   vm.navData = vxlansWrapperService.getNavData();
+   vm.cachedObject = vxlansWrapperService.cachedObject;
+   vm.redirectUrl = &#39;vxlans/vxlan-service&#39;;
+   vm.appRootUrl = &#39;/vxlans&#39;;
+   vm.contentWrapperCss = &#39;vxlans-right-pane&#39;;
+</code></pre>
+</div></div>
+</div>

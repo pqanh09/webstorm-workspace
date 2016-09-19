@@ -1,0 +1,77 @@
+<h1><code ng:non-bindable="">ovSpinnerLoading</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovspinnerloading-page"><p>Wrap <a href="api/ov-component.directive:ovLoadSpinner">ovLoadSpinner</a> directive to show or hide spinner. Add in DOM directly that need to be covered</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY ov-spinner-loading="{boolean}"
+     [spinner-id="{string}"]
+     [spinner-config="{object}"]&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ovSpinnerLoading</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-directive-page ov-component-directive-ovspinnerloading-page"><p>Boolean value to toggle show/hide spinner</p>
+</div></td></tr><tr><td>spinnerId <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovspinnerloading-page"><p>Make spinner unique by giving an ID (default <code>ov-load-spinner</code>)</p>
+</div></td></tr><tr><td>spinnerConfig <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovspinnerloading-page"><p>Spinner configuration. Default values:</p>
+<ul>
+<li><strong>spinnerLabel</strong>(optional) <code>string</code>: Label of the spinner (default $i18next(&#39;spinner&#39;) or &#39;Loading...&#39;)</li>
+<li><strong>hasBackground</strong>(optional) <code>boolean</code>: Show/hide background of the spinner to shadow the content (default true)</li>
+<li><strong>spinnerLoadingClass</strong>(optional) <code>string</code>: Custom CSS class of spinner loading (default ``)</li>
+<li><strong>spinnerLoadingStyle</strong>(optional) <code>string</code>: Custom CSS styles of spinner loading (default ``)</li>
+<li><strong>ovLoadSpinnerClass</strong>(optional) <code>string</code>: Custom CSS class of load spinner (default ``)</li>
+<li><strong>ovLoadSpinnerStyle</strong>(optional) <code>string</code>: Custom CSS styles of load spinner (default ``)</li>
+</ul>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovspinnerloading-page"><p><strong>Basic example:</strong>
+<pre class="prettyprint linenums">
+  // HTML
+  &lt;div ov-spinner-loading="ctrl1.inProgress" spinner-id="ov-topology-spinner"&gt;
+    &lt;p&gt;Element content here&lt;/p&gt;
+  &lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+  // JS
+  ctrl1.inProgress = true;
+  $http.get('something').then().finally(function finishGettingSomething() {
+   ctrl1.inProgress = false;
+  })
+</pre>
+<p><strong>Use custom label example:</strong>
+<pre class="prettyprint linenums">
+  // HTML
+  &lt;div ov-spinner-loading="ctrl1.inProgress" spinner-id="ov-topology-spinner" spinner-config="ctrl1.spinnerConfig"&gt;
+    &lt;p&gt;Element content here&lt;/p&gt;
+  &lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+  // JS
+  ctrl1.inProgress = true;
+  $http.get('something').then().finally(function finishGettingSomething() {
+   ctrl1.inProgress = false;
+  })
+  ctrl1.spinnerConfig = {
+    spinnerLabel: 'Trying to load'
+  };
+</pre>
+<p><strong>Hide background example:</strong>
+<pre class="prettyprint linenums">
+  // HTML
+  &lt;div ov-spinner-loading="ctrl1.inProgress" spinner-id="ov-topology-spinner" spinner-config="ctrl1.spinnerConfig"&gt;
+    &lt;p&gt;Element content here&lt;/p&gt;
+  &lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+  // JS
+  ctrl1.inProgress = true;
+  $http.get('something').then().finally(function finishGettingSomething() {
+   ctrl1.inProgress = false;
+  })
+  ctrl1.spinnerConfig = {
+    hasBackground: false
+  };
+</pre>
+</div></div>
+</div>

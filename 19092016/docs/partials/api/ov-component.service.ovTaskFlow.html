@@ -1,0 +1,206 @@
+<h1><code ng:non-bindable="">ovTaskFlow</code>
+<div><span class="hint">service in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-service-page ov-component-service-ovtaskflow-page"><p>Provide a task flow from apps to apps and send data accordingly between apps for specific task of handling.
+It also check flow breakage to alert user to give a proper decision of action.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="api/ovLocation">ovLocation</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addtask">addTask(object)</h3>
+<div class="addtask"><div class="addtask-page"><p>Add new task to the flow. Task flow object controller/name will be checked to detect any existence of the task flow object. If not found, then use <code>pushNewTask</code> method to push new task</p>
+</div><h5 id="methods_addtask_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>object</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="addtask-page"><p>Task flow object</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_getcurrenttask">getCurrentTask()</h3>
+<div class="getcurrenttask"><div class="getcurrenttask-page"><p>Return the current or the last task object in the flow</p>
+</div><h5 id="methods_getcurrenttask_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getcurrenttask-page"><p>Task object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getdlgreturnvalue">getDlgReturnValue()</h3>
+<div class="getdlgreturnvalue"><div class="getdlgreturnvalue-page"><p>Return the value of the dialog after being closed which implies the way of closing the dialog: cancel or submit
+The dialog is used to alert user is trying to break the flow to give a proper decision of action (cancel or submit).</p>
+</div><h5 id="methods_getdlgreturnvalue_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="getdlgreturnvalue-page"><p>Return value of the dialog after being closed</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getflow">getFlow()</h3>
+<div class="getflow"><div class="getflow-page"><p>Returns the list of all task flow objects forming a flow between apps.</p>
+</div><h5 id="methods_getflow_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="getflow-page"><p>The flow</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getflowlength">getFlowLength()</h3>
+<div class="getflowlength"><div class="getflowlength-page"><p>Get lenght of the flow</p>
+</div><h5 id="methods_getflowlength_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getflowlength-page"><p>Flow length</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getflowstatus">getFlowStatus()</h3>
+<div class="getflowstatus"><div class="getflowstatus-page"><p>Get the status of the flow. The status implies there is a flow between apps.</p>
+</div><h5 id="methods_getflowstatus_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="getflowstatus-page"><p>Status of the flow</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getnocheck">getNoCheck()</h3>
+<div class="getnocheck"><div class="getnocheck-page"><p>Return breakage checking activation status</p>
+</div><h5 id="methods_getnocheck_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="getnocheck-page"><p>Breakage checking activation status</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getprevtask">getPrevTask()</h3>
+<div class="getprevtask"><div class="getprevtask-page"><p>Return the previous task flow object in the flow</p>
+</div><h5 id="methods_getprevtask_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getprevtask-page"><p>The previous task flow object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gettask">getTask(key, value)</h3>
+<div class="gettask"><div class="gettask-page"><p>Get task flow object by its key and value</p>
+</div><h5 id="methods_gettask_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="gettask-page"><p>Property key of a task object</p>
+</div></td></tr><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="gettask-page"><p>Value to compare</p>
+</div></td></tr></tbody></table><h5 id="methods_gettask_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="gettask-page"><p>Task object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gotoprevtaskapp">goToPrevTaskApp()</h3>
+<div class="gotoprevtaskapp"><div class="gotoprevtaskapp-page"><p>Go to the previous task using its URL without checking flow breakage</p>
+</div></div>
+</li>
+<li><h3 id="methods_gototask">goToTask(Task)</h3>
+<div class="gototask"><div class="gototask-page"><p>Go to a specific task using its URL without checking flow breakage</p>
+</div><h5 id="methods_gototask_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>Task</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="gototask-page"><p>flow object</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_initialflowobject">initialFlowObject(config)</h3>
+<div class="initialflowobject"><div class="initialflowobject-page"><p>Initialize task flow object with given config to add to the flow.
+The URL of the return task flow object will be the current one</p>
+</div><h5 id="methods_initialflowobject_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="initialflowobject-page"><p>Custom task flow object data</p>
+</div></td></tr></tbody></table><h5 id="methods_initialflowobject_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="initialflowobject-page"><p>A new task flow object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_pushnewtask">pushNewTask(object)</h3>
+<div class="pushnewtask"><div class="pushnewtask-page"><p>Push new task to the flow.
+Task object structure is as follow:
+<pre class="prettyprint linenums">
+  {
+    name: 'New Task Name',
+    controller: 'NewTaskController',
+    data: {}
+  }
+</pre>
+A recommendation for putting data accompanying a task flow object is put it in <code>data</code> property of the task  flow object in form of a object.
+To ensure only one task flow object with controller/name to be existed in the flow, task object controller/name will be checked and the flow will be cut off right at where a matched object is found.
+If after pushing new task to the flow, the flow only contains one task flow object and flow status is true, then empty the flow and set the status of the flow to false meaning there is no flow at the time.</p>
+</div><h5 id="methods_pushnewtask_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>object</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="pushnewtask-page"><p>Task flow object</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_pushtask">pushTask(object)</h3>
+<div class="pushtask"><div class="pushtask-page"><p>Push new task to the flow.
+Task object structure is as follow:
+<pre class="prettyprint linenums">
+  {
+    name: 'New Task Name',
+    controller: 'NewTaskController',
+    data: {}
+  }
+</pre>
+A recommendation for putting data accompanying a task flow object is put it in <code>data</code> property of the task  flow object in form of a object.
+To ensure only one task flow object with controller/name to be existed in the flow, task object controller/name will be checked and the flow will be cut off right at where a matched object is found.
+If after pushing new task to the flow, the flow only contains one task flow object, then set the status of the flow to false meaning there is no flow at the time.</p>
+</div><h5 id="methods_pushtask_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>object</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="pushtask-page"><p>Task flow object</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_searchflow">searchFlow(controllerName)</h3>
+<div class="searchflow"><div class="searchflow-page"><p>Search flow object in stack by controller name</p>
+</div><h5 id="methods_searchflow_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>controllerName</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="searchflow-page"><p>Controller name to compare</p>
+</div></td></tr></tbody></table><h5 id="methods_searchflow_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="searchflow-page"><p>Task flow object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_searchitem">searchItem(name, type)</h3>
+<div class="searchitem"><div class="searchitem-page"><p>Iterate through the flow, find and return a task flow object containing value of property <code>type</code> equal to <code>name</code>.
+Otherwise return false</p>
+</div><h5 id="methods_searchitem_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="searchitem-page"><p>Value to compare</p>
+</div></td></tr><tr><td>type</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="searchitem-page"><p>Property name to get value</p>
+</div></td></tr></tbody></table><h5 id="methods_searchitem_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="searchitem-page"><ul>
+<li>Task flow object if found</li>
+<li>false otherwise</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_setflowstatus">setFlowStatus(val)</h3>
+<div class="setflowstatus"><div class="setflowstatus-page"><p>Set the status of the flow. The status implies there is a flow between apps. If it&#39;s set to false, then empty the flow accordingly</p>
+</div><h5 id="methods_setflowstatus_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>val</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="setflowstatus-page"><p>Status of the flow</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setnocheck">setNoCheck(val)</h3>
+<div class="setnocheck"><div class="setnocheck-page"><p>Enable/disable breakage checking</p>
+</div><h5 id="methods_setnocheck_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>val</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="setnocheck-page"><p>Enable/disable breakage checking</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_showdlg">showDlg(url, _tCallBack, _fCallBack)</h3>
+<div class="showdlg"><div class="showdlg-page"><p>Manually check flow breakage and display the dialog if breakage checking is enabled with custom submit and cancel callbacks.
+If submission for breakage is proceeded, then go to given expected URL</p>
+</div><h5 id="methods_showdlg_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>url</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="showdlg-page"><p>Next URL to go if submitting flow breakage</p>
+</div></td></tr><tr><td>_tCallBack <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="showdlg-page"><p>Submit callback</p>
+</div></td></tr><tr><td>_fCallBack <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="showdlg-page"><p>Cancel callback</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_validatetask">validateTask()</h3>
+<div class="validatetask"><div class="validatetask-page"><p>Check if the flow only contains one task flow object meaning there is no flow between apps.
+Then empty the flow and set the status to false.</p>
+</div></div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-service-page ov-component-service-ovtaskflow-page"><p><strong>Basic example:</strong></p>
+<pre class="prettyprint linenums">
+  // JS
+
+  function Controller1($scope, ovTaskFlow) {
+
+    var inFlow = false;
+    var newTaskFlow, flowData, prevTask, prevTaskData;
+
+    // Check if there is a flow to this app
+    if (ovTaskFlow.getFlowStatus()) {
+      // Create new task flow object
+      newTaskFlow = {
+        name: 'Controller1',
+        controller: 'Controller1',
+        url: '/app1'
+      };
+
+      // Push new task flow object to the flow
+      ovTaskFlow.pushTask(newTaskFlow);
+
+      // Enable flow breakage check
+      ovTaskFlow.setNoCheck(false);
+
+      flowLength = ovTaskFlow.getFlowLength();
+      if (flowLength &gt;= 2) {
+        inFlow = true;
+
+        prevTask = ovTaskFlow.getPrevTask();
+
+        // As in a recommendation of using ovTaskFlow and the way of this app retrieves task data to process, the data is put as value of property `data` of the a task flow object
+        prevTaskData = prevTask.data;
+
+        // Handle previous task flow object data
+        // ,,,
+      } else {
+        ovTaskFlow.validateTask();
+        ovTaskFlow.setNoCheck(true);
+      }
+    }
+
+    // ...
+    // When finish handling task then go back to the previous one
+    function finishTaskAndGoBack() {
+      if (inFlow) {
+        ovTaskFlow.goToPrevTaskApp();
+      }
+    }
+
+  }
+</pre>
+</div></div>
+</div>

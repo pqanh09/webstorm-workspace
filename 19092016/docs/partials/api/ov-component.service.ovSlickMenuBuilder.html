@@ -1,0 +1,95 @@
+<h1><code ng:non-bindable="">ovSlickMenuBuilder</code>
+<div><span class="hint">service in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-service-page ov-component-service-ovslickmenubuilder-page"><p>Used to build configuration object which is used for ov-slick-menu component</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_build">build()</h3>
+<div class="build"><div class="build-page"><p>Build up the configuration object which is used in ov-slick-menu object</p>
+</div><h5 id="methods_build_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="build-page"><p>The builder instance</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_extend">extend(extendedData)</h3>
+<div class="extend"><div class="extend-page"><p>Extend custom configuration from the default one</p>
+</div><h5 id="methods_extend_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>extendedData</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="extend-page"><p>Custom configuration.
+Custom configuration object should follow the default one which contains following property</p>
+<ul>
+<li><code>showMode</code>: Indicate the menu will be shown in large mode only or in small mode only or in both modes. Default is both. Use ovSlickMenuConstant.BOTH, ovSlickMenuConstant.ONY_SMALL_MODE, and ovSlickMenuConstant.ONY_LARGE_MODE to declare.</li>
+<li><code>idPrefix</code>: The prefix for ID used for automation test. Default is &#39;ov-slickMenu-</li>
+<li><code>showMenuButton</code>: The object to render toggle button to display menu in small mode. Default is
+<pre class="prettyprint linenums">
+ {
+   id: 'show-menu-button',
+   titleI18key: 'common.showMenu',
+   btnClass: 'btn btn-default',
+   iconClass: 'fa fa-ellipsis-v fa-2x'
+ }
+</pre></li>
+<li><code>minWidth</code>: Minimum value of width which the menu will be displayed in small mode. Default is &#39;832px&#39;</li>
+<li><code>overrideCss</code>: CSS class which overrides the default one. Default is &#39;slick-menu-override&#39;</li>
+<li><code>ulOverrideCss</code>: CSS class which overrides the default one of UL element. Default is &#39;ul-slick-menu-override&#39;</li>
+<li><code>toggleButtonTemplate</code>: Custom template for toggle button.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_extend_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="extend-page"><p>The builder instance</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_setidprefix">setIdPrefix(value)</h3>
+<div class="setidprefix"><div class="setidprefix-page"><p>Set the prefix for ID used in the component for automation test</p>
+</div><h5 id="methods_setidprefix_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setidprefix-page"><p>ID prefix</p>
+</div></td></tr></tbody></table><h5 id="methods_setidprefix_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="setidprefix-page"><p>The builder instance</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_setminwidth">setMinWidth(value)</h3>
+<div class="setminwidth"><div class="setminwidth-page"><p>Set minimum value of width which the menu will be displayed in small mode</p>
+</div><h5 id="methods_setminwidth_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="setminwidth-page"><p>Minimum width</p>
+</div></td></tr></tbody></table><h5 id="methods_setminwidth_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="setminwidth-page"><p>The builder instance</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_setoverridecss">setOverrideCss(value)</h3>
+<div class="setoverridecss"><div class="setoverridecss-page"><p>Set CSS class which overrides the default one</p>
+</div><h5 id="methods_setoverridecss_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setoverridecss-page"><p>Overridden CSS class</p>
+</div></td></tr></tbody></table><h5 id="methods_setoverridecss_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="setoverridecss-page"><p>The builder instance</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_setshowmenubutton">setShowMenuButton(value)</h3>
+<div class="setshowmenubutton"><div class="setshowmenubutton-page"><p>Set custom object for toggle button which will be displayed in small mode to open the menu</p>
+</div><h5 id="methods_setshowmenubutton_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="setshowmenubutton-page"><p>Custom menu button. It should be like the following
+<pre class="prettyprint linenums">
+ {
+   id: 'show-menu-button',
+   titleI18key: 'common.showMenu',
+   btnClass: 'btn btn-default',
+   iconClass: 'fa fa-ellipsis-v fa-2x'
+ }
+</pre>
+</div></td></tr></tbody></table><h5 id="methods_setshowmenubutton_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="setshowmenubutton-page"><p>The builder instance</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_settogglebuttontemplate">setToggleButtonTemplate(value)</h3>
+<div class="settogglebuttontemplate"><div class="settogglebuttontemplate-page"><p>Set custom template for toggle button</p>
+</div><h5 id="methods_settogglebuttontemplate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="settogglebuttontemplate-page"><p>Path to your custom template</p>
+</div></td></tr></tbody></table><h5 id="methods_settogglebuttontemplate_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="settogglebuttontemplate-page"><p>The builder instance</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_setuloverridecss">setUlOverrideCss(value)</h3>
+<div class="setuloverridecss"><div class="setuloverridecss-page"><p>Set CSS class which overrides the default one of UL element</p>
+</div><h5 id="methods_setuloverridecss_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setuloverridecss-page"><p>Overridden CSS class</p>
+</div></td></tr></tbody></table><h5 id="methods_setuloverridecss_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="setuloverridecss-page"><p>The builder instance</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_showonlylargemode">showOnlyLargeMode()</h3>
+<div class="showonlylargemode"><div class="showonlylargemode-page"><p>Indicate the menu will be shown in large mode only</p>
+</div><h5 id="methods_showonlylargemode_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="showonlylargemode-page"><p>The builder instance</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_showonlysmallmode">showOnlySmallMode()</h3>
+<div class="showonlysmallmode"><div class="showonlysmallmode-page"><p>Indicate the menu will be shown in small mode only</p>
+</div><h5 id="methods_showonlysmallmode_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="showonlysmallmode-page"><p>The builder instance</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

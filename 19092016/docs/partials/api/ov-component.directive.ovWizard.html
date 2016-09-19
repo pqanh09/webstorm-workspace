@@ -1,0 +1,96 @@
+<h1><code ng:non-bindable="">ovWizard</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovwizard-page"><p>The Wizard component will provide a user interface that leads a user through some steps
+The Wizard component UI will contain these elements:</p>
+<ul>
+<li>Wizard title area:<ul>
+<li>Wizard title text</li>
+<li>Wizard title icon</li>
+</ul>
+</li>
+<li>Wizard page heading area:<ul>
+<li>Current wizard page title text</li>
+<li>Current wizard page description text</li>
+</ul>
+</li>
+<li>Wizard page icon<ul>
+<li>Wizard page content area:</li>
+<li>Wizard page content template for custom rendering</li>
+</ul>
+</li>
+<li>Button bar area:<ul>
+<li>Navigation buttons (Back, Next) and action buttons (Finish, Cancel) shall be put in here</li>
+</ul>
+</li>
+</ul>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="api/ov-component.service:ovValidatorServices">ovValidatorServices</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="api/ov-component.service:ovWizardDataBuilder">ovWizardDataBuilder</a></code>
+</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-wizard
+       wz-model="{object}"&gt;
+&lt;/ov-wizard&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>wzModel</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovwizard-page"><p>an object that contains configurations for the directive to render.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovwizard-page"><p><strong>Basic example:</strong>
+<pre class="prettyprint linenums">
+  &lt;!-- HTML --&gt;
+   &lt;ov-wizard wz-model="ctrl.wizard"&gt;&lt;/ov-wizard&gt;
+</pre>
+<pre class="prettyprint linenums">
+   //JS
+   ctrl.wizard = ovWizardDataBuilder.getBuilder()
+     .setSequencePages([step1, step2, step3])
+     .setTitle('Registration')
+     .build();
+</pre>
+<strong>Step model</strong></p>
+<ul>
+<li><strong><em>id</em></strong> {string} - (Optional) step id</li>
+<li><strong><em>stepName</em></strong> {string} - step name</li>
+<li><strong><em>title</em></strong> {string} - step title</li>
+<li><strong><em>desc</em></strong> {string} - step description</li>
+<li><strong><em>templateUrl</em></strong> {string} - path to the template file to render the page content</li>
+<li><strong><em>initValid</em></strong> {function} - function can be executed on init the wizard, return true or false to check whether the wizard can be valid or not, if this page is invalid, you can not move to next step</li>
+<li><strong><em>isValid</em></strong> {function} - function can be executed when this is current step, return true or false to check whether the wizard can be valid or not, if this page is invalid, you can not move to next step</li>
+<li><strong><em>onInit</em></strong> {function} - (Optional) callback function can be executed one time on init the this step</li>
+<li><strong><em>onDisplay</em></strong> {function} - (Optional) callback function can be executed when this is current step</li>
+<li><strong><em>onDestroy</em></strong> {function} - (Optional) callback function can be executed when this step is destroyed
+<pre class="prettyprint linenums">
+   //JS
+   var step1 = {
+      id: 'step1-user-info',
+      stepName: 'User Information',
+      title: 'User Information',
+      desc: 'User Information Description',
+      templateUrl: 'scripts/_demo_area_/ovWizardDemo/wzTemplates/userInfoPage.html',
+      initValid: function(){
+        return true;
+      },
+      isValid: function(){
+        return true;
+      },
+      onInit: function () {//Optional
+
+      },
+      onDisplay: function () {//Optional
+
+      },
+      onDestroy: function () {/Optional
+
+      }
+
+   }
+</pre></li>
+</ul>
+</div></div>
+</div>

@@ -1,0 +1,10 @@
+<div class="form-horizontal">
+  <div class="form-group" ng-repeat="attr in ovDataView.attrs">
+    <label class="control-label col-md-5">{{attr.i18nKey | i18next}}</label>
+    <div ov-ellipsis="{{selectedList[0][attr.key]}}">
+      <div class="col-md-7 form-control-static">
+        {{selectedList[0][attr.key]}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="ovas-container" id="{{vm.appId}}-skeleton">
+  <!-- TODO: add prefix for every id field in this template -->
+  <div class="content-wrapper" ng-class="{'hide-sidebar' : vm.sbHidden}">
+    <!--sidebar-->
+    <div id="{{vm.appId}}-skeleton-sidebar" class="sidebar" fixed-top="0" init-top="{{vm.skeletonConfig.initTop}}">
+
+      <div id="{{vm.appId}}-skeleton-menuSbHidden" class="col-toggle" ng-click="vm.toggleMenu()" auto-exec="vm.sbHidden = true" when-width="768">
+        <div id="{{vm.appId}}-skeleton-toggle-icon" style="" class="toggle-icon">
+          <i class="fa fa-2x" ng-class="{'fa-caret-left': !vm.sbHidden, 'fa-caret-right': vm.sbHidden}"></i>
+        </div>
+      </div>
+
+      <ov-nested-list id-app="vm.appId" root="vm.sideBarMenu" on-selected-callback="vm.onMenuItemSelected"
+                      selected="vm.cachedObject.selectedMenuItem"
+                      on-pre-selected-callback="vm.preventSelect"  class=""></ov-nested-list>
+    </div>
+
+    <!--breadcrumb-->
+    <div class="content ovas-right-pane ov-container-margin" ov-transition-end="vm.navData.contentTransitionEnd($event)" id="{{vm.appId}}-skeleton-content">
+      <ov-breadcrumb ng-hide="vm.skeletonConfig.hideBreadcrumb" id-app="vm.appId" nav-list="vm.navData.displayList" current="vm.navData.current" on-selected="vm.onBreadcrumbItemClick" class=""></ov-breadcrumb>
+      <!--include selected path-->
+      <div ng-include="vm.contentTemplateUrl" class="{{vm.contentWrapperCss}} vxlans-clear-both position-relative"></div>
+    </div>
+
+  </div>
+</div>

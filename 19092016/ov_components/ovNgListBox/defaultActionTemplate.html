@@ -1,0 +1,39 @@
+<div ng-repeat="action in config.actionList" ng-if="action.show(item)">
+  <div ng-if="action.field">
+    <span ng-if="getItemList(item, action).length>0">{{action.label(item) | i18next}}:</span>
+    <a href  ov-stop-propagation="true" ng-click="selectItem(itemIndex, $event);action.onClick(item)">
+    <span ng-if="getItemList(item, action).length>0">
+      <span ng-if="isArray(getItemList(item, action))">
+        <span ng-repeat="li in getItemList(item, action) | limitTo: action.limit(item)">{{action.key(item) ? li[action.key(item)]: li}}<span ng-hide="$last">, </span></span>
+        <span ng-if="getItemList(item, action).length > action.limit(item)">{{'common.and' | i18next}} {{getItemList(item, action).length - action.limit(item)}} {{'common.more' | i18next}}</span>
+      </span>
+      <span ng-if="!isArray(getItemList(item, action))">
+        {{getItemList(item, action)}}
+      </span>
+    </span>
+    <span class="action-btn-label" ng-if="getItemListWithoutDefaultValue(item, action) && getItemList(item, action).length===0">
+      {{action.btnLabel(item) | i18next}}
+    </span>
+    <span class="action-btn-label" ng-if="!getItemListWithoutDefaultValue(item, action)">
+      {{(action.defaultBtnLabel() || action.btnLabel(item)) | i18next}}
+    </span>
+    </a>
+  </div>
+  <div ng-if="action.data">
+    <span ng-if="action.data(item).length>0">{{action.label(item) | i18next}}:</span>
+    <a href  ov-stop-propagation="true" ng-click="selectItem(itemIndex, $event);action.onClick(item)">
+    <span ng-if="action.data(item).length>0">
+      <span ng-if="isArray(action.data(item))">
+        <span ng-repeat="li in action.data(item) | limitTo: action.limit(item)">{{action.key(item) ? li[action.key(item)]: li}}<span ng-hide="$last">, </span></span>
+        <span ng-if="action.data(item).length > action.limit(item)">{{'common.and' | i18next}} {{action.data(item).length - action.limit(item)}} {{'common.more' | i18next}}</span>
+      </span>
+      <span ng-if="!isArray(action.data(item))">
+        {{action.data(item)}}
+      </span>
+    </span>
+    <span class="action-btn-label" ng-if="!action.data(item) || action.data(item).length===0">
+      {{action.btnLabel(item) | i18next}}
+    </span>
+    </a>
+  </div>
+</div>

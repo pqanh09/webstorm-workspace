@@ -1,0 +1,104 @@
+.slick-header-column.ui-state-default {
+  height: 25px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-right: 0px;
+}
+
+.slick-resizable-handle {
+  border-right: 1px solid silver;
+}
+
+.slick-cell:before {
+  content: '';
+  display: block;
+  height: 0px;
+}
+
+.slick-cell, .slick-headerrow-column {
+  box-sizing:content-box;
+  height : 25px;
+}
+
+.slick-column-name {
+  padding-left: 4px;
+  display: table-cell;
+  font-weight: 700;
+}
+
+.slick-header-column.ui-state-default {
+  display: table;
+
+  background: rgb(238,238,238);
+  background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(255,255,255,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(255,255,255,1)));
+  background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%);
+  background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%);
+  background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 );
+
+}
+
+.slick-header-column.ui-state-default:hover {
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(237,237,237,1)));
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
+  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+}
+
+.slick-sort-indicator {
+  display: table-cell;
+  float:right;
+  /*width: 8px;*/
+  /*height: 5px;*/
+  margin-left: 0px;
+  margin-top: 0px;
+  /*clear: both;*/
+  position: relative;
+  left: -5px;
+}
+
+.slick-header-columns .ui-sortable-helper {
+  display: block !important;
+}
+
+.slick-header-columns .ui-sortable-helper > .slick-sort-indicator {
+  position: relative !important;
+  top: -8px;
+}
+
+.slick-pager {
+  height: auto !important;
+  display: table;
+
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(238,238,238,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(238,238,238,1)));
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%);
+  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%);
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
+
+}
+
+.slick-pager .slick-pager-nav {
+  padding: 2px 2px 0;
+}
+
+.slick-pager .slick-pager-status {
+  padding: 3px 6px 0;
+}
+
+.slick-pager .slick-pager-settings a {
+  padding: 0 2px;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: -2px;
+}

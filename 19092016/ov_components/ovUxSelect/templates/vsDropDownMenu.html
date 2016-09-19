@@ -1,0 +1,34 @@
+<div class="dropdown-menu ov-ux-dropdown" ov-spinner-loading="obj.setting.showSpinner" tabindex="0" ng-keydown="keyPressDropdownMenu($event)" ng-class="{'apply-scaling': obj.setting.applyScaling}">
+  <div class="ov-ux-dropdown-header">
+    <!--search box-->
+    <div class="input-group" ng-if="obj.setting.search">
+      <span class="input-group-addon"><i class="fa fa-search"></i></span>
+      <input type="text" id="{{collectionID.dropdownInputSearch}}" class="form-control" ng-model="obj.searchText" ng-change="obj.filterData()" autofocus placeholder="{{'button-label.search' | i18next}}">
+    <!--sort-->
+    <span ng-if="obj.setting.sort" class="input-group-addon ov-select-btn-sort" id="{{collectionID.dropdownSort}}" ng-click="obj.sort()">
+      <i class="fa" ng-class="{'fa-sort-alpha-asc': obj.sortDesc==false, 'fa-sort-alpha-desc': obj.sortDesc==true, 'fa-sort': obj.sortDesc==undefined}"></i>
+    </span>
+    </div>
+    <!--check button-->
+    <div ng-if="obj.setting.multiple && obj.setting.btnCheckAll">
+      <button  id="{{collectionID.dropdownCheckAll}}" class="ov-ux-select-checkall btn-link btn-small" ng-click="checkAll()"><i class="fa fa-check"></i> {{'button-label.checkAll' | i18next}} </button>
+      <button  id="{{collectionID.dropdownUncheckAll}}" class="ov-ux-select-uncheckall btn-link btn-small" ng-click="uncheckAll()"><i class="fa fa-times"></i> {{'button-label.unCheckAll' | i18next}} </button>
+    </div>
+  </div>
+  <!--
+  DOQ: Fix issue when items.length < 5 and appear a vertical scrollbar AT THE FIRST TIME (because of CL#93415 for support override item template
+  RCA: Because when using with ng-include need time to request to get template data at the first time and cache it
+  Ref: $scope.elementSize = $scrollParent[0][clientSize] || 50; of course $scrollParent[0]clientSize] is 0 at the first time then assign to default height is 50
+  Solution: Using vs-repeat with parameter to override the automatically computed element size
+  -->
+  <div class="ov-dropdown-container ov-ux-data-grid" ng-style="{'height': height ? height+'rem' : '20rem'}" vs-repeat="40">
+    <div class="ov-item-wrapper" ng-repeat="item in obj.items">
+        <div ng-include="obj.setting.itemTemplate"></div>
+    </div>
+  </div>
+  <div class="ov-ux-dropdown-footer">
+    <button class="btn btn-link" ng-attr-id="{{::collectionID.addNew}}" ng-if="obj.onAddNewAttr" ng-click="obj.onAddNew()" ng-disabled="obj.checkAddNewDisabled()">
+      <i class="fa fa-plus"></i> <span>{{::'common.addNew' | i18next}}</span>
+    </button>
+  </div>
+</div>

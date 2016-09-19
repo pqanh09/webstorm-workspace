@@ -1,0 +1,7 @@
+<div class="ov-cards-wrapper clearfix">
+    <div class="ov-card-wrapper" ng-repeat="card in vm.ovCards" ng-if="!card.isHidden()"
+         ng-attr-id="{{::'ov-cards-item-'+$index}}"
+         ov-card="card" card-type="{{vm.cardsConfig.cardType}}" repeat-done="vm.repeatDone()"
+         ng-style="{'width': (vm.widthCardAuto + 'px')}">
+  </div>
+</div>

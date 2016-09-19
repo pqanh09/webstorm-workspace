@@ -1,0 +1,10 @@
+<div>
+  <div ng-if="viewMode==='table' && ovDataView.slickMenu.dataTableMode.length">
+    <ov-slick-menu menu-data="ovDataView.slickMenu.dataTableMode" menu-config="ovDataView.slickMenu.configTableMode"
+                   class="ov-data-view-slick-menu"></ov-slick-menu>
+  </div>
+  <div ng-if="viewMode==='list' && ovDataView.slickMenu.dataListMode.length">
+    <ov-slick-menu menu-data="ovDataView.slickMenu.dataListMode" menu-config="ovDataView.slickMenu.configListMode"
+                   class="ov-data-view-slick-menu"></ov-slick-menu>
+  </div>
+</div>

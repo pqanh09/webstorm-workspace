@@ -1,0 +1,14 @@
+<li ng-class="{'ov-slick-menu-li-disabled':item.disabled}">
+  <a ng-attr-id="horizontal-{{vm.menuConfig.idPrefix}}{{item.id}}"
+     ng-attr-title="{{item.titleI18key | i18next}}"
+     ng-click="item.onClick()"
+     ng-show="item.isShow"
+     ov-select-show="item.ovSelectShow"
+     hide-list="item.hideList"
+     show-list="item.showList"
+     finish-callback="item.finishCallback"
+     ov-slick-menu-disabled="item.disabled">
+    <i class="{{item.iconClass}} ov-slick-menu-icon"></i>
+    <span class="ov-slick-menu-icon-title"> {{item.titleI18key | i18next}}</span>
+  </a>
+</li>

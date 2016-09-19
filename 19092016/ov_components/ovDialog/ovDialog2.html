@@ -1,0 +1,33 @@
+<div id="{{dlgModel.idApp}}" class="ov-dlg" ng-class="dlgModel.overrideClass" enter-to-perform-dialog>
+  <div class="panel panel-primary" enter-to-perform-dialog>
+    <div class="panel-heading">
+      <h3 class="panel-title"><i ng-class="dlgModel.titleIconClasses"></i> {{ dlgModel.title }}</h3>
+    </div>
+
+    <div class="panel-body" ng-include="dlgModel.templateUrl"></div>
+
+    <div class="panel-footer">
+      <div class="button-bar clearfix">
+        <div class="pull-left custom-button">
+          <button id="{{dlgCollectionId.helpBtn}}" class="btn btn-default" ng-show="dlgModel.buttonBarConfigs.showHelp"
+                  ng-click="dlgModel.performHelp()"><i class="fa fa-question"></i>&nbsp;{{
+            dlgModel.buttonBarConfigs.helpLabel || 'Help' }}
+          </button>
+        </div>
+        <div class="pull-right default-button">
+          <button id="{{dlgCollectionId.listBtn}}{{$index}}" class="{{dlgModel.buttonBarConfigs.listButton[$index].btnCls || 'btn btn-primary'}} extra-btn" ng-repeat="aButton in dlgModel.buttonBarConfigs.listButton" ng-show="aButton"
+                  ng-click="dlgModel.buttonBarConfigs.listButton[$index].onClick()" ng-disabled="dlgModel.buttonBarConfigs.listButton[$index].disabled || dlgModel.buttonBarConfigs.listButton[$index].checkDisabled()" ng-show="dlgModel.buttonBarConfigs.listButton[$index].isShow || dlgModel.buttonBarConfigs.listButton[$index].checkShow()">
+            {{dlgModel.buttonBarConfigs.listButton[$index].label}}
+          </button>
+
+          <button id="{{dlgCollectionId.finishBtn}}" class="btn btn-primary" ng-show="dlgModel.buttonBarConfigs.showFinish" ng-disabled="!!!enableFinish"
+                  ng-click="dlgModel.performFinish()">{{ dlgModel.buttonBarConfigs.finishLabel || 'OK' }}
+          </button>
+          <button id="{{dlgCollectionId.cancelBtn}}" class="btn btn-default" ng-show="dlgModel.buttonBarConfigs.showCancel" ng-disabled="!!!enableCancel"
+                  ng-click="dlgModel.performCancel()">{{ dlgModel.buttonBarConfigs.cancelLabel || 'Cancel' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

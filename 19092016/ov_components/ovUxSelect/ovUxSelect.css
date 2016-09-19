@@ -1,0 +1,188 @@
+.btn-ux-select-right {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+.btn-ux-select-left {
+  background-image: none;
+  background-color: #fff;
+  width: calc(100% - 2.6rem);
+  text-align: left;
+  min-height: 3.4rem;
+  overflow: hidden;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: nowrap;
+  padding-right: 0.3rem;
+}
+.btn-ux-select-left:focus,
+.btn-ux-select-left:hover {
+  background-color: #fff;
+}
+.btn-ux-select-scale {
+  -webkit-border-radius: 0.4rem !important;
+  border-radius: 0.4rem !important;
+  display: none;
+}
+.ov-select-item-wraper {
+  position: relative;
+}
+.ov-select-item {
+  padding: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-height: 4rem;
+}
+/*.ov-select-item:hover*/
+/*background-color #e8e8e8*/
+/*color #333*/
+.ov-select-item-hover {
+  background-color: #e8e8e8;
+  color: #333;
+}
+/*.ov-select-checked-item:hover*/
+/*background-color rgb(84, 160, 223)!important*/
+/*color #ffffff*/
+.ov-select-checked-item-hover {
+  background-color: #54a0df !important;
+  color: #fff;
+}
+.ov-select-item-hover-disabled {
+  background-color: #eee !important;
+}
+.ov-select-checked-item {
+  background-color: #357ebd;
+  outline: 1px solid #fff;
+  color: #fff;
+}
+.ov-select-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  z-index: 2000;
+}
+.ov-ux-dropdown {
+  z-index: 2009;
+}
+.ov-ux-dropdown-container {
+  overflow: auto;
+  overflow-x: hidden;
+  margin: 1px;
+}
+.ov-ux-data-grid {
+  height: 100%;
+}
+.ov-ux-dropdown-header {
+  margin-left: 1px;
+  margin-right: 1px;
+}
+.ov-select-disabled-item {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5 !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)" !important;
+  filter: alpha(opacity=50) !important;
+}
+.ov-select-btn-sort {
+  cursor: pointer;
+}
+.ov-ux-dropdown-header .btn-link {
+  outline: none;
+}
+.dropdown-menu:focus {
+  outline: 0;
+}
+.btn-non-block {
+  min-width: 20rem;
+  max-width: 100%;
+}
+.ov-ux-select .btn {
+  height: 3.4rem;
+}
+@media (max-width: 768px) {
+  .ov-ux-select.apply-scaling .btn-ux-select-scale {
+    display: inline-block;
+  }
+  .ov-ux-select.apply-scaling .btn-ux-select-right,
+  .ov-ux-select.apply-scaling .btn-ux-select-left {
+    display: none;
+  }
+  .ov-ux-dropdown.apply-scaling {
+    width: 23rem !important;
+  }
+}
+.ov-ux-select:focus {
+  outline: 0;
+}
+.ov-ux-select:focus .btn-ux-select-left,
+.ov-ux-select:focus .btn-ux-select-right {
+  border-color: #66afe9;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+}
+.ov-overflow-shadowed-input .overflow-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.ov-overflow-shadowed-input .overflow-shadow {
+  position: absolute;
+  right: 2.6rem;
+  top: 1px;
+  width: 3rem;
+  height: calc(100% - 0.2rem);
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0), #f5f5f5);
+  background: -moz-linear-gradient(left, rgba(255,255,255,0), #f5f5f5);
+  background: -o-linear-gradient(left, rgba(255,255,255,0), #f5f5f5);
+  background: -ms-linear-gradient(left, rgba(255,255,255,0), #f5f5f5);
+  background: linear-gradient(to right, rgba(255,255,255,0), #f5f5f5);
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transition: opacity 250ms ease-out 10ms;
+  -moz-transition: opacity 250ms ease-out 10ms;
+  -o-transition: opacity 250ms ease-out 10ms;
+  -ms-transition: opacity 250ms ease-out 10ms;
+  transition: opacity 250ms ease-out 10ms;
+}
+.ov-overflow-shadowed-input .overflow-input[readonly] {
+  cursor: pointer;
+}
+.ov-overflow-shadowed-input .overflow-input:focus ~ .overflow-shadow {
+  background: inherit;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.ov-overflow-shadowed-input.icon-included .overflow-input {
+  padding-left: 2.8rem;
+}
+.ov-overflow-shadowed-input.icon-included .fa {
+  position: absolute;
+  top: 0.9rem;
+  left: 1rem;
+}
+.ov-ux-dropdown-footer .btn-link {
+  -webkit-border-radius: 0.3rem;
+  border-radius: 0.3rem;
+  width: 100%;
+  text-align: left;
+}
+.ov-ux-dropdown-footer .btn-link:hover,
+.ov-ux-dropdown-footer .btn-link:focus {
+  text-decoration: none !important;
+  outline: none;
+}
+.ov-ux-dropdown-footer span {
+  padding-left: 0.5rem;
+}

@@ -1,0 +1,167 @@
+.ul-slick-menu-override-ovDataView {
+  right: 0 !important;
+  top: 4rem !important;
+}
+.ov-data-view-print {
+  text-align: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.ov-data-view .data-view-heading {
+  width: 100%;
+  background: #fff;
+  border-bottom: none;
+  padding-bottom: 0;
+  min-height: 5rem;
+}
+.ov-data-view .ov-data-view-body .panel-body {
+  padding-top: 0;
+}
+.ov-data-view .data-grid-view .slick-pager {
+  margin-bottom: 0;
+}
+.ov-data-view .collapse-item {
+  cursor: pointer;
+}
+.ov-data-view .control-button-collapse {
+  display: none;
+}
+.ov-data-view .control-button-collapse .dropdown-menu {
+  right: 0 !important;
+  left: initial;
+}
+.ov-data-view .detail-icon-slide-left {
+  display: none;
+  text-align: left;
+}
+.ov-data-view .detail-icon-slide-right {
+  text-align: right;
+}
+.ov-data-view .showOvDataViewList {
+  width: 50%;
+}
+.ov-data-view .showOvDataViewDetail {
+  width: calc(50% - 1.5rem);
+}
+.ov-data-view .ov-data-view-detail-margin {
+  padding: 1rem;
+}
+.ov-data-view-row-disabled {
+  background-color: #fff !important;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.ov-data-view-row-disabled .ov-data-view-checkbox-wrapper {
+  cursor: default !important;
+}
+.slick-cell-checkboxsel {
+  background-color: inherit;
+}
+.ov-data-view-checkbox-wrapper {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #999;
+  height: 1.7rem;
+  width: 1.7rem;
+  background: #fff;
+}
+.ov-data-view-checkbox-wrapper .ov-data-view-check-box-un-check {
+  padding: 1px;
+  color: #fff;
+  display: block;
+}
+.ov-data-view-checkbox-wrapper .ov-data-view-checkbox-check {
+  padding: 1px;
+  color: #000;
+  display: block;
+}
+.slick-cell-checkboxsel .ov-data-view-checkbox-wrapper {
+  margin: 0.7rem 0 0 0.8rem;
+}
+.slick-column-name .ov-data-view-checkbox-wrapper {
+  margin: 0 0 0 0.6rem;
+}
+.ov-data-view .slick-header-column.ui-state-default .slick-column-name {
+  display: block;
+  width: inherit;
+  line-height: 27px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.ov-data-view .data-grid-view .quick-search-wrapper {
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  -ms-transition: height 0.3s;
+  transition: height 0.3s;
+  overflow: hidden;
+  position: relative;
+  height: 0;
+}
+.ov-data-view .data-grid-view .quick-search-wrapper input::-ms-clear {
+  display: none;
+}
+.ov-data-view .data-grid-view .quick-search-wrapper a {
+  position: absolute;
+  cursor: pointer;
+  right: 1rem;
+  top: 0.7rem;
+  color: #000;
+}
+.ov-data-view .data-grid-view .open .quick-search-wrapper {
+  height: 4.3rem;
+}
+.ovNgListBox-responsive-wrapper .ovNgListBox .small-screen-visible {
+  display: inline-block;
+}
+.ovNgListBox-responsive-wrapper .ovNgListBox .small-screen-max-width {
+  width: 100%;
+}
+.ovNgListBox-responsive-wrapper .ovNgListBox .small-screen-hidden {
+  display: none;
+}
+.ovNgListBox-responsive-wrapper .ovNgListBox .ov-ng-list-box-sort-title {
+  display: none;
+}
+.ovNgListBox-responsive-wrapper .ovNgListBox .ov-ng-list-box-search-wrapper.small-screen-visible a {
+  display: inline-block !important;
+}
+.ovNgListBox-responsive-wrapper .ovNgListBox .ov-ng-list-box-sort-box-content.small-screen-hidden {
+  display: inline-block !important;
+}
+.ovNgListBox-responsive-wrapper .ovNgListBox .ov-ng-list-box-sort-box-order.small-screen-hidden {
+  display: inline-block !important;
+}
+@media screen and (max-width: 320px) {
+  .ov-data-view .control-button-collapse {
+    display: inline-block !important;
+  }
+  .ov-data-view .control-button-full {
+    display: none !important;
+  }
+}
+@media (max-width: 640px) {
+  .ovNgListBox-responsive-wrapper .ovNgListBox .ov-ng-list-box-sort-box-content.small-screen-hidden {
+    display: none !important;
+  }
+  .ovNgListBox-responsive-wrapper .ovNgListBox .ov-ng-list-box-sort-box-order.small-screen-hidden {
+    display: none !important;
+  }
+}
+@media (max-width: 1024px) {
+  .ov-data-view .detail-icon-slide-left {
+    display: block;
+  }
+  .ov-data-view .detail-icon-slide-right {
+    display: none;
+  }
+  .ov-data-view .showOvDataViewList {
+    width: 100%;
+    display: none;
+  }
+  .ov-data-view .showOvDataViewDetail {
+    width: 100%;
+  }
+}

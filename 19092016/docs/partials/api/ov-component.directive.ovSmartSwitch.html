@@ -1,0 +1,31 @@
+<h1><code ng:non-bindable="">ovSmartSwitch</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovsmartswitch-page"><p>The <code>ovSmartSwitch</code> allows user to select anything with two states e.g On vs Off, Disabled vs Enable, True vs False.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY ov-smart-switch
+     smart-switch-id="{string}"
+     [smart-peer="{boolean}"]
+     [label-on="{string}"]
+     [label-off="{string}"]&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>smartSwitchId</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovsmartswitch-page"><p>Provide unique id of directive for automation test.</p>
+</div></td></tr><tr><td>smartPeer <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-directive-page ov-component-directive-ovsmartswitch-page"><p>Set it true if two states is peer.</p>
+</div></td></tr><tr><td>labelOn <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovsmartswitch-page"><p>Label for on state. It can be the i18next key, it does translation itself.</p>
+</div></td></tr><tr><td>labelOff <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovsmartswitch-page"><p>Label for off state. It can be the i18next key, it does translation itself.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovsmartswitch-page"><pre class="prettyprint linenums">
+&lt;!--HTML--&gt;
+  &lt;input type="checkbox" ov-smart-switch smart-switch-id="traps-refresh-interval-switch"
+  label-on="'button-label.on'" ng-true-value="true"
+  label-off="'button-label.off'" ng-false-value="false"
+  ng-model="vm.extendModel.settingModel.trapInterval.enabled"&gt;
+</pre>
+</div></div>
+</div>

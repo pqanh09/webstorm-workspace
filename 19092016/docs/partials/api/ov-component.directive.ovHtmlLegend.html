@@ -1,0 +1,69 @@
+<h1><code ng:non-bindable="">ovHtmlLegend</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovhtmllegend-page"><p>Create html chart legends to be used in report.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-html-legend
+       legend-data="{array}"
+       legend-config="{object}"&gt;
+&lt;/ov-html-legend&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY ov-html-legend
+     legend-data="{array}"
+     legend-config="{object}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>legendData</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovhtmllegend-page"><p>legend data</p>
+</div></td></tr><tr><td>legendConfig</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovhtmllegend-page"><p>Legend config.</p>
+<ul>
+<li><strong>colors</strong> <code>string</code> or <code>Array</code> (optional): colors to be used in charts, can be array of color code or d3 colors collection name. If not specified, each object in the data list must carry a color value</li>
+<li><strong>fixedColors</strong> <code>object</code> (optional): A mapper to define fixed color for some data items.</li>
+<li><strong>mapping</strong> <code>object</code>: define map values<ul>
+<li><strong>name</strong> <code>string</code>: property name can be used to get legend item name</li>
+<li><strong>value</strong> <code>string</code>: property name can be used to get legend item value</li>
+</ul>
+</li>
+</ul>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovhtmllegend-page"><p><strong>Basic Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-html-legend legend-config="ctrl.legendConfig" legend-data="ctrl.legendData"&gt;
+ &lt;/ov-html-legend&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ ctrl.legendConfig = {
+    colors: 'colorScale20',
+    mapping: {
+      name: 'displayName',
+      value: 'count'
+    },
+    fixedColors: {
+      Others: '#808080',
+      OTHERS: '#808080'
+    }
+  };
+ ctrl.legendData = [
+ {
+   "displayName": "10.1.4.123",
+   "count": 96,
+   "color": "#9467bd" // this value gets priority for use rather than legendConfig.colors
+ },
+ {
+   "displayName": "10.1.3.72",
+   "count": 281,
+   "color": "#ff9896"
+ },
+ {
+   "displayName": "10.1.4.80",
+   "count": 554,
+   "color": "#aec7e8"
+ }];
+</pre>
+</div></div>
+</div>
