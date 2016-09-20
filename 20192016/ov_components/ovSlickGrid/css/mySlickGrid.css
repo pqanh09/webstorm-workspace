@@ -1,0 +1,58 @@
+
+/** {*/
+    /*font-family: arial;*/
+    /*font-size: 10pt;*/
+/*}*/
+
+/*body {*/
+    /*background: beige;*/
+    /*padding: 0;*/
+    /*margin: 8;*/
+/*}*/
+
+/*h2 {*/
+    /*font-size: 10pt;*/
+    /*border-bottom: 1px dotted gray;*/
+/*}*/
+
+[slick-grid] {
+    background: white;
+    outline: 0;
+    border: 1px solid gray;
+}
+
+
+/*Adjust row's color based on row index*/
+/*.slick-row.odd{*/
+    /*background: #b0fff8 !important;*/
+/*}*/
+
+/*.slick-row.even{*/
+    /*background: #feff78 !important;*/
+/*}*/
+
+
+.parentRow {
+    background:  #eeeeff !important;
+}
+.childRow {
+    background:  #eeffcc !important;
+}
+
+.usage-percent-bar {
+    display: inline-block !important;
+    height: 6px;
+}
+
+/*CSS for grouping*/
+/*.slick-group-title[level='0'] {*/
+/*font-weight: bold;*/
+/*}*/
+
+/*.slick-group-title[level='1'] {*/
+/*text-decoration: underline;*/
+/*}*/
+
+/*.slick-group-title[level='2'] {*/
+/*font-style: italic;*/
+/*}*/

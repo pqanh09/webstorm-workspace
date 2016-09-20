@@ -1,0 +1,62 @@
+<div class="ov-data-view clearfix">
+  <div class="panel panel-default ov-data-view-body">
+
+    <div class="panel-heading data-view-heading clearfix" ng-include="headerTemplate"></div>
+
+    <div class="panel-body">
+      <div class="data-grid-view" ng-show="viewMode==='table'">
+        <div ng-class="{'open': ovDataView.tableConfig.showSearchGroup}">
+          <div class="quick-search-wrapper"
+               ov-transition-end="ovDataView.resizeGrid()">
+            <input id="{{commonId}}-dataGridView-search-input"
+                   class="form-control" placeholder="{{'ovListBox.search' | i18next}}"
+                   ng-model=ovDataView.tableConfig.searchString>
+
+            <a id="{{commonId}}-dataGridView-search-input-clear"
+               ng-show="ovDataView.tableConfig.searchString"
+               ng-click="ovDataView.tableConfig.clearSearch()">
+              <i class="fa fa-times-circle-o"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="data-slick-view" slick-grid
+             height-options="ovDataView.tableConfig.heightOptions"
+             grid-options="ovDataView.tableConfig.gridOptions" grid-columns="ovDataView.tableConfig.gridColumns"
+             selection-model="ovDataView.tableConfig.selectionModel" grid-view-id="ovDataView.tableConfig.gridViewId"
+             grid-view-check-box-id="{{commonId}}"
+             sorter="ovDataView.tableConfig.dataViewSorter" pager-data="ovDataView.tableConfig.pagerData"
+             pager-constructor="ovDataView.tableConfig.pagerConstructor"
+             function-list="functionList">
+        </div>
+      </div>
+      <div class="data-list-view" ng-if="viewMode==='list'">
+        <ov-ng-list-box list-item="viewData"
+                        on-rows-changed="ovDataView.listConfig.onRowsChanged"
+                        on-selected-function="selectedCallBack"
+                        config="ovDataView.listConfig.config"
+                        function-list="functionList"></ov-ng-list-box>
+      </div>
+    </div>
+  </div>
+
+  <div class="ov-data-view-detail">
+    <div class="panel panel-default" ng-if="ovDataViewDetailTpl && ovDataView.showDetailCondition(selectedList) && ovDataView.isShowDetail">
+      <div class="panel-body ov-data-view-detail-margin">
+        <div class="afn-control-button-group clearfix">
+          <a ov-nav-button direction="left"
+             class="detail-icon-slide-left pull-left"
+             id="{{commonId}}-detail-left"
+             label="{{ 'components.ovNavBtn.back' | i18next }}"
+             ng-click="hideDetail()"></a>
+          <a ov-nav-button direction="right"
+             class="detail-icon-slide-right pull-right"
+             id="{{commonId}}-detail-right"
+             label="{{ 'components.ovNavBtn.hide' | i18next }}"
+             ng-click="hideDetail()"></a>
+        </div>
+        <ng-include src="ovDataViewDetailTpl" class="ovDataViewDetail"></ng-include>
+      </div>
+    </div>
+  </div>
+</div>

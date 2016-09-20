@@ -1,0 +1,43 @@
+<div class="ovPagination">
+  <div ng-switch on="paginationType">
+
+    <!-- type 1: bootstrapType -->
+    <ul ng-switch-when="bootstrapType" class="pagination bootstrap-type-pagination">
+      <li ng-class="{disabled:currentPage===1}"><a href="" ng-click="doAction(1)" title="{{tooltipTitles.first | i18next}}" ng-class="{'fa fa-angle-double-left':!pageTexts.first}">{{pageTexts.first | i18next}}</a></li>
+      <li ng-class="{disabled:currentPage===1}"><a href="" ng-click="doAction(currentPage-1)" title="{{tooltipTitles.previous | i18next}}" ng-class="{'fa fa-angle-left':!pageTexts.previous}">{{pageTexts.previous | i18next}}</a></li>
+      <li ng-repeat="page in pages" ng-class="{active:page.selected}" ><a href="" ng-click="doAction(page.number)" title="{{tooltipTitles.page | i18next}} {{page.number}}">{{pageTexts.page | i18next}} {{page.number}}</a></li>
+      <li ng-class="{disabled:currentPage===totalPages}"><a href="" ng-click="doAction(currentPage+1)" title="{{tooltipTitles.next | i18next}}" ng-class="{'fa fa-angle-right':!pageTexts.next}">{{pageTexts.next | i18next}}</a></li>
+      <li ng-class="{disabled:currentPage===totalPages}"><a href="" ng-click="doAction(totalPages)" title="{{tooltipTitles.last | i18next}}" ng-class="{'fa fa-angle-double-right':!pageTexts.last}">{{pageTexts.last | i18next}}</a></li>
+      </ul>
+
+    <!-- type 2: dropDownType -->
+    <div ng-switch-when="dropDownType" class="btn-group dropdown-type-pagination">
+      <button class="first-pagination btn btn-default" ng-class="{disabled:currentPage===1,'fa fa-angle-double-left':!pageTexts.first}" ng-click="doAction(1)" ng-disabled="currentPage===1">{{pageTexts.first | i18next}}</button>
+      <button class="previous-pagination btn btn-default" ng-class="{disabled:currentPage===1,'fa fa-angle-left':!pageTexts.previous}" ng-click="doAction(currentPage - 1)" ng-disabled="currentPage===1">{{pageTexts.previous | i18next}}</button>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          {{pageTexts.page | i18next}} {{currentPage}} / {{totalPages}}
+          &nbsp;&nbsp;&nbsp;
+          <span class="caret"></span>
+          </button>
+        <ul class="dropdown-menu">
+          <li class="text-center" ng-class="{disabled:!!hidePreviousPageIcon}" ><a href="" ng-click="showPreviousPageList($event)" class="dropup"><span class="caret"></span></a></li>
+          <li ng-repeat="page in pages track by $index" ng-class="{active:page.selected}" ><a href="" ng-click="doAction(page.number)" title="{{tooltipTitles.page | i18next}} {{page.number}}">{{pageTexts.page | i18next}} {{page.number}}</a></li>
+          <li class="text-center" ng-class="{disabled:!!hideNextPageIcon}"><a href="" ng-click="showNextPageList($event)"><span class="caret"></span></a></li>
+          </ul>
+        </div>
+      <button class="next-pagination btn btn-default" ng-class="{disabled:currentPage===totalPages,'fa fa-angle-right':!pageTexts.next}" ng-click="doAction(currentPage + 1)" ng-disabled="currentPage===totalPages">{{pageTexts.next | i18next}}</button>
+      <button class="last-pagination btn btn-default" ng-class="{disabled:currentPage===totalPages,'fa fa-angle-double-right':!pageTexts.last}" ng-click="doAction(totalPages)" ng-disabled="currentPage===totalPages">{{pageTexts.last | i18next}}</button>
+      </div><!-- ng-switch-when -->
+
+    <!-- type 3: textBoxType -->
+    <div ng-switch-when="textBoxType" class="textbox-type-pagination">
+      <a class="first-pagination btn btn-default" ng-class="{disabled:currentPage===1,'fa fa-angle-double-left':!pageTexts.first}" ng-click="doAction(1)" title="{{tooltipTitles.first | i18next}}" ng-disabled="currentPage===1">{{pageTexts.first  | i18next}}</a>
+      <a class="previous-pagination btn btn-default" ng-class="{disabled:currentPage===1,'fa fa-angle-left':!pageTexts.previous}" ng-click="doAction(currentPage - 1)" title="{{tooltipTitles.previous | i18next}}" ng-disabled="currentPage===1">{{pageTexts.previous  | i18next}}</a>
+      <input type="text" class="textbox-pagination" ng-model="currentPage" ng-blur="handleOnBlur(this)" ng-keypress="handleKeyPress($event,this)" title="{{tooltipTitles.page | i18next}} {{currentPage}} / {{totalPages}}" ng-readonly="totalPages===1" ov-input-auto-grow/>
+      <a class="next-pagination btn btn-default" ng-class="{disabled:currentPage===totalPages,'fa fa-angle-right':!pageTexts.next}" ng-click="doAction(currentPage + 1)" title="{{tooltipTitles.next | i18next}}" ng-disabled="currentPage===totalPages">{{pageTexts.next  | i18next}}</a>
+      <a class="last-pagination btn btn-default" ng-class="{disabled:currentPage===totalPages,'fa fa-angle-double-right':!pageTexts.last}" ng-click="doAction(totalPages)" title="{{tooltipTitles.last | i18next}}" ng-disabled="currentPage===totalPages">{{pageTexts.last  | i18next}}</a>
+    </div><!-- ng-switch-when -->
+
+  </div>
+</div>

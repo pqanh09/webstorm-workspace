@@ -1,0 +1,12 @@
+<table border=1>
+  <thead>
+  <tr>
+    <th class="ov-data-view-print" ng-repeat='h in headers track by $index'>{{h.name}}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat='row in rows track by $index'>
+    <td class="ov-data-view-print" ng-repeat='h in headers'>{{row[h.printBy || h.field]}}</td>
+  </tr>
+  </tbody>
+</table>

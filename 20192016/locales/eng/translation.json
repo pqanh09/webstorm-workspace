@@ -1,0 +1,285 @@
+{
+  "appTitle": "Music Manager",
+  "spinner": "Loading...",
+  "common": {
+    "ok": "OK",
+    "back": "Back",
+    "msg": {
+      "createSuccess": "The object is created to DB successfully",
+      "updateSuccess": "The object is updated to DB successfully",
+      "deleteSuccess": "The object is deleted from DB successfully",
+      "exist": "The object already exists in DB",
+      "notExist": "The object does not exist in DB"
+    }
+  },
+  "button-label": {
+    "ok": "OK",
+    "csv": ".csv",
+    "add": "Create",
+    "create": "Create",
+    "edit": "Edit",
+    "asterisk": "(*) indicates a required field",
+    "apply": "Apply",
+    "reset": "Reset",
+    "print": "Print",
+    "cancel": "Cancel",
+    "more": "More",
+    "search": "Search",
+    "filter": "Filter",
+    "delete": "Delete",
+    "sortBy": "Sort by",
+    "exportCSV": "Export CSV",
+    "resetFilter": "Reset Filter"
+  },
+  "ovListBox": {
+    "selectAll": "Select All",
+    "search": "Search ...",
+    "total": "Total",
+    "page": "__count__ page",
+    "page_plural": "__count__ pages"
+  },
+  "ovResultTable": {
+    "allSourceNotFinished": "All sources have not finished on target yet",
+    "assign": "Assign ",
+    "completedWith": "completed with",
+    "details": "Details",
+    "dependencyBy": "Dependence on",
+    "failure": "failure",
+    "headerText": " __title__ completed with ",
+    "hasFollowingReference": "has following reference",
+    "isSuccessfull": " is successfull.",
+    "isFailed": " is failed.",
+    "isPartiallyFailed": " is partially failed.",
+    "isInProgress": "is in progress...",
+    "other": "Other",
+    "operationOn": "Operations on __friendlyName__",
+    "operationFailed": "__count__ operation failed",
+    "operationFailed_plural": "__count__ operations failed",
+    "operationSuccess": "__count__ operation success,",
+    "operationSuccess_plural": "__count__ operations success,",
+    "partialSuccess": "partial success",
+    "result": "Result",
+    "sourceName": "Source Name",
+    "success": "success",
+    "showMore": "Show more",
+    "showLess": "Show less",
+    "targetInterupted": "This target has been interupted",
+    "taskResult": "__title__ result",
+    "taskFailed": "Task failed",
+    "theOperationCompleteSuccess": "The operation completed successfully.",
+    "theOperationFailed": "The operation failed.",
+    "theOperationIsPartiallysuccessful": "The operation is partially successful",
+    "dependencyPage": {
+      "dependencyTitle": "Reference list"
+    }
+  },
+  "ovDataView": {
+    "slickGrid": {
+      "show": "Show",
+      "showingAll": "Showing All",
+      "rows": "rows",
+      "row": "row",
+      "row_plural": "rows",
+      "showingPage": "Showing Page",
+      "of": "of",
+      "all": "All",
+      "auto": "Auto"
+    },
+    "filterTitle": "Filter data"
+  },
+  "ovNgFilter": {
+    "title": "Filter Data",
+    "filterSelection": "Filter Selection",
+    "createFilter": "Create Filter Profile",
+    "updateFilter": "Update Filter Profile",
+    "group": {
+      "condition": {
+        "addNew": "[Add new condition]",
+        "input": {
+          "empty": "[enter value]"
+        }
+      },
+      "and": "and",
+      "or": "or",
+      "all": "all",
+      "any": "any",
+      "where": "Filter records where",
+      "ofTheFollowing": "of the following apply:",
+      "addGroupTitle": "Add child group",
+      "removeGroupTitle": "Remove group",
+      "removeConditionTitle": "Remove condition"
+    },
+    "validator": {
+      "conditionLength": "This group must contain at least one condition",
+      "nameExist": "This name already exists"
+    },
+    "filterFields": {
+      "name": "Name",
+      "description": "Description"
+    },
+    "alert": {
+      "createSuccess": "Filter was created successfully.",
+      "editSuccess": "Filter was updated successfully.",
+      "deleteSuccess": "Filters were deleted successfully."
+    },
+    "filter": {
+      "name": "Filter name",
+      "description": "Filter Description",
+      "conditions": "Conditions"
+    },
+    "options": {
+      "includedMenu": {
+        "have": "have",
+        "notHave": " not have"
+      },
+      "caseSensitiveMenu": {
+        "caseSensitive": "case sensitive",
+        "nonCaseSensitive": "non-case sensitive"
+      },
+      "booleanMenu": {
+        "true": "True",
+        "false": "False"
+      },
+      "compareMenus": {
+        "string": {
+          "contains": "contains",
+          "beginsWith": "begins with",
+          "endsWith": "ends with",
+          "equals": "equals",
+          "doesNotEqual": "does not equal",
+          "isGreaterThan": "is greater than",
+          "isGreaterThanOrEqual": "is greater than or equal",
+          "isLessThan": "is less than",
+          "isLessThanOrEqual": "is less than or equal"
+        },
+        "number": {
+          "equals": "equals",
+          "doesNotEqual": "does not equal",
+          "isGreaterThan": "is greater than",
+          "isGreaterThanOrEqual": "is greater than or equal",
+          "isLessThan": "is less than",
+          "isLessThanOrEqual": "is less than or equal"
+        },
+        "boolean": {
+          "equals": "equals",
+          "doesNotEqual": "does not equal"
+        },
+        "date": {
+          "equals": "equals",
+          "doesNotEqual": "does not equal",
+          "isGreaterThan": "is greater than",
+          "isGreaterThanOrEqual": "is greater than or equal",
+          "isLessThan": "is less than",
+          "isLessThanOrEqual": "is less than or equal"
+        },
+        "time": {
+          "equals": "equals",
+          "doesNotEqual": "does not equal",
+          "isGreaterThan": "is greater than",
+          "isGreaterThanOrEqual": "is greater than or equal",
+          "isLessThan": "is less than",
+          "isLessThanOrEqual": "is less than or equal"
+        },
+        "dateTime": {
+          "equals": "equals",
+          "doesNotEqual": "does not equal",
+          "isGreaterThan": "is greater than",
+          "isGreaterThanOrEqual": "is greater than or equal",
+          "isLessThan": "is less than",
+          "isLessThanOrEqual": "is less than or equal"
+        }
+      }
+    }
+  },
+  "components": {
+    "ovNavBtn": {
+      "back": "Back",
+      "hide": "Hide Details"
+    }
+  },
+  "ovSelectShow": {
+    "selectField": "Select Fields to Show",
+    "selectColumn": "Select Columns to Show"
+  },
+  "ovSlickDoubleList": {
+    "defaultConfig": {
+      "item": "__count__ Item",
+      "item_plural": "__count__ Items",
+      "selected": "selected",
+      "moveSelectedUpTooltip": "Move Selected Items Up",
+      "moveSelectedDownTooltip": "Move Selected Items Down",
+      "removeSelectedTooltip": "Remove Selected Items",
+      "removeAllTooltip": "Remove All Items",
+      "addAllTooltip": "Add All Items",
+      "addSelectedTooltip": "Add Selected Items",
+      "searchText": "Search...",
+      "add": "Add Item",
+      "showMore": "Show more",
+      "remove": "Remove Item",
+      "sortBy": "Sort by"
+    }
+  },
+  "ovValidator": {
+    "msg": {
+      "asciiError": "Non-ASCII code characters are not allowed",
+      "nameError": "This field cannot contain any of the following characters: \\ / ? , < > \" ' { } + * = # ; @",
+      "nameLength32": "This field must be in 1-32 characters",
+      "stringLengthValue": "This field must be in 1-__value__ characters",
+      "hexColorError": "Hex color is invalid",
+      "required": "This field is required",
+      "existingName": "This name already exists",
+      "ipv4": "This IP address is invalid",
+      "macError": "This Mac address is invalid",
+      "urlError": "This Url address is invalid",
+      "rangeValue": "Please enter a value between __from__ and __to__",
+      "numberGreaterThanValue": "Please enter a number greater than __value__",
+      "numberLessThanValue": "Please enter a number less than __value__",
+      "numberGreaterZero": "Please enter a number greater than zero",
+      "email": "Email format is not valid",
+      "subnetMaskError": "Subnet mask is not valid",
+      "notSubnetMaskError": "This must not be subnet mask",
+      "portError": "Port must be between 1025-65535",
+      "portRange1To65535": "Port must be number in range 1 - 65535",
+      "maxSelectedDevicesAre200": "Maximum devices that can be selected are 200"
+    }
+  },
+  "sampleApp": {
+    "title": "Sample App",
+    "menus": {
+      "sampleHome": {
+        "title": "Sample Home"
+      },
+      "sampleOne": {
+        "title": "Sample One",
+        "description": "Sample One Description",
+        "create": "Create Sample One Profile",
+        "edit": "Edit Sample One Profile",
+        "msg": {
+          "confirmDelete": "Are you sure you want to delete __count__ selected item?",
+          "confirmDelete_plural": "Are you sure you want to delete __count__ selected items?",
+          "delete": "Delete User",
+          "nameLength": "This name must be in 1-32 characters.",
+          "nameExist": "This name already exists",
+          "description": "This description must be in 1-256 characters"
+        }
+      },
+      "sampleTwo": {
+        "title": "Sample Two"
+      },
+      "sampleTwo1": {
+        "title": "Sample Two 1"
+      },
+      "sampleTwo2": {
+        "title": "Sample Two 2"
+      }
+    },
+    "navData": {
+      "home": "Home",
+      "sampleApp": "Sample App"
+    },
+    "attrs": {
+      "name": "Name",
+      "description": "Description"
+    }
+  }
+}

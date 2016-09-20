@@ -1,0 +1,60 @@
+<h1><code ng:non-bindable="">ovTagsInput</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovtagsinput-page"><p>ov-tags-input is an input component for building lists of strings or objects. The list items are displayed as &#39;tags&#39; or &#39;list&#39;.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-tags-input
+       ov-ng-options="{string}"
+       ng-model="{string}"
+       [model-change="{expression}"]
+       [current-model="{string}"]
+       [current-model-change="{expression}"]
+       [placeholder="{string}"]
+       [id="{string}"]
+       [ng-disabled="{expression}"]
+       [config="{object}"]&gt;
+&lt;/ov-tags-input&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ovNgOptions</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovtagsinput-page"><p>sets the options that the select is populated with and defines what is set on the model on selection.</p>
+<ul>
+<li><code>modelValue</code> <strong><code>for</code></strong> <code>item</code> <strong><code>in</code></strong> <code>collection</code></li>
+<li><code>modelValue</code> <strong><code>as</code></strong> <code>label</code> <strong><code>for</code></strong> <code>item</code> <strong><code>in</code></strong> <code>collection</code></li>
+</ul>
+</div></td></tr><tr><td>ngModel</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovtagsinput-page"><p>A model to bind the selected item to</p>
+</div></td></tr><tr><td>modelChange <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-expression">expression</a></td><td><div class="ov-component-directive-page ov-component-directive-ovtagsinput-page"><p>Angular expression to be executed when ngModel updates</p>
+</div></td></tr><tr><td>currentModel <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovtagsinput-page"><p>A model to bind the input text to</p>
+</div></td></tr><tr><td>currentModelChange <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-expression">expression</a></td><td><div class="ov-component-directive-page ov-component-directive-ovtagsinput-page"><p>An expression to be run each time the input text updates</p>
+</div></td></tr><tr><td>placeholder <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovtagsinput-page"><p>Placeholder text that will be forwarded to the input.</p>
+</div></td></tr><tr><td>id <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovtagsinput-page"><p>An ID to be added to the element to support automation test e.g. id=&quot;test&quot;</p>
+</div></td></tr><tr><td>ngDisabled <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-expression">expression</a></td><td><div class="ov-component-directive-page ov-component-directive-ovtagsinput-page"><p>Determines whether or not to disable the input field</p>
+</div></td></tr><tr><td>config <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovtagsinput-page"><p>config for custom tags input</p>
+<ul>
+<li><strong>tagClass</strong>(optional) <code>string</code>: bootstrap label class for tags (default label-primary)</li>
+<li><strong>max</strong> (optional) <code>number</code>: maximum number of tags can input (default undefined)</li>
+<li><strong>maxMessage</strong> (optional) <code>string</code>: msg for max tags (default &quot;Cannot input more&quot;)</li>
+<li><strong>allowDuplicate</strong> (optional) <code>boolean</code>: allow duplicate (default false)</li>
+<li><strong>duplicateError</strong> (optional) <code>string</code>: error msg for duplicate error(default &quot;The item already exists&quot;)</li>
+</ul>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovtagsinput-page"><p><strong>Basic Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-tags-input
+    ov-ng-options="item as item.name for item in ctrl.items"
+    ng-model="ctrl.model"&gt;
+ &lt;/ov-tags-input&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ ctrl.items = [
+ {name: 'One', value: 1},
+ {name: 'Two', value: 2}
+ ];
+ ctrl.model = 1;
+</pre>
+</div></div>
+</div>

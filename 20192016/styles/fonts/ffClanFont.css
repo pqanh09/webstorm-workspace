@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'ClanWebPro';
+  src: url('allFonts/ClanWebPro-News.eot');
+  src: url('allFonts/ClanWebPro-News.woff') format('woff'),
+  url('allFonts/ClanCompPro-News.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClanWebPro';
+  src: url('allFonts/ClanWebPro-Medium.eot');
+  src: url('allFonts/ClanWebPro-Medium.woff') format('woff'),
+  url('allFonts/ClanCompPro-Medium.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClanWebPro';
+  src: url('allFonts/ClanWebPro-MediumItalic.eot');
+  src: url('allFonts/ClanWebPro-MediumItalic.woff') format('woff'),
+  url('allFonts/ClanCompPro-MediumItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}

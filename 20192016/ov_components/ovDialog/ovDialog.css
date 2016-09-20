@@ -1,0 +1,102 @@
+.ov-dlg-modal {
+  width: 70%;
+}
+.ov-dlg-modal textarea{
+  resize:none;
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  .ov-dlg-modal {
+    width: auto;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+  .ov-dlg-modal {
+    width: 95%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .ov-dlg-modal {
+    width: 90%;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .ov-dlg-modal {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .ov-dlg-modal {
+    width: 85%;
+  }
+}
+
+.ov-dlg .page-heading {
+  padding: 1rem 1.5rem;
+  border-bottom: #dddddd solid thin;
+
+  background: #ffffff;
+  background: -moz-linear-gradient(-45deg,  #ffffff 24%, #efefef 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(24%,#ffffff), color-stop(100%,#efefef));
+  background: -webkit-linear-gradient(-45deg,  #ffffff 24%,#efefef 100%);
+  background: -o-linear-gradient(-45deg,  #ffffff 24%,#efefef 100%);
+  background: -ms-linear-gradient(-45deg,  #ffffff 24%,#efefef 100%);
+  background: linear-gradient(135deg,  #ffffff 24%,#efefef 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=1 );
+}
+
+.ov-dlg .panel-footer > .button-bar .btn-default {
+  color: black;
+}
+
+.ov-dlg .panel-footer > .button-bar .btn-default[disabled] {
+  color: #868686;
+}
+
+.ov-dlg .panel-footer > .button-bar > .default-button > .btn:disabled {
+  font-weight: 100;
+}
+
+.ov-dlg .panel-footer > .button-bar > .default-button > .extra-btn {
+  margin-left: 0.5rem;
+}
+
+.ov-dlg > .panel-primary {
+  border-color: #499bea;
+}
+
+.ov-dlg > .panel-primary > .panel-heading {
+  color: #ffffff;
+  background-color: #499bea;
+  border-color: #499bea;
+}
+
+.ov-dlg > .panel-primary > .panel-heading > .panel-title {
+  font-size: 1.8rem;
+}
+
+.ov-dlg > .panel-primary > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #499bea;
+}
+
+.ov-dlg > .panel-primary > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #499bea;
+}
+
+.ov-dlg > .panel-primary > .panel-heading {
+  background: #499bea;
+  background: -moz-linear-gradient(top, #499bea 0%, #207ce5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #499bea), color-stop(100%, #207ce5));
+  background: -webkit-linear-gradient(top, #499bea 0%, #207ce5 100%);
+  background: -o-linear-gradient(top, #499bea 0%, #207ce5 100%);
+  background: -ms-linear-gradient(top, #499bea 0%, #207ce5 100%);
+  background: linear-gradient(to bottom, #499bea 0%, #207ce5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#499bea', endColorstr='#207ce5', GradientType=0);
+}
+
+.ov-dlg-auto-flow {
+  overflow: auto;
+}

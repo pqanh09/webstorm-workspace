@@ -1,0 +1,13 @@
+<div>
+  <button ng-attr-id="{{vm.menuConfig.idPrefix}}{{vm.menuConfig.showMenuButton.id}}"
+          ng-attr-title="{{vm.menuConfig.showMenuButton.titleI18key | i18next}}"
+          class="{{vm.menuConfig.showMenuButton.btnClass}}"
+          type="button"
+          ng-click="vm.menuList.toggle(); $event.stopPropagation();">
+    <span class="ov-slick-menu-icon-title" ng-if="vm.menuConfig.showMenuButton.name"> {{vm.menuConfig.showMenuButton.name}}</span>
+    <i class="{{vm.menuConfig.showMenuButton.iconClass}}"
+    ng-class="{'ov-slick-menu-action-style': vm.menuConfig.showMenuButton.actionStyle,
+    'default-toggle-button-icon': !vm.menuConfig.showMenuButton.removeDefaultToggleCss}"
+    ></i>
+  </button>
+</div>

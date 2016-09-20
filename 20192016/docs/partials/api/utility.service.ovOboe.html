@@ -1,0 +1,150 @@
+<h1><code ng:non-bindable="">ovOboe</code>
+<div><span class="hint">service in module <code ng:non-bindable="">utility</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="utility-service-page utility-service-ovoboe-page"><p>Oboe service provide get/post/put/delete method replace $http. You can cancel a request easily by call cancel() method.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="api/ng.$log">$log</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="api/ng.$q">$q</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="api/ng.$i18next">$i18next</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_defaulterrordetector">defaultErrorDetector(rawResponse, config)</h3>
+<div class="defaulterrordetector"><div class="defaulterrordetector-page"><p>Based on</p>
+</div><h5 id="methods_defaulterrordetector_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rawResponse</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="defaulterrordetector-page"><p>deferred object</p>
+</div></td></tr><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="defaulterrordetector-page"><ul>
+<li>configuration object</li>
+<li><code>successProperty</code> is &#39;enumResponse&#39; if config.successProperty is undefined.</li>
+<li><code>failCompareKey</code> is &#39;fail&#39; if config.failCompareKey is undefined.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_defaulterrordetector_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="defaulterrordetector-page"><ul>
+<li>successProperty === failCompareKey</li>
+<li><code>true</code>: response error.</li>
+<li><code>false</code>: response success.</li>
+<li>*NOTE: successProperty === null || successProperty === undefined =&gt; will return false</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_defaulterrordetector">defaultErrorDetector(rawResponse, config)</h3>
+<div class="defaulterrordetector"><div class="defaulterrordetector-page"><p>Based on</p>
+</div><h5 id="methods_defaulterrordetector_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rawResponse</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="defaulterrordetector-page"><p>deferred object</p>
+</div></td></tr><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="defaulterrordetector-page"><ul>
+<li>configuration object</li>
+<li><code>successProperty</code> is &#39;enumResponse&#39; if config.successProperty is undefined.</li>
+<li><code>failCompareKey</code> is &#39;fail&#39; if config.failCompareKey is undefined.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_defaulterrordetector_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="defaulterrordetector-page"><ul>
+<li>successProperty === failCompareKey</li>
+<li><code>true</code>: response error.</li>
+<li><code>false</code>: response success.</li>
+<li>*NOTE: successProperty === null || successProperty === undefined =&gt; will return false</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_defaultsuccesscontrol">defaultSuccessControl(deferred, rawResponse, concreteOboe)</h3>
+<div class="defaultsuccesscontrol"><div class="defaultsuccesscontrol-page"><ul>
+<li>Base on _errorDetector() function result to decide reject, resolve or notify result.</li>
+</ul>
+</div><h5 id="methods_defaultsuccesscontrol_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>deferred</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="defaultsuccesscontrol-page"><p>deferred object</p>
+</div></td></tr><tr><td>rawResponse</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="defaultsuccesscontrol-page"><p>raw response from API</p>
+</div></td></tr><tr><td>concreteOboe</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="defaultsuccesscontrol-page"><ul>
+<li>configuration object</li>
+<li>_errorDetector function is defaultErrorDetector if config.errorDetector is undefined</li>
+</ul>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_defaultsuccesscontrol">defaultSuccessControl(deferred, rawResponse, config)</h3>
+<div class="defaultsuccesscontrol"><div class="defaultsuccesscontrol-page"><ul>
+<li>Base on _errorDetector() function result to decide reject, resolve or notify result.</li>
+</ul>
+</div><h5 id="methods_defaultsuccesscontrol_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>deferred</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="defaultsuccesscontrol-page"><p>deferred object</p>
+</div></td></tr><tr><td>rawResponse</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="defaultsuccesscontrol-page"><p>raw response from API</p>
+</div></td></tr><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="defaultsuccesscontrol-page"><ul>
+<li>configuration object</li>
+<li>_errorDetector function is defaultErrorDetector if config.errorDetector is undefined</li>
+</ul>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_oboeconstruct">oboeConstruct(oboeConfig)</h3>
+<div class="oboeconstruct"><div class="oboeconstruct-page"><p>oboe request concreteOboe</p>
+</div><h5 id="methods_oboeconstruct_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>oboeConfig</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="oboeconstruct-page"><p>parameter to make request</p>
+</div></td></tr><tr><td>[oboeConfig.url]</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="oboeconstruct-page"><p>url to make request. By default this setting isn&#39;t  used, it was added for compatibility with oboe.js</p>
+</div></td></tr><tr><td>[oboeConfig.method]</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="oboeconstruct-page"><ul>
+<li>get/post/put/delete.</li>
+<li>If you use ovOboe.get, ovOboe.post, ovOboe.put or ovOboe.delete this option will be ignored.</li>
+</ul>
+</div></td></tr><tr><td>[oboeConfig.body]</td><td><a href="" class="label type-hint type-hint-object">Object</a><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="oboeconstruct-page"><p>Request data</p>
+</div></td></tr><tr><td>oboeConfig.headers</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="oboeconstruct-page"><p>parameter to make request</p>
+</div> <p><em>(default: {"Content-Type": "application/json"})</em></p></td></tr><tr><td>oboeConfig.successControl</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="oboeconstruct-page"><p>success control function</p>
+</div> <p><em>(default: ovOboe.defaultSuccessControl)</em></p></td></tr><tr><td>oboeConfig.errorDetector</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="oboeconstruct-page"><p>Error detector function</p>
+</div> <p><em>(default: ovOboe.defaultErrorDetector)</em></p></td></tr><tr><td>oboeConfig.onPreExecute</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="oboeconstruct-page"><p>pre-executed callback</p>
+</div> <p><em>(default: angular.noop)</em></p></td></tr><tr><td>oboeConfig.onPostExecute</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="oboeconstruct-page"><p>post-executed callback</p>
+</div> <p><em>(default: angular.noop)</em></p></td></tr><tr><td>oboeConfig.successProperty</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="oboeconstruct-page"><p>post-executed callback</p>
+</div> <p><em>(default: 'enumResponse')</em></p></td></tr><tr><td>oboeConfig.failCompareKey</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="oboeconstruct-page"><p>Used to check successProperty is success or error</p>
+</div> <p><em>(default: 'fail')</em></p></td></tr><tr><td>[oboeConfig.requestId]</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="oboeconstruct-page"><p>Used to cancel old request</p>
+</div></td></tr><tr><td>oboeConfig.disabledProxy</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="oboeconstruct-page"><p>use raw url instead of ovHttp.proxy</p>
+</div> <p><em>(default: false)</em></p></td></tr></tbody></table><h5 id="methods_oboeconstruct_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="oboeconstruct-page"><p>Promise: a promise with .success(), .error(), and .notify() method.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_oboeconstruct">oboeConstruct(oboeConfig)</h3>
+<div class="oboeconstruct"><div class="oboeconstruct-page"><p>oboe request constructor</p>
+</div><h5 id="methods_oboeconstruct_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>oboeConfig</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="oboeconstruct-page"><p>parameter to make request</p>
+</div></td></tr><tr><td>[oboeConfig.url]</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="oboeconstruct-page"><p>url to make request. By default this setting isn&#39;t  used, it was added for compatibility with oboe.js</p>
+</div></td></tr><tr><td>[oboeConfig.method]</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="oboeconstruct-page"><ul>
+<li>get/post/put/delete.</li>
+<li>If you use ovOboe.get, ovOboe.post, ovOboe.put or ovOboe.delete this option will be ignored.</li>
+</ul>
+</div></td></tr><tr><td>[oboeConfig.body]</td><td><a href="" class="label type-hint type-hint-object">Object</a><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="oboeconstruct-page"><p>Request data</p>
+</div></td></tr><tr><td>oboeConfig.headers</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="oboeconstruct-page"><p>parameter to make request</p>
+</div> <p><em>(default: {'Content-Type': application/json})</em></p></td></tr><tr><td>oboeConfig.successControl</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="oboeconstruct-page"><p>success control function</p>
+</div> <p><em>(default: ovOboe.defaultSuccessControl)</em></p></td></tr><tr><td>oboeConfig.errorDetector</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="oboeconstruct-page"><p>Error detector function</p>
+</div> <p><em>(default: ovOboe.defaultErrorDetector)</em></p></td></tr><tr><td>oboeConfig.onPreExecute</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="oboeconstruct-page"><p>pre-executed callback</p>
+</div> <p><em>(default: angular.noop)</em></p></td></tr><tr><td>oboeConfig.onPostExecute</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="oboeconstruct-page"><p>post-executed callback</p>
+</div> <p><em>(default: angular.noop)</em></p></td></tr><tr><td>oboeConfig.successProperty</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="oboeconstruct-page"><p>post-executed callback</p>
+</div> <p><em>(default: 'enumResponse')</em></p></td></tr><tr><td>oboeConfig.failCompareKey</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="oboeconstruct-page"><p>Used to check successProperty is success or error</p>
+</div> <p><em>(default: 'fail')</em></p></td></tr><tr><td>oboeConfig.isLoading</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="oboeconstruct-page"><p>Used to check successProperty is success or error</p>
+</div> <p><em>(default: false)</em></p></td></tr></tbody></table><h5 id="methods_oboeconstruct_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="oboeconstruct-page"><p>Promise: a promise with .success(), .error(), and .notify() method.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="utility-service-page utility-service-ovoboe-page"><pre><code class="lang-Preface">Referenced app: vmSnooping -&gt; profile
+</code></pre>
+<pre><code class="lang-js">service.apiList.getAllVmsProfile = ovOboe.get(&#39;api/vmsnooping/globalprofile&#39;,
+{
+  onPreExecute: function () {
+    hideMainMessage();
+  }
+});
+</code></pre>
+<p>Execute function have 2 params: <code>URL</code> and <code>config</code> object. With get method, you don’t have to send data,
+so <code>execute()</code> function can be invoke like below example:</p>
+<pre><code class="lang-js">service.apiList.getAllVmsProfile.execute().then(function (successData) {
+       service.profile.profileData = successData.response.data;
+       formatProfileList(service.profile.profileData);
+       //console.log(&#39;service.profile.profileData&#39;, service.profile.profileData);
+     },function (errorData) {
+       service.alertData.main._error(errorData.response.translated.messageTranslated);
+     }).then(function () {
+       //get column config
+       getColumnConfig();
+     }).finally(function () {
+       //you MUST call this line manually for cancel function work properly
+       //I&#39;m trying to eliminate this inconvenient
+       service.apiList.getAllVmsProfile.isLoading = false;
+       //----
+       service.slickMenu.slickMenuObj.refreshBtn.disabled = false;
+       service.slickMenu.slickMenuObj.settingBtn.disabled = false;
+       hideSpinner();
+       vmSnoopingUtil.callBackExecute(callBackFunction);
+     });
+</code></pre>
+</div></div>
+</div>

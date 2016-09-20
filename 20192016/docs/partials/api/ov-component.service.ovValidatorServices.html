@@ -1,0 +1,257 @@
+<h1><code ng:non-bindable="">ovValidatorServices</code>
+<div><span class="hint">service in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-page"><p>The collection of validate rules, validate object and functions which are used for ovValidator directive.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_callcheckvalid">callCheckValid(scope, id)</h3>
+<div class="callcheckvalid"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-callcheckvalid-page"><p>Re-apply validate rules for all the input group and show error if any.</p>
+</div><h5 id="methods_callcheckvalid_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-callcheckvalid-page"><p>The owner scope which calls validator service.</p>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-callcheckvalid-page"><p>The id of validator group which is needed to check valid.</p>
+</div></td></tr></tbody></table><h5 id="methods_callcheckvalid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-null">null</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-callcheckvalid-page"><p>This function does not return.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_checkvalid">checkValid(id)</h3>
+<div class="checkvalid"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-checkvalid-page"><p>Check current valid value of an input group.
+If the id does not exist, it will return <strong>true</strong> value.</p>
+</div><h5 id="methods_checkvalid_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-checkvalid-page"><p>The id of validator group which is needed to check.</p>
+</div></td></tr></tbody></table><h5 id="methods_checkvalid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-checkvalid-page"><p>This function returns the valid value of input group.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_checkvalidextend">checkValidExtend(rules)</h3>
+<div class="checkvalidextend"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-checkvalidextend-page"><p>Check current valid value of providing rule and model.</p>
+</div><h5 id="methods_checkvalidextend_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rules</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-checkvalidextend-page"><p>The array of rule and model object.
+Rule object includes two attributes:</p>
+<ul>
+<li>1.model: the current model need to apply the rules.</li>
+<li>2.rule: the array of rule objects - a rule object contents validator function and error string. Check ovValidator directive for more detail.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_checkvalidextend_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-checkvalidextend-page"><p>This function returns the valid value of input group.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_checkvalidgroup">checkValidGroup(id)</h3>
+<div class="checkvalidgroup"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-checkvalidgroup-page"><p>Check current valid value of an input group. This is customization of &quot;checkValid&quot; function to use in &quot;ovWizard&quot;.
+If the id does not exist, it will return <strong>false</strong> value.</p>
+</div><h5 id="methods_checkvalidgroup_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-checkvalidgroup-page"><p>The id of validator group which is needed to check.</p>
+</div></td></tr></tbody></table><h5 id="methods_checkvalidgroup_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-checkvalidgroup-page"><p>This function returns the valid value of input group.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isbinarynumber">isBinaryNumber(number)</h3>
+<div class="isbinarynumber"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isbinarynumber-page"><p>Check a number if it is <strong>binary number</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isbinarynumber_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>number</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isbinarynumber-page"><p>Number needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isbinarynumber_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isbinarynumber-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isbinarynumberorempty">isBinaryNumberOrEmpty(number)</h3>
+<div class="isbinarynumberorempty"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isbinarynumberorempty-page"><p>Check a number if it is <strong>binary number or empty</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isbinarynumberorempty_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>number</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isbinarynumberorempty-page"><p>Number needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isbinarynumberorempty_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isbinarynumberorempty-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isemail">isEmail(email)</h3>
+<div class="isemail"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isemail-page"><p>Check a string if it is <strong>email</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isemail_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>email</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isemail-page"><p>Email address needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isemail_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isemail-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isemailorempty">isEmailOrEmpty(email)</h3>
+<div class="isemailorempty"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isemailorempty-page"><p>Check a string if it is <strong>email or empty</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isemailorempty_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>email</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isemailorempty-page"><p>Email address needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isemailorempty_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isemailorempty-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isemptystring">isEmptyString(string)</h3>
+<div class="isemptystring"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isemptystring-page"><p>Check a string if it is <strong>empty</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isemptystring_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>string</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isemptystring-page"><p>String needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isemptystring_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isemptystring-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isfqdn">isFQDN(string)</h3>
+<div class="isfqdn"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isfqdn-page"><p>Check a string if it is <strong>FQDN</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isfqdn_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>string</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isfqdn-page"><p>String needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isfqdn_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isfqdn-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isfqdnorempty">isFQDNOrEmpty(string)</h3>
+<div class="isfqdnorempty"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isfqdnorempty-page"><p>Check a string if it is <strong>FQDN or empty</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isfqdnorempty_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>string</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isfqdnorempty-page"><p>String needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isfqdnorempty_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isfqdnorempty-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_ishttpsurl">isHttpsUrl(string)</h3>
+<div class="ishttpsurl"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ishttpsurl-page"><p>Check a string if it is <strong>https url</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_ishttpsurl_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>string</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ishttpsurl-page"><p>String needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_ishttpsurl_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ishttpsurl-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isip">isIP(ip)</h3>
+<div class="isip"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isip-page"><p>Check a string if it is <strong>IP (both IPv4 and IPv6)</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isip_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ip</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isip-page"><p>IP address needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isip_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isip-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isiporempty">isIPOrEmpty(ip)</h3>
+<div class="isiporempty"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isiporempty-page"><p>Check a string if it is <strong>IP or empty (both IPv4 and IPv6)</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isiporempty_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ip</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isiporempty-page"><p>IP address needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isiporempty_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isiporempty-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isinteger">isInteger(number)</h3>
+<div class="isinteger"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isinteger-page"><p>Check a number if it is <strong>integer</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isinteger_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>number</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isinteger-page"><p>Number needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isinteger_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isinteger-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isipv4">isIpv4(ip)</h3>
+<div class="isipv4"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isipv4-page"><p>Check a string if it is <strong>IPv4</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isipv4_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ip</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isipv4-page"><p>IP address needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isipv4_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isipv4-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isipv4orempty">isIpv4OrEmpty(ip)</h3>
+<div class="isipv4orempty"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isipv4orempty-page"><p>Check a string if it is <strong>IPv4 or empty</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isipv4orempty_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ip</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isipv4orempty-page"><p>IP address needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isipv4orempty_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isipv4orempty-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isipv6">isIpv6(ip)</h3>
+<div class="isipv6"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isipv6-page"><p>Check a string if it is <strong>IPv6</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isipv6_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ip</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isipv6-page"><p>IP address needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isipv6_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isipv6-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isipv6orempty">isIpv6OrEmpty(ip)</h3>
+<div class="isipv6orempty"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isipv6orempty-page"><p>Check a string if it is <strong>IPv6 or empty</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isipv6orempty_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ip</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isipv6orempty-page"><p>IP address needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isipv6orempty_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isipv6orempty-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_ismac">isMac(mac)</h3>
+<div class="ismac"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ismac-page"><p>Check a string if it is <strong>MAC address</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_ismac_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>mac</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ismac-page"><p>MAC address needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_ismac_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ismac-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_ismacincludestar">isMacIncludeStar(mac)</h3>
+<div class="ismacincludestar"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ismacincludestar-page"><p>Check a string if it is <strong>MAC address, maybe stars(*) is included</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_ismacincludestar_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>mac</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ismacincludestar-page"><p>MAC address needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_ismacincludestar_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ismacincludestar-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_ismacincludestarorempty">isMacIncludeStarOrEmpty(mac)</h3>
+<div class="ismacincludestarorempty"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ismacincludestarorempty-page"><p>Check a string if it is <strong>MAC address, maybe stars(*) is included or empty</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_ismacincludestarorempty_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>mac</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ismacincludestarorempty-page"><p>MAC address needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_ismacincludestarorempty_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ismacincludestarorempty-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_ismacorempty">isMacOrEmpty(mac)</h3>
+<div class="ismacorempty"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ismacorempty-page"><p>Check a string if it is <strong>MAC address or empty</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_ismacorempty_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>mac</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ismacorempty-page"><p>MAC address needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_ismacorempty_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ismacorempty-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isnumber">isNumber(number)</h3>
+<div class="isnumber"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isnumber-page"><p>Check a number if it is <strong>number</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isnumber_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>number</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isnumber-page"><p>Number needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isnumber_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isnumber-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isphonenumber">isPhoneNumber(number)</h3>
+<div class="isphonenumber"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isphonenumber-page"><p>Check a number if it is <strong>phone number</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isphonenumber_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>number</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isphonenumber-page"><p>Number needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isphonenumber_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isphonenumber-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isshortforminteger">isShortFormInteger(string)</h3>
+<div class="isshortforminteger"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isshortforminteger-page"><p>Check a number if it is <strong>integer</strong>, and must be in short form (1,22,33) not long form (01, 001, 011). If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isshortforminteger_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>string</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isshortforminteger-page"><p>String or Number needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isshortforminteger_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isshortforminteger-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_issubnetmask">isSubnetMask(subnetMask)</h3>
+<div class="issubnetmask"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-issubnetmask-page"><p>Check a string if it is <strong>subnet mask</strong>. If yes, returns true, else returns false.
+References: <a href="http://www.ietf.org/rfc/rfc1878.txt">http://www.ietf.org/rfc/rfc1878.txt</a></p>
+</div><h5 id="methods_issubnetmask_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>subnetMask</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-issubnetmask-page"><p>Subnet mask needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_issubnetmask_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-issubnetmask-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isvalidcaptiveportalurl">isValidCaptivePortalUrl(string)</h3>
+<div class="isvalidcaptiveportalurl"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isvalidcaptiveportalurl-page"><p>Check a string if it is <strong>captive portal url</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isvalidcaptiveportalurl_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>string</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isvalidcaptiveportalurl-page"><p>String needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isvalidcaptiveportalurl_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isvalidcaptiveportalurl-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isvalidcaptiveportalurlwithorwithourhttphttps">isValidCaptivePortalUrlWithOrWithourHttpHttps(string)</h3>
+<div class="isvalidcaptiveportalurlwithorwithourhttphttps"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isvalidcaptiveportalurlwithorwithourhttphttps-page"><p>Check a string if it is <strong>captive portal url (with or without http/https)</strong>. If yes, returns true, else returns false.</p>
+</div><h5 id="methods_isvalidcaptiveportalurlwithorwithourhttphttps_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>string</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isvalidcaptiveportalurlwithorwithourhttphttps-page"><p>String needs to be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isvalidcaptiveportalurlwithorwithourhttphttps_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-isvalidcaptiveportalurlwithorwithourhttphttps-page"><p>This function return true/false value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_reset">reset(scope, id)</h3>
+<div class="reset"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-reset-page"><p>Hide all warning errors of current input group.</p>
+</div><h5 id="methods_reset_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-reset-page"><p>The owner scope which calls validator service.</p>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-reset-page"><p>The id of validator group which is needed to reset.</p>
+</div></td></tr></tbody></table><h5 id="methods_reset_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-null">null</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-reset-page"><p>This function does not return.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_submit">submit(scope, id)</h3>
+<div class="submit"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-submit-page"><p>Check current valid value of an input group and show warning error if any.
+If the id does not exist, it will return <strong>true</strong> value.</p>
+</div><h5 id="methods_submit_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-submit-page"><p>The owner scope which calls validator service.</p>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-submit-page"><p>The id of validator group which is needed to submit.</p>
+</div></td></tr></tbody></table><h5 id="methods_submit_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-service-page ov-component-service-ovvalidatorservices-submit-page"><p>This function returns the valid value of input group.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+<div class="member property"><h2 id="properties">Properties</h2>
+<ul class="properties"><li><h3 id="properties_asciirule">ASCIIRule</h3>
+<div class="asciirule"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-asciirule-page"><p>ASCII rule for name input. Non-ASCII code characters are not allowed.</p>
+<p>This common rule object is using for ovValidator directive.
+View ovValidator directive for more detail.</p>
+</div></div>
+</li>
+<li><h3 id="properties_hexcolorrule">hexColorRule</h3>
+<div class="hexcolorrule"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-hexcolorrule-page"><p>Common name length rule for name input. Must be in 1-32 characters.</p>
+<p>This common rule object is using for ovValidator directive.
+View ovValidator directive for more detail.</p>
+</div></div>
+</li>
+<li><h3 id="properties_ipv4oremptyrule">ipv4OrEmptyRule</h3>
+<div class="ipv4oremptyrule"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ipv4oremptyrule-page"><p>Common IPv4 or empty rule for an input. Must be IPv4 or empty.</p>
+<p>This common rule object is using for ovValidator directive.
+View ovValidator directive for more detail.</p>
+</div></div>
+</li>
+<li><h3 id="properties_ipv4rule">ipv4Rule</h3>
+<div class="ipv4rule"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-ipv4rule-page"><p>Common IPv4 rule for an input. Must be an IPv4 address.</p>
+<p>This common rule object is using for ovValidator directive.
+View ovValidator directive for more detail.</p>
+</div></div>
+</li>
+<li><h3 id="properties_namelength32rule">nameLength32Rule</h3>
+<div class="namelength32rule"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-namelength32rule-page"><p>Common name length rule for name input. Must be in 1-32 characters.</p>
+<p>This common rule object is using for ovValidator directive.
+View ovValidator directive for more detail.</p>
+</div></div>
+</li>
+<li><h3 id="properties_namerule">nameRule</h3>
+<div class="namerule"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-namerule-page"><p>Common name rule for name input. Cannot contain any of the following characters: \ / ? , &lt; &gt; \&quot; &#39; { } + * = # ; @.</p>
+<p>This common rule object is using for ovValidator directive.
+View ovValidator directive for more detail.</p>
+</div></div>
+</li>
+<li><h3 id="properties_requiredrule">requiredRule</h3>
+<div class="requiredrule"><div class="ov-component-service-page ov-component-service-ovvalidatorservices-requiredrule-page"><p>Common required rule for an input. Must not be empty.</p>
+<p>This common rule object is using for ovValidator directive.
+View ovValidator directive for more detail.</p>
+</div></div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"></div>
+</div>

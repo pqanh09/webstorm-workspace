@@ -1,0 +1,143 @@
+<h1><code ng:non-bindable="">ovDeviceSelector</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovdeviceselector-page"><p>The <code>ovDeviceSelector</code> helps user to pick single/multiple devices.</p>
+<p>Features:</p>
+<ul>
+<li><p>Support 4 types (these are all types in our project so far) of device selection:</p>
+<ol>
+<li>Inline selection (multiple selection-in wizard).</li>
+<li>Popup selection with a list inline (multiple selection-in apply/assign page).</li>
+<li>Popup selection with a link (multiple selection-in notify page).</li>
+<li>Browse device (single selection-device view page).</li>
+</ol>
+</li>
+<li><p>Get devices from server via promise provided by user, then separate available and selected devices.</p>
+</li>
+<li><p>Cache selected devices (optional).</p>
+</li>
+<li><p>Cache selection options (switch picker/topology, search, sort, pagination, ... options in double list/list box)</p>
+</li>
+<li><p>Custom selection template.</p>
+</li>
+<li><p>Support ovTaskFlow as well.</p>
+</li>
+<li><p>Support service for popup selection.</p>
+</li>
+</ul>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY ov-device-selector
+     input-devices="{array}"
+     selected-devices="{array}"
+     selection-options="{object}"
+     [function-object="{object}"]
+     [selection-type="{string}"]
+     [selection-template="{string}"]&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>inputDevices</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovdeviceselector-page"><p>This can be an empty array, directive will automatically get devices via &#39;getDevicesPromise&#39; function.</p>
+</div></td></tr><tr><td>selectedDevices</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovdeviceselector-page"><p>This can be an empty array, directive will automatically get devices via &#39;getDevicesPromise&#39; function.</p>
+</div></td></tr><tr><td>selectionOptions</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovdeviceselector-page"><p>This is config object:</p>
+<ul>
+<li><strong>id</strong>: Provide unique id of directive for automation test.</li>
+<li><strong>instanceId</strong>: Provide a property of an item which is used for identification.</li>
+<li><strong>getDevicesPromise</strong>: A promise that returns an array of device objects.
+This should take care some logic actions as well e.g. turn on/off spinner.</li>
+<li><strong>taskFlowKey</strong>: Key of taskflow.</li>
+<li><strong>useDownDevice</strong>: Set this true to use down device. Default is false.</li>
+<li><strong>inlineDoubleListConfig</strong>: Config of <strong>inline</strong> ovSlickdoubleList. Check ovSlickDoubleList config for more detail.</li>
+<li><strong>inlineListBoxConfig</strong>: This is config object includes 3 attributes: {config, onSelect, functionList} of <strong>inline</strong> ovNgListBox. Check ovNgListBox config for more detail.</li>
+<li><strong>doubleListConfig</strong>: Config of <strong>popup</strong> ovSlickdoubleList. Check ovSlickDoubleList config for more detail.</li>
+<li><strong>listBoxConfig</strong>: This is config object includes 3 attributes: {config, onSelect, functionList} of <strong>popup</strong> ovNgListBox. Check ovNgListBox config for more detail.</li>
+<li><strong>convertDevice</strong>: This is a function, it comes along with &quot;getDevicesPromise&quot;.
+It has one param is deviceObject, use it to converts deviceObject and return the new format you want. Ignore it if you want to use default format.</li>
+<li><strong>isSelectedDevice</strong>: The same as &quot;convertDevice&quot; function.
+It has one param is deviceObject, return true if device is selected side and vice versa. Ignore it if devices are always on available side.</li>
+<li><strong>cacheSelectedDevices</strong>: Set it true in case we need to cache selected devices and vice versa. Default is false.</li>
+<li><strong>isNotLoadedOnStarting</strong>: Set it true and &quot;getDevicesPromise&quot; will not be called on starting.</li>
+<li><strong>onSelectionDataIsReady</strong>: This callback will be called once devices were returned via &quot;getDevicesPromise&quot; and converted, separated two sides (available.selected).</li>
+<li><strong>disabledSelector</strong>: You can set this true/false in &quot;getDevicesPromise&quot; to disabled/enabled devices selection, e.g. we want to avoid user&#39;s interaction while device datum are loading.</li>
+<li><strong>goToTopologyOptions</strong>: Config object to config going to Topology options, put your extra info for Topology as well.</li>
+<li><strong>pollFunction</strong>: This function to handle polling devices.</li>
+<li><strong>portSelectorOptions</strong>: //TODO here.</li>
+</ul>
+<p>--------------------------------popup options--------------------------------</p>
+<ul>
+<li><strong>multipleSelection</strong>: Set it true for multiple devices selection and vice versa. Default is true. Except browseDevice type, default is false.</li>
+<li><strong>canFinishSelection</strong>: Provide this function in case you want to change the way disabled/enabled ok button on popup selection. Return true to enabled and vice versa.
+By default, ok button will be enabled only when user changes something e.g. changing number of selected devices, changing the order of selected devices.</li>
+<li><strong>finishCallback</strong>: This function will be called after user performs ok popup selection.</li>
+<li><strong>cancelCallback</strong>: This function will be called after user cancels popup selection.</li>
+<li><strong>popupTemplate</strong>: Url of custom popup template.</li>
+</ul>
+</div></td></tr><tr><td>functionObject <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovdeviceselector-page"><p>Pass custom functions to custom template.</p>
+</div></td></tr><tr><td>selectionType <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovdeviceselector-page"><p>This attribute can be one of these:</p>
+<ul>
+<li>&#39;inline&#39; or ovDeviceSelectorConstant.selectionType.inline. This is default option.</li>
+<li>&#39;popupList&#39; or ovDeviceSelectorConstant.selectionType.popupList.</li>
+<li>&#39;popupLink&#39; or ovDeviceSelectorConstant.selectionType.popupLink.</li>
+<li>&#39;browseDevice&#39; or ovDeviceSelectorConstant.selectionType.browseDevice.</li>
+</ul>
+<p>Check ovDeviceSelectorConstant for more detail.</p>
+</div></td></tr><tr><td>selectionTemplate <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovdeviceselector-page"><p>In case you want to custom template.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovdeviceselector-page"><pre class="prettyprint linenums">
+&lt;!--HTML--&gt;
+  &lt;div ov-device-selector
+  input-devices="vm.inline.inputDevices"
+  selected-devices="vm.inline.selectedDevices"
+  selection-type="vm.inline.selectionType"
+  selection-options="vm.inline.selectionOptions"
+  function-object="vm.inline.functionObject"&gt;
+  &lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+  // inline style
+  function getInlineDevicesPromise() {
+     var deferred = $q.defer();
+     var deviceList = [];
+     vm.showMainSpinner();
+     vm.hideMainAlert();
+
+     ovDeviceSelectorDemoService.logger.info('Start to get all devices for inline demo.');
+
+     ovDeviceSelectorDemoService.requestObject.getInlineDevices.execute().then(angular.noop,
+       function (error) {
+         vm.showMainAlertError(ovDeviceSelectorDemoService.common.getMessageTranslated(error));
+         deviceList = [];
+         ovDeviceSelectorDemoService.logger.error('Getting all devices for inline demo from server ends: Fail!');
+       },
+       function (data) {
+
+         deviceList = ovDottie.getArray(data, 'response');
+
+         ovDeviceSelectorDemoService.logger.info('Getting all devices for inline demo from server ends: Success!');
+       }).finally(function () {
+       deferred.resolve(deviceList);
+       vm.hideMainSpinner();
+     });
+     return deferred.promise;
+   }
+
+  vm.inline = {
+     inputDevices: [],
+     selectedDevices: [],
+     selectionType: ovDeviceSelectorConstant.selectionType.inline,
+     selectionOptions: {
+       id: demoConstant.ovDeviceSelector.inline.id,
+       getDevicesPromise: getInlineDevicesPromise,
+       cacheSelectedDevices: true,
+       onSelectionDataIsReady: function () {
+       }
+     },
+     functionObject: {}
+   };
+</pre>
+</div></div>
+</div>

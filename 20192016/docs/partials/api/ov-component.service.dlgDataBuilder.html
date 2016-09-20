@@ -1,0 +1,109 @@
+<h1><code ng:non-bindable="">dlgDataBuilder</code>
+<div><span class="hint">service in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-service-page ov-component-service-dlgdatabuilder-page"><ul>
+<li><strong>dlgDataBuilder</strong>: build dialog object</li>
+</ul>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="api/ov-component.service:$ovDlgService2">$ovDlgService2</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_build">build()</h3>
+<div class="build"><div class="build-page"><p>build dialog</p>
+</div></div>
+</li>
+<li><h3 id="methods_setcancancel">setCanCancel(canCancel)</h3>
+<div class="setcancancel"><div class="setcancancel-page"><p>set canCancel function to detect can cancel dialog</p>
+</div><h5 id="methods_setcancancel_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>canCancel</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="setcancancel-page"><p>call back function return boolean</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setcanfinish">setCanFinish(canFinish)</h3>
+<div class="setcanfinish"><div class="setcanfinish-page"><p>set canFinish function to detect can finish dialog</p>
+</div><h5 id="methods_setcanfinish_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>canFinish</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="setcanfinish-page"><p>call back function return boolean</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setcancellabel">setCancelLabel(label)</h3>
+<div class="setcancellabel"><div class="setcancellabel-page"><p>set cancel label for dialog</p>
+</div><h5 id="methods_setcancellabel_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>label</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setcancellabel-page"><p>cancel label</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setfinishlabel">setFinishLabel(label)</h3>
+<div class="setfinishlabel"><div class="setfinishlabel-page"><p>set finish label for dialog</p>
+</div><h5 id="methods_setfinishlabel_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>label</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setfinishlabel-page"><p>finish label</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setiddlg">setIdDlg(id)</h3>
+<div class="setiddlg"><div class="setiddlg-page"><p>set Id for dialog</p>
+</div><h5 id="methods_setiddlg_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setiddlg-page"><p>id of dialog</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setlistbutton">setListButton(listButton)</h3>
+<div class="setlistbutton"><div class="setlistbutton-page"><p>append custom buttons</p>
+</div><h5 id="methods_setlistbutton_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>listButton</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="setlistbutton-page"><p>list button object</p>
+<ul>
+<li><em>button object</em><ul>
+<li><strong>label</strong> {string}: button label</li>
+<li><strong>btnCls</strong> {string}: button class</li>
+<li><strong>onClick</strong> {function}: on click call back function</li>
+<li><strong>disabled</strong> {boolean}: disabled button</li>
+<li><strong>checkDisabled</strong> {function}: check disabled button</li>
+<li><strong>isShow</strong> {boolean}: show/hide button</li>
+<li><strong>checkShow</strong> {function}: check to show button</li>
+</ul>
+</li>
+</ul>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setperformcancel">setPerformCancel(performCancel)</h3>
+<div class="setperformcancel"><div class="setperformcancel-page"><p>set performCancel function</p>
+</div><h5 id="methods_setperformcancel_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>performCancel</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="setperformcancel-page"><p>call back function to be executed when cancel dialog</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setperformfinish">setPerformFinish(performFinish)</h3>
+<div class="setperformfinish"><div class="setperformfinish-page"><p>set performFinish function</p>
+</div><h5 id="methods_setperformfinish_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>performFinish</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="setperformfinish-page"><p>call back function to be executed when finish dialog</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setshowcancel">setShowCancel(value)</h3>
+<div class="setshowcancel"><div class="setshowcancel-page"><p>show/hide cancel button</p>
+</div><h5 id="methods_setshowcancel_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="setshowcancel-page"><p>true/false --&gt; show/hide cancel button</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setshowfinish">setShowFinish(value)</h3>
+<div class="setshowfinish"><div class="setshowfinish-page"><p>show/hide finish button</p>
+</div><h5 id="methods_setshowfinish_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="setshowfinish-page"><p>true/false --&gt; show/hide finish button</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_settitle">setTitle(title)</h3>
+<div class="settitle"><div class="settitle-page"><p>set title for dialog</p>
+</div><h5 id="methods_settitle_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>title</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="settitle-page"><p>title of dialog</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_settitleiconclasses">setTitleIconClasses(cssClass)</h3>
+<div class="settitleiconclasses"><div class="settitleiconclasses-page"><p>set css class for dialog</p>
+</div><h5 id="methods_settitleiconclasses_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>cssClass</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="settitleiconclasses-page"><p>e.g. &#39;fa fa-warning fa-fw&#39;</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-service-page ov-component-service-dlgdatabuilder-page"><p><strong>Basic example:</strong>
+<pre class="prettyprint linenums">
+
+    function showDialog() {
+        var dialog = dlgDataBuilder.getBuilder()
+          .setTitle('title')
+          .setIdDlg('dialogId')
+          .setTemplateUrl('your-url/dialog.html')
+          .build();
+        $ovDlgService2.showDialog($scope, dialog);
+    };
+
+</pre>
+</div></div>
+</div>

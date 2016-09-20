@@ -1,0 +1,61 @@
+<h1><code ng:non-bindable="">ovDateTimePicker</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovdatetimepicker-page"><p>This component consists actually of 2 sub component UI widgets one for the date and one for the time selection process.
+The developers can configure which of those are needed and also the granularity that the component will allow the users to select a date/time.
+Developers also choose the format that the selected datetime will be displayed in the input field. The component uses on jQuery, moment.js and bootstrap libraries.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-date-time-picker
+       pick-date="{boolean}"
+       pick-date="{boolean}"
+       widget-container="{string}"
+       chosen-date="{millisecond}"
+       initial-date="{millisecond}"
+       date-time-format="{string}"
+       override-css="{string}"&gt;
+&lt;/ov-date-time-picker&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY ov-date-time-picker
+     pick-date="{boolean}"
+     pick-date="{boolean}"
+     widget-container="{string}"
+     chosen-date="{millisecond}"
+     initial-date="{millisecond}"
+     date-time-format="{string}"
+     override-css="{string}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pickDate</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-directive-page ov-component-directive-ovdatetimepicker-page"><p>enable date picker (Default is true)</p>
+</div></td></tr><tr><td>pickDate</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-directive-page ov-component-directive-ovdatetimepicker-page"><p>enable time picker (default is true)</p>
+</div></td></tr><tr><td>widgetContainer</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovdatetimepicker-page"><p>DOM element (default is body dom element)</p>
+</div></td></tr><tr><td>chosenDate</td><td><a href="" class="label type-hint type-hint-millisecond">millisecond</a></td><td><div class="ov-component-directive-page ov-component-directive-ovdatetimepicker-page"><p>current millisecond value</p>
+</div></td></tr><tr><td>initialDate</td><td><a href="" class="label type-hint type-hint-millisecond">millisecond</a></td><td><div class="ov-component-directive-page ov-component-directive-ovdatetimepicker-page"><p>initial date if not exist</p>
+</div></td></tr><tr><td>dateTimeFormat</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovdatetimepicker-page"><p>date time format string ex:</p>
+</div></td></tr><tr><td>overrideCss</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovdatetimepicker-page"><p>override class if you want</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovdatetimepicker-page"><p><strong> Minimum Setup </strong>
+<pre class="prettyprint linenums">
+  &lt;ov-date-time-picker
+       chosen-date="vm.chosenDate"&gt;
+  &lt;/ov-date-time-picker&gt;
+</pre>
+<p><strong> Show date picker only </strong>
+<pre class="prettyprint linenums">
+  &lt;ov-date-time-picker
+       pick-time="false"
+       chosen-date="vm.chosenDate"&gt;
+  &lt;/ov-date-time-picker&gt;
+</pre>
+<p><strong> Show time picker only </strong>
+<pre class="prettyprint linenums">
+  &lt;ov-date-time-picker
+       pick-date="false"
+       chosen-date="vm.chosenDate"&gt;
+  &lt;/ov-date-time-picker&gt;
+</pre>
+</div></div>
+</div>

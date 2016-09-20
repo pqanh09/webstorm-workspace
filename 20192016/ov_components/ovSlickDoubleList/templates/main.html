@@ -1,0 +1,94 @@
+<div class="ov-slick-double-list">
+
+  <div class="sdl-sort-bar-wrapper" ng-if="sdlConfig.sortByList.length>0">
+    <div class="sdl-sort-bar">
+      <label class="sort-label">{{sdlConfig.sortByText}}</label>
+
+      <div ng-class="{'sort-list-box-without-icon': sdlConfig.sortAsc===undefined, 'sort-list-box': sdlConfig.sortAsc!==undefined}">
+        <ov-ux-select ng-model="sdlConfig.sortBy" ux-select-id="{{collectionID.uxSelectId}}"
+                      ng-disabled="sdlConfig.sortByList.length===1"
+                      ov-ng-options="item as item.name for item in sdlConfig.sortByList">
+        </ov-ux-select>
+      </div>
+      <i class="fa prevent-select sdl-sort-icon" ng-hide="sdlConfig.sortAsc===undefined"
+         ng-click="sdlConfig.sortAsc=!sdlConfig.sortAsc;sortHandle()" id="{{collectionID.sdlSort}}"
+         ng-class="{'fa-sort-alpha-asc': sdlConfig.sortAsc, 'fa-sort-alpha-desc': !sdlConfig.sortAsc}"></i>
+
+    </div>
+  </div>
+
+  <div class="clearfix {{sdlConfig.overrideClasses}}">
+
+    <div class="input-panel"
+         ng-class="{'left-panel': !sdlConfig.leftHandSide, 'right-panel': sdlConfig.leftHandSide}">
+      <div class="action-bar">
+        <input type="text" id="{{collectionID.sdlSearch}}" placeholder="{{sdlConfig.searchText}}" class="search-box" ng-model="sdlConfig.searchString"
+               ng-change="updateSearch()"/>
+
+        <div class="action-button btn-group">
+          <button id="{{collectionID.addSelectedItem}}" class="btn btn-default" title="{{sdlConfig.addSelectedTooltip}}"
+                  type="button"
+                  ng-disabled="disableAddItems()" ng-click="addItems()">
+            <i class="fa"
+               ng-class="{'fa-angle-right': !sdlConfig.leftHandSide, 'fa-angle-left': sdlConfig.leftHandSide}"></i>
+          </button>
+          <button id="{{collectionID.addAllItem}}" class="btn btn-default" title="{{sdlConfig.addAllTooltip}}"
+                  type="button"
+                  ng-disabled="disableAddAllItems()" ng-click="addAllItems()">
+            <i class="fa"
+               ng-class="{'fa-angle-double-right': !sdlConfig.leftHandSide, 'fa-angle-double-left': sdlConfig.leftHandSide}"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="list-container height-list">
+        <div class="ov-infinity-list height-list"
+             ov-infinity-list row-height="sdlConfig.itemHeight" selected-rows="inputListIndex"
+             list-config="inputConfig" item-id="itemId" grid="inputGrid"
+             item-template="inputItemTemplate" list-data="inputList">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="selected-panel"
+         ng-class="{'left-panel': sdlConfig.leftHandSide, 'right-panel': !sdlConfig.leftHandSide}">
+      <div class="action-bar">
+        <div class="status-label">{{sdlConfig.item|i18next:{count:selectedList.length} }} {{sdlConfig.selected}}
+        </div>
+        <div class="action-button btn-group">
+          <button id="{{collectionID.moveSelectedItemDown}}" class="btn btn-default" title="{{sdlConfig.moveSelectedDownTooltip}}"
+                  type="button"
+                  ng-disabled="(selectedListIndex.length<1||selectedListIndex.length===selectedList.length)" ng-click="moveItemsDown()">
+            <i class="fa fa-angle-down"></i>
+          </button>
+          <button id="{{collectionID.moveSelectedItemUp}}" class="btn btn-default" title="{{sdlConfig.moveSelectedUpTooltip}}"
+                  type="button"
+                  ng-disabled="(selectedListIndex.length<1||selectedListIndex.length===selectedList.length)" ng-click="moveItemsUp()">
+            <i class="fa fa-angle-up"></i>
+          </button>
+          <button id="{{collectionID.removeSelectedItem}}" class="btn btn-default " title="{{sdlConfig.removeSelectedTooltip}}"
+                  type="button"
+                  ng-disabled="selectedListIndex.length < 1" ng-click="removeItems()">
+            <i class="fa"
+               ng-class="{'fa-angle-right': sdlConfig.leftHandSide, 'fa-angle-left': !sdlConfig.leftHandSide}"></i>
+          </button>
+          <button id="{{collectionID.removeAllItem}}" class="btn btn-default" title="{{sdlConfig.removeAllTooltip}}"
+                  type="button"
+                  ng-disabled="disableRemoveAllItems()" ng-click="removeAllItems()">
+            <i class="fa"
+               ng-class="{'fa-angle-double-right': sdlConfig.leftHandSide, 'fa-angle-double-left': !sdlConfig.leftHandSide}"></i>
+          </button>
+        </div>
+      </div>
+      <div class="list-container height-list">
+        <div class="ov-infinity-list height-list"
+             ov-infinity-list row-height="sdlConfig.itemHeight" selected-rows="selectedListIndex"
+             list-config="selectedConfig" grid="selectedGrid" item-id="itemId"
+             item-template="selectedItemTemplate" list-data="selectedList">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="disabled-component" ng-if="sdlDisabled"></div>
+</div>

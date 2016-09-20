@@ -1,0 +1,48 @@
+<h1><code ng:non-bindable="">ovOboe</code>
+<div><span class="hint">object in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-object-page ov-component-object-ovoboe-page"><p>Object providing GET, POST, PUT, and DELETE methods as a replacement of $http.
+Must be generated from <a href="api/ov-component.service:ovOboeBuilder">ov-component.service:ovOboeBuilder</a></p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_delete">delete(url, config)</h3>
+<div class="delete"><div class="delete-page"><p>Build up a DELETE request before sending</p>
+</div><h5 id="methods_delete_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>url</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="delete-page"><p>URL of DELETE request</p>
+</div></td></tr><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="delete-page"><p>Custom configuration. Refer to <code>config</code> parameter of <code>get</code> method</p>
+</div></td></tr></tbody></table><h5 id="methods_delete_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="delete-page"><p>Concrete <a href="api/ov-component.object:ovOboeReq">ov-component.object:ovOboeReq</a> object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_get">get(url, config)</h3>
+<div class="get"><div class="get-page"><p>Build up a GET request before sending</p>
+</div><h5 id="methods_get_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>url</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="get-page"><p>URL of GET request</p>
+</div></td></tr><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="get-page"><p>Custom configuration</p>
+</div></td></tr><tr><td>config.requestId</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="get-page"><p>Used to cancel old request</p>
+</div></td></tr><tr><td>config.headers <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="get-page"><p>Custom request header object</p>
+</div> <p><em>(default: {"Content-Type": "application/json"})</em></p></td></tr><tr><td>config.successControl <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="get-page"><p>Callback function used to control success status of a response</p>
+</div></td></tr><tr><td>config.errorDetector <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="get-page"><p>Callback function used to detect error in a response</p>
+</div></td></tr><tr><td>config.onPreExecute <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="get-page"><p>Pre-executed callback used to do before executing request</p>
+</div> <p><em>(default: angular.noop)</em></p></td></tr><tr><td>config.onPostExecute <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="get-page"><p>Post-executed callback used to do after executing request</p>
+</div> <p><em>(default: angular.noop)</em></p></td></tr><tr><td>config.disabledProxy <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="get-page"><p>Use raw URL instead of using ovHttp.proxy</p>
+</div> <p><em>(default: false)</em></p></td></tr></tbody></table><h5 id="methods_get_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="get-page"><p>Concrete <a href="api/ov-component.object:ovOboeReq">ov-component.object:ovOboeReq</a> object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_post">post(url, config)</h3>
+<div class="post"><div class="post-page"><p>Build up a POST request before sending</p>
+</div><h5 id="methods_post_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>url</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="post-page"><p>URL of POST request</p>
+</div></td></tr><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="post-page"><p>Custom configuration. Refer to <code>config</code> parameter of <code>get</code> method</p>
+</div></td></tr></tbody></table><h5 id="methods_post_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="post-page"><p>Concrete <a href="api/ov-component.object:ovOboeReq">ov-component.object:ovOboeReq</a> object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_put">put(url, config)</h3>
+<div class="put"><div class="put-page"><p>Build up a PUT request before sending</p>
+</div><h5 id="methods_put_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>url</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="put-page"><p>URL of PUT request</p>
+</div></td></tr><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="put-page"><p>Custom configuration. Refer to <code>config</code> parameter of <code>get</code> method</p>
+</div></td></tr></tbody></table><h5 id="methods_put_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="put-page"><p>Concrete <a href="api/ov-component.object:ovOboeReq">ov-component.object:ovOboeReq</a> object</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

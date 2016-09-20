@@ -1,0 +1,9 @@
+
+<div>
+  <button ng-attr-id="{{vm.menuConfig.idPrefix}}{{vm.menuConfig.showMenuButton.id}}"
+          class="{{vm.menuConfig.showMenuButton.btnClass}}"
+          ng-click="vm.menuList.toggle(); $event.stopPropagation();"
+          ng-init="vm.isShowMenuList = false">
+    {{'button-label.more' | i18next}} <span class="caret"></span>
+  </button>
+</div>

@@ -1,0 +1,60 @@
+<h1><code ng:non-bindable="">ovEllipsis</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovellipsis-page"><p>Support to see ellipsis text in full form</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY ov-ellipsis="{string}"
+     [ov-ellipsis-template="{string}"]&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ovEllipsis</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovellipsis-page"><p>Text to be ellipsis</p>
+</div></td></tr><tr><td>ovEllipsisTemplate <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovellipsis-page"><p>Custom template for displaying ellipsis text</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovellipsis-page"><p><strong>Basic example:</strong>
+<pre class="prettyprint linenums">
+  // HTML
+  &lt;div ov-ellipsis="This is the content of the ellipsis element" style="width: 100px"&gt;
+    This is the content of the ellipsis element
+  &lt;/div&gt;
+</pre>
+<p><strong>Use controller&#39;s property example:</strong>
+<pre class="prettyprint linenums">
+  // HTML
+  &lt;div ov-ellipsis="{{ctrl1.ellipsis.text}}" style="width: 100px"&gt;
+    {{ctrl1.ellipsis.text}}
+  &lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+  // JS
+  ctrl1.ellipsis = {
+    text: 'This is the content of the ellipsis element'
+  };
+</pre>
+<p><strong>Use custom template example:</strong>
+<pre class="prettyprint linenums">
+  // HTML
+  &lt;div ov-ellipsis="{{ctrl1.ellipsis.text}}" ov-ellipsis-template="{{ctrl1.ellipsis.template}}"style="width: 100px"&gt;
+    {{ctrl1.ellipsis.text}}
+  &lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+  // HTML - path/to/your/ov-ellipsis-template.html
+  &lt;div&gt;
+    &lt;div&gt;Ellipsis text is:&lt;/div&gt;
+    &lt;div&gt;{{ctrl1.ellipsis.text}}&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+  // JS
+  ctrl1.ellipsis = {
+    text: 'This is the content of the ellipsis element',
+    template: 'path/to/your/ov-ellipsis-template.html'
+  };
+</pre>
+</div></div>
+</div>

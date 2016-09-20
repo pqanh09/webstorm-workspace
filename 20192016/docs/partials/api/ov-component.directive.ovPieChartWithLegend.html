@@ -1,0 +1,60 @@
+<h1><code ng:non-bindable="">ovPieChartWithLegend</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovpiechartwithlegend-page"><p>Displays a pieChart based on the given data. Supported drill down, back to parent, save state, export chart.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-pie-chart-with-legend
+       chart-data="{array}"
+       [chart-config="{object}"]
+       [on-pie-click="{function}"]
+       [state="{function}"]&gt;
+&lt;/ov-pie-chart-with-legend&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY ov-pie-chart-with-legend
+     chart-data="{array}"
+     [chart-config="{object}"]
+     [on-pie-click="{function}"]
+     [state="{function}"]&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>chartData</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovpiechartwithlegend-page"><p>Chart data</p>
+</div></td></tr><tr><td>chartConfig <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovpiechartwithlegend-page"><p>Chart config.</p>
+<ul>
+<li><strong>pieChartConfig</strong> <code>object</code>: Config for the pie-chart, similar to config in pieChart component, have an additional optional property:<ul>
+<li><strong>childrenProps</strong> (optional) <code>object</code>: included <code>key</code> and <code>title</code>, in case pie have multiple children to be drilled down.</li>
+</ul>
+</li>
+<li><strong>legendConfig</strong> <code>object</code>: Config for the legend, similar to config in ovLegend component.</li>
+<li><strong>isReportMode</strong> (optional) <code>object</code>: Define if the chart is drawing in report mode (default <code>false</code>)</li>
+<li><strong>isDashboard</strong> (optional) <code>object</code>: Define if the chart is drawing in dashboard mode (default <code>false</code>)</li>
+</ul>
+</div></td></tr><tr><td>onPieClick <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-directive-page ov-component-directive-ovpiechartwithlegend-page"><p>callBack function will be called when click on a bar. whole bar data and index will be passed as arguments</p>
+</div></td></tr><tr><td>state <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-directive-page ov-component-directive-ovpiechartwithlegend-page"><p>state of the current chart, use this to save current chart state.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovpiechartwithlegend-page"><p><strong>Basic Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-pie-chart-with-legend chart-data="ctrl.pieChartData" chart-config="ctrl.pieChartWithLegendConfig"&gt;&lt;/ov-pie-chart-with-legend&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+
+ var pieChartConfig = {...};
+ var legendConfig = {...};
+
+ ctrl.pieChartWithLegendConfig = {
+   pieChartConfig: pieChartConfig,
+   legendConfig: legendConfig,
+   isReportMode: false,
+   isDashboard: false
+ };
+
+ ctrl.pieChartData = [...];
+
+</pre>
+</div></div>
+</div>

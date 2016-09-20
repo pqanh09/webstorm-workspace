@@ -1,0 +1,55 @@
+<form class="panel panel-default">
+
+  <div class="panel-heading">
+    <h4 class="app-heading">
+      <span ng-if="vm.isCreate()">{{::'sampleApp.menus.sampleOne.create'|i18next}}</span>
+      <span ng-if="vm.isEdit()">{{::'sampleApp.menus.sampleOne.edit'|i18next}}</span>
+    </h4>
+  </div>
+
+  <div class="panel-body">
+    <div class="form-horizontal">
+      <div class="asterisk-info">{{::'button-label.asterisk' | i18next }}</div>
+      <div class="form-group">
+        <label class="col-md-3 control-label">*{{:: vm.constant.sampleOne.attrs.name.i18nKey | i18next}}</label>
+
+        <div class="col-md-6">
+          <input class="form-control" ng-disabled="vm.isEdit()" ov-auto-focus="vm.isCreate()"
+                 ng-model="vm.cache.currentItem[vm.constant.sampleOne.attrs.name.key]"
+                 id="sample-sampleOne-name"
+                 ov-validator="vm.action.rules.name"
+                 validator-group-id="vm.constant.sampleOne.validatorGroupId">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-3 control-label">{{:: vm.constant.sampleOne.attrs.description.i18nKey | i18next}}</label>
+
+        <div class="col-md-6">
+          <textarea class="form-control" ov-auto-focus="vm.isEdit()" rows="3"
+                    ng-model="vm.cache.currentItem[vm.constant.sampleOne.attrs.description.key]"
+                    id="sample-sampleOne-description"
+                    ov-validator="vm.action.rules.description"
+                    validator-group-id="vm.constant.sampleOne.validatorGroupId"></textarea>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="panel-footer">
+    <div class="text-right">
+      <button id="sampleOne-add" ng-if="vm.isCreate()" type="submit" class="btn btn-primary"
+              ng-click="vm.action.create()" ng-disabled="!vm.action.isValidForm()"
+              title="{{::'button-label.create' | i18next}}">{{::'button-label.create' | i18next}}
+      </button>
+      <button id="sampleOne-edit" ng-if="vm.isEdit()" type="submit" class="btn btn-primary"
+              ng-click="vm.action.update()" ng-disabled="!vm.action.isValidForm() || !vm.action.isChanged()"
+              title="{{::'button-label.apply' | i18next}}">{{::'button-label.apply' | i18next}}
+      </button>
+      <button id="sampleOne-cancel" type="button" class="btn btn-default" ng-click="vm.action.reset()"
+              title="{{::'button-label.cancel' | i18next}}">{{::'button-label.cancel' | i18next}}
+      </button>
+    </div>
+  </div>
+</form>

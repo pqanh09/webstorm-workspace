@@ -1,0 +1,35 @@
+<h1><code ng:non-bindable="">onResizeElement</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-onresizeelement-page"><p>Execute given callback function whenever window element gets re-sized and pass new width value to the callback as a parameter.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY on-resize-element="{function}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>onResizeElement</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-directive-page ov-component-directive-onresizeelement-page"><p>Callback function to execute</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-onresizeelement-page"><p><strong>Basic example:</strong>
+<pre class="prettyprint linenums">
+  // HTML
+  &lt;div ov-resize-element="ctrl1.ovResizeElem.onResize"&gt;
+  &lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+  // JS
+  ctrl1.ovResizeElem = {
+    onResize: function (newWidthSize) {
+      if (newWidthSize &lt; 768) {
+        // Try to collapse something
+      } else {
+        // Expand them
+      }
+    }
+  };
+</pre>
+</div></div>
+</div>

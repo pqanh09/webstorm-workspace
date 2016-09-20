@@ -1,0 +1,73 @@
+<h1><code ng:non-bindable="">ovSvgLegend</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovsvglegend-page"><p>Create chart legends using SVG for exporting purpose.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-svg-legend
+       legend-data="{Array}"
+       [legend-config="{Object}"]&gt;
+&lt;/ov-svg-legend&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY ov-svg-legend
+     legend-data="{Array}"
+     [legend-config="{Object}"]&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>legendData</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovsvglegend-page"><p>legend data</p>
+</div></td></tr><tr><td>legendConfig <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovsvglegend-page"><p>Legend config.</p>
+<ul>
+<li><strong>width</strong> <code>Integer</code> (optional): Legends container width (default <code>600</code>)</li>
+<li><strong>fixedColors</strong> <code>Object</code> (optional): A mapper to define fixed color for some data items.</li>
+<li><strong>mapping</strong> (optional) <code>object</code>: define map values<ul>
+<li><strong>name</strong> <code>string</code>: property name can be used to get legend item name (default <code>name</code>)</li>
+<li><strong>value</strong> <code>string</code>: property name can be used to get legend item value (default <code>value</code>)</li>
+</ul>
+</li>
+</ul>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovsvglegend-page"><p><strong>Basic Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-svg-legend legend-config="ctrl.legendConfig"
+ legend-data="ctrl.legendData"&gt;
+ &lt;/ov-svg-legend&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ ctrl.legendConfig = {
+    width: 600px,
+    mapping: {
+      name: 'displayName',
+      value: 'count'
+    },
+    fixedColors: {
+      Others: '#808080',
+      OTHERS: '#808080'
+    }
+  };
+ ctrl.legendData = [
+ {
+   "displayName": "10.1.4.123",
+   "count": 96,
+   "color": "#9467bd",
+   "checked": false
+ },
+ {
+   "displayName": "10.1.3.72",
+   "count": 281,
+   "color": "#ff9896",
+   "checked": false
+ },
+ {
+   "displayName": "10.1.4.80",
+   "count": 554,
+   "color": "#aec7e8",
+   "checked": false
+ }];
+</pre>
+</div></div>
+</div>

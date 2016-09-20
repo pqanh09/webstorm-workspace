@@ -1,0 +1,28 @@
+<div>
+  <h4 class="app-heading">{{:: reportOptions.title | i18next}}</h4>
+
+  <div class="ovNgListBox" ng-show="localData.length">
+    <div class="detail-content">
+      <div class="header" ng-include="'ov_components/ovNgListBox/defaultResultHeaderTemplate.html'"></div>
+
+      <ul class="list-item">
+        <div class="content-view">
+          <div ng-repeat="(itemIndex,item) in localData">
+            <li
+              class="ovNgListBoxItem list-item-{{$index}} {{item.overrideCss}}"
+              ng-class="{'ovListEven': !!($index%2), 'ovListOdd': !($index%2)}">
+              <div>
+                <div class="ov-ng-list-box-item-content-wrapper">
+                  <div ng-include="'ov_components/ovNgListBox/defaultResultItemTemplate.html'"></div>
+                  <div class="ov-ng-list-box-tag-list ov-tag-list"></div>
+                </div>
+              </div>
+            </li>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+
+  <div class="well well-sm" ng-hide="localData.length">{{:: 'common.noData' | i18next}}</div>
+</div>

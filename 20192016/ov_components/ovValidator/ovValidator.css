@@ -1,0 +1,42 @@
+.ov-validator {
+  color: #b94a48;
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+}
+.ov-validator-auto-hide {
+  color: #b94a48;
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.ov-validator-fixed-contain {
+  color: #b94a48;
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: bold;
+  height: 0;
+}
+.ov-validator-fixed-contain .ov-validator-fixed {
+  width: 100%;
+  display: block;
+}
+.ov-validator-fixed-contain .ov-validator-auto-hide-fixed {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.ov-validator-demo .test-demo {
+  color: #00f;
+}

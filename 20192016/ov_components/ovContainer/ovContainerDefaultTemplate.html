@@ -1,0 +1,34 @@
+<div class="{{ovContainer.$ovContainerConfig.cssWrapper}}-wrapper" ng-attr-id="{{ovContainer.$ovContainerConfig.appId + '-ov-container-main'}}">
+  <!--header-->
+  <div ng-attr-id="{{ovContainer.$ovContainerConfig.appId + '-ov-container-header'}}" class="clearfix content-header">
+
+    <!--heading-->
+      <h3 class="{{ ovContainer.$ovContainerConfig.titleCssClass }} pull-left">{{ovContainer.$ovContainerConfig.title |i18next}}</h3>
+    <!--end heading-->
+
+    <!--menu button bar-->
+    <div class="pull-right">
+      <div class="toolbar pull-right vxlans-help-icon">
+        <i ng-attr-id="{{ovContainer.$ovContainerConfig.appId + '-ov-container-help-button'}}" ng-attr-title="{{'button-label.help' | i18next}}"
+           class="toolbar-icon app-help fa fa-question-circle"
+           ng-click="ovContainer.$ovContainer.openHelp(ovContainer.$ovContainerConfig.helpLink)"></i>
+      </div>
+      <ov-slick-menu menu-data="ovContainer.$ovContainerConfig.slickMenu.data" menu-config="ovContainer.$ovContainerConfig.slickMenu.config"
+                     class="{{ovContainer.$ovContainerConfig.slickMenu.config.containnerCssClass}}" ng-if="ovContainer.$ovContainerConfig.slickMenu.getStatus()"></ov-slick-menu>
+    </div>
+    <!--end menu button bar-->
+
+  </div>
+  <!--end header-->
+
+  <!--alert-->
+  <div alert-id="{{ovContainer.$ovContainerConfig.appId + '-ov-container-main-alert'}}" ov-alert="ovContainer.$ovContainerConfig.alertObject"></div>
+  <!--end alert-->
+
+  <div ov-spinner-loading="ovContainer.$ovContainerConfig.spinner.status" spinner-id="ovContainer.$ovContainerConfig.appId + '-ov-container-main-alert'">
+    <!-- container content -->
+    <ng-include src="ovContainer.$ovContainerConfig.state.current.templateUrl"></ng-include>
+    <!-- end container content -->
+  </div>
+
+</div>

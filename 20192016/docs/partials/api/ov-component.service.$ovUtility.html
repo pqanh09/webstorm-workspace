@@ -1,0 +1,542 @@
+<h1><code ng:non-bindable="">$ovUtility</code>
+<div><span class="hint">service in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-service-page ov-component-service--ovutility-page"><p>Provide utility functions</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="api/ov-component.service:ovUserPrefSrv">ovUserPrefSrv</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="api/ov-component.service:ovHttp">ovHttp</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addtimestamp">addTimestamp(resultItem, config)</h3>
+<div class="addtimestamp"><div class="addtimestamp-page"><p>Add resultTimestamp to resultItem</p>
+</div><h5 id="methods_addtimestamp_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>resultItem</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="addtimestamp-page"><p>Result item object to add timestamp</p>
+</div></td></tr><tr><td>config <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="addtimestamp-page"><p>Optional configs</p>
+<ul>
+<li>config.ignoreTranslated ignore adding resultTimestampTranslated to resultItem.translated object</li>
+</ul>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_compareaction">compareAction(sourceArray, selectedArray, compareFn, actionFn)</h3>
+<div class="compareaction"><div class="compareaction-page"><p>Compare two arrays and execute given action callback function if two equal items found via compareFn</p>
+</div><h5 id="methods_compareaction_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>sourceArray</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="compareaction-page"><p>Source array to compare</p>
+</div></td></tr><tr><td>selectedArray</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="compareaction-page"><p>Selected array to compare</p>
+</div></td></tr><tr><td>compareFn</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="compareaction-page"><p>Function used to detect 2 items in 2 list are equal</p>
+</div></td></tr><tr><td>actionFn</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="compareaction-page"><p>Callback function to execute once two equal items are found. Two item objects are passed as parameters</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_comparearray">compareArray(destinationArray, originArray, primaryKey)</h3>
+<div class="comparearray"><div class="comparearray-page"><p>Compare 2 arrays included: order of items and number of array items
+This function is not used to compare deeply 2 arrays
+Only compare when length of 2 items is greater than 0,
+otherwise, the two array are considered as the same, this is to service for ovDataView in which the least at one &quot;field&quot; must be selected</p>
+</div><h5 id="methods_comparearray_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>destinationArray</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="comparearray-page"><p>Destination array to compare</p>
+</div></td></tr><tr><td>originArray</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="comparearray-page"><p>Source array to compare</p>
+</div></td></tr><tr><td>primaryKey</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="comparearray-page"><p>Key of an item to compare</p>
+</div></td></tr></tbody></table><h5 id="methods_comparearray_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="comparearray-page"><p>True if 2 array are the same and not empty. Otherwise false</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_comparearraybyproperty">compareArrayByProperty(selectedArray, originalArray, property)</h3>
+<div class="comparearraybyproperty"><div class="comparearraybyproperty-page"><p>Compare 2 arrays included: order of items and number of array items
+This function is not used to compare deeply 2 arrays
+Only compare when length of 2 items is greater than 0,
+otherwise, the two array are considered as the same, this is to service for ovDataView in which the least at one &quot;field&quot; must be selected</p>
+</div><h5 id="methods_comparearraybyproperty_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>selectedArray</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="comparearraybyproperty-page"><p>Source array to compare</p>
+</div></td></tr><tr><td>originalArray</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="comparearraybyproperty-page"><p>Destination array to compare</p>
+</div></td></tr><tr><td>property</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="comparearraybyproperty-page"><p>Property of an item to compare</p>
+</div></td></tr></tbody></table><h5 id="methods_comparearraybyproperty_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="comparearraybyproperty-page"><p>True if 2 array are the same and not empty. Otherwise false</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_comparemacaddress">compareMACAddress(a, b)</h3>
+<div class="comparemacaddress"><div class="comparemacaddress-page"><p>Compare 2 MAC addresses</p>
+</div><h5 id="methods_comparemacaddress_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>a</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="comparemacaddress-page"><p>Source MAC address to compare</p>
+</div></td></tr><tr><td>b</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="comparemacaddress-page"><p>Destination MAC address to compare</p>
+</div></td></tr></tbody></table><h5 id="methods_comparemacaddress_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="comparemacaddress-page"><p>True if 2 MAC addresses are equal. Otherwise false</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_comparestringignorecase">compareStringIgnoreCase(str1, str2)</h3>
+<div class="comparestringignorecase"><div class="comparestringignorecase-page"><p>Compare two input string ignore case</p>
+</div><h5 id="methods_comparestringignorecase_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>str1</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="comparestringignorecase-page"><p>Source string to compare</p>
+</div></td></tr><tr><td>str2</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="comparestringignorecase-page"><p>Destination string to compare</p>
+</div></td></tr></tbody></table><h5 id="methods_comparestringignorecase_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="comparestringignorecase-page"><p>True if two strings are equal. Otherwise false</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_compareversion">compareVersion(firstVer, comparisonOperator, secondVer)</h3>
+<div class="compareversion"><div class="compareversion-page"><p>Compare version</p>
+<pre class="prettyprint linenums">
+Version format: [version].[buildNumber].[subVersion]
+ ==&gt; ex: 7.3.4.111.R01
+       version: 7.3.4
+       buildNumber: 111
+       subVersion: R01
+Compare in turn: version, subVersion, buildNumber
+==&gt; 7.3.4.35.R02 &gt; 7.3.4.111.R01
+</pre>
+</div><h5 id="methods_compareversion_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>firstVer</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="compareversion-page"><p>: first version</p>
+</div></td></tr><tr><td>comparisonOperator</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="compareversion-page"><p>: operators include: =, !=, &gt;, &gt;=, &lt;, &lt;=</p>
+</div></td></tr><tr><td>secondVer</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="compareversion-page"><p>: second version</p>
+</div></td></tr></tbody></table><h5 id="methods_compareversion_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="compareversion-page"><p>True if two versions are equal. Otherwise false</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_convertresponsetext2json">convertResponseText2Json(responseText)</h3>
+<div class="convertresponsetext2json"><div class="convertresponsetext2json-page"><p>Convert string to json object</p>
+</div><h5 id="methods_convertresponsetext2json_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>responseText</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="convertresponsetext2json-page"><p>String that is needed to convert to json object</p>
+</div></td></tr></tbody></table><h5 id="methods_convertresponsetext2json_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="convertresponsetext2json-page"><p>Regular JS object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_dorequest">doRequest(link, sendData, reqMethod)</h3>
+<div class="dorequest"><div class="dorequest-page"><p>Do a single request using Angular <a>$http</a> service and return a promise of the request</p>
+</div><h5 id="methods_dorequest_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>link</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dorequest-page"><p>URL API of the request</p>
+</div></td></tr><tr><td>sendData</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="dorequest-page"><p>Data accompanying the request</p>
+</div></td></tr><tr><td>reqMethod</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dorequest-page"><p>Request method name. Valid ones are:</p>
+<ul>
+<li>GET</li>
+<li>PUT</li>
+<li>POST</li>
+<li>DELETE</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_dorequest_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dorequest-page"><p>Promise object of the request</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_dorequestmultipart">doRequestMultiPart(link, sendData, reqMethod, progressCallBack, finishCallBack, errorCallback)</h3>
+<div class="dorequestmultipart"><div class="dorequestmultipart-page"><p>Do a multi-part request using <a>$ovChunked</a> service</p>
+</div><h5 id="methods_dorequestmultipart_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>link</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dorequestmultipart-page"><p>URL API of the request</p>
+</div></td></tr><tr><td>sendData</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="dorequestmultipart-page"><p>Data accompanying the request</p>
+</div></td></tr><tr><td>reqMethod</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dorequestmultipart-page"><p>Request method name. Valid ones are:</p>
+<ul>
+<li>GET</li>
+<li>PUT</li>
+<li>POST</li>
+<li>DELETE</li>
+</ul>
+</div></td></tr><tr><td>progressCallBack <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dorequestmultipart-page"><p>Callback function being executed whenever a piece of data return from server</p>
+</div></td></tr><tr><td>finishCallBack <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dorequestmultipart-page"><p>Callback function being executed whenever the request is finished</p>
+</div></td></tr><tr><td>errorCallback <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dorequestmultipart-page"><p>Callback function being executed whenever error happens</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_extendconfig">extendConfig(config, defaultConfig)</h3>
+<div class="extendconfig"><div class="extendconfig-page"><p>Merge MISSING values of defaultConfig to config and keep reference of config</p>
+</div><h5 id="methods_extendconfig_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="extendconfig-page"><p>Destination config object to merge missing values</p>
+</div></td></tr><tr><td>defaultConfig</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="extendconfig-page"><p>Default config object to use when merging missing values</p>
+</div></td></tr></tbody></table><h5 id="methods_extendconfig_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="extendconfig-page"><p>Reference to config</p>
+</div></td></tr></table><h4 id="methods_extendconfig_example">Example</h4>
+<div class="example"><div class="extendconfig-page"><pre class="prettyprint linenums">
+Ex:
+ defaultConfig = {
+   options1: {
+     key1: true,
+     key2: true
+     key3: false
+   },
+   option1: [1, 2],
+   option2: []
+ }
+
+ config = {
+   options: {
+     key1: false
+   },
+   option1: [3, 4]
+ }
+
+ extendConfig(config, defaultConfig)
+ config = {
+   options1: {
+     key1: false,
+     key2: true
+     key3: false
+   },
+   option1: [3, 4],
+   option2: []
+ }
+ </pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_findsidebarmenuitem">findSidebarMenuItem(sideBarData, menuId)</h3>
+<div class="findsidebarmenuitem"><div class="findsidebarmenuitem-page"><p>Returns side bar item object if found. Otherwise Null</p>
+</div><h5 id="methods_findsidebarmenuitem_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>sideBarData</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="findsidebarmenuitem-page"><p>Side bar object</p>
+</div></td></tr><tr><td>menuId</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="findsidebarmenuitem-page"><p>Expected side bar object ID</p>
+</div></td></tr></tbody></table><h5 id="methods_findsidebarmenuitem_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="findsidebarmenuitem-page"><p>Found side bar item</p>
+</div></td></tr></table><h4 id="methods_findsidebarmenuitem_example">Example</h4>
+<div class="example"><div class="findsidebarmenuitem-page"><p><strong>Side bar object structure:</strong>
+<pre class="prettyprint linenums">
+  var rootSideBar = {
+    id: 'root',
+    title: 'Root',
+    templateUrl: '/path/to/your/root//sideBar/template',
+    i18nKey: 'sideBar.root',
+    menuItems: []
+  }
+
+  var sideBarItem1 = {
+    id: 'item1',
+    title: 'Item 1',
+    templateUrl: '/path/to/your/item1/sideBar/template',
+    i18nKey: 'sideBar.item1',
+    menuItems: [],
+    parent: rootSideBar
+  };
+
+  ctrl1.sideBar = {};
+  ctr1.sideBar.menu = rootSideBar;
+  ctr1.sideBar.menu.menuItems.push(sideBarItem1);
+
+  var item1 = $ovUtility.findSidebarMenuItem(ctrl1.sideBar.menu, 'item1');
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_findvalitem">findValItem(item, key)</h3>
+<div class="findvalitem"><div class="findvalitem-page"><p>Find value of a item based on given path (in dot format) of properties</p>
+</div><h5 id="methods_findvalitem_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>item</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="findvalitem-page"><p>Item to find value</p>
+</div></td></tr><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="findvalitem-page"><p>Path of properties in dot format</p>
+</div></td></tr></tbody></table><h5 id="methods_findvalitem_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="findvalitem-page"><p>Found value</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_findvaluebykey">findValueByKey(value, list, key)</h3>
+<div class="findvaluebykey"><div class="findvaluebykey-page"><p>Find item in array of objects by value and field</p>
+</div><h5 id="methods_findvaluebykey_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="findvaluebykey-page"><p>Given value to compare</p>
+</div></td></tr><tr><td>list</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="findvaluebykey-page"><p>Array of item to find</p>
+</div></td></tr><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="findvaluebykey-page"><p>Search property of an item in the list</p>
+</div></td></tr></tbody></table><h5 id="methods_findvaluebykey_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="findvaluebykey-page"><p>Found item</p>
+</div></td></tr></table><h4 id="methods_findvaluebykey_example">Example</h4>
+<div class="example"><div class="findvaluebykey-page"><pre class="prettyprint linenums">
+Input:
+  value: 1
+  list: [{id: 1}, {id: 2}]
+  key: 'id'
+Output:
+  {id: 1}
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_findvalueindexbykey">findValueIndexByKey(value, list, key)</h3>
+<div class="findvalueindexbykey"><div class="findvalueindexbykey-page"><p>Find index of an item in array of objects by value and field</p>
+</div><h5 id="methods_findvalueindexbykey_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="findvalueindexbykey-page"><p>Given value to compare</p>
+</div></td></tr><tr><td>list</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="findvalueindexbykey-page"><p>Array of item to find</p>
+</div></td></tr><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="findvalueindexbykey-page"><p>Search property of an item in the list</p>
+</div></td></tr></tbody></table><h5 id="methods_findvalueindexbykey_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="findvalueindexbykey-page"><p>Found item index</p>
+</div></td></tr></table><h4 id="methods_findvalueindexbykey_example">Example</h4>
+<div class="example"><div class="findvalueindexbykey-page"><pre class="prettyprint linenums">
+Input:
+  value: 2
+  list: [{id: 1}, {id: 2}]
+  key: 'id'
+Output:
+  1
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_formatclearpass">formatClearpass(clearpass, useVendorEnable)</h3>
+<div class="formatclearpass"><div class="formatclearpass-page"><p>Add disabled to clearpass object base on accessType and vendorEnabled (optional) attribute.</p>
+</div><h5 id="methods_formatclearpass_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>clearpass</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="formatclearpass-page"><p>Clearpass object to be formatted</p>
+</div></td></tr><tr><td>useVendorEnable <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="formatclearpass-page"><p>Use <code>vendorEnabled</code> property of given object</p>
+</div></td></tr></tbody></table><h5 id="methods_formatclearpass_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="formatclearpass-page"><p>The clearpass object itself</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_formatswitch">formatSwitch(switchObj)</h3>
+<div class="formatswitch"><div class="formatswitch-page"><p>Add disabled property to switch object if it implies a down switch</p>
+</div><h5 id="methods_formatswitch_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>switchObj</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="formatswitch-page"><p>Switch object to be formatted</p>
+</div></td></tr></tbody></table><h5 id="methods_formatswitch_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="formatswitch-page"><p>The switch object itself</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getcolumnlist">getColumnList(attrs, minDefaultAll)</h3>
+<div class="getcolumnlist"><div class="getcolumnlist-page"><p>Convert regular javascript object whose value of each property is another object into an array of extracted object.
+Extracted object contains:</p>
+<ul>
+<li><code>id</code> and <code>field</code> property values extracted from the object property <code>key</code></li>
+<li><code>name</code> and <code>title</code> property values extracted from the object property <code>i18nKey</code> via $i18next</li>
+<li><code>type</code> value extracted from the object property <code>type</code> or 0 by default</li>
+<li><code>sortable</code> value extracted from the object property <code>sortable</code> if it&#39;s defined or true by default</li>
+<li><code>resizable</code> value extracted from the object property <code>resizable</code> if it&#39;s defined or true by default</li>
+<li><code>minWidth</code> value extracted from the object property <code>minWidth</code> if it&#39;s defined or by minDefaultAll parameter or 250 by default</li>
+</ul>
+</div><h5 id="methods_getcolumnlist_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>attrs</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getcolumnlist-page"><p>An object to convert</p>
+</div></td></tr><tr><td>minDefaultAll <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="getcolumnlist-page"><p>A min width value applied for all item in the extracted list. Default is 250</p>
+</div></td></tr></tbody></table><h5 id="methods_getcolumnlist_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="getcolumnlist-page"><p>Array of all extracted items</p>
+</div></td></tr></table><h4 id="methods_getcolumnlist_example">Example</h4>
+<div class="example"><div class="getcolumnlist-page"><pre class="prettyprint linenums">
+Input:
+  attrs: {deviceIp: {key: 'deviceIpAddress', i18nKey: 'device.ipAddress'}}
+  minDefaultAll: 300
+
+Output:
+  [
+    {
+      id: 'deviceIpAddress',
+      field: 'deviceIpAddress',
+      key: 'deviceIpAddress',
+      name: 'Device IP Address',
+      title: 'Device IP Address',
+      i18nKey: 'device.ipAddress',
+      sortable: true,
+      resizable: true,
+      minWidth: 300
+    }
+  ]
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_getcontrastcolor">getContrastColor(bgColor)</h3>
+<div class="getcontrastcolor"><div class="getcontrastcolor-page"><p>Calculating Color Contrast.
+It takes the hex value and compares it to the value halfway between pure black and pure white.
+If the hex value is less than half, meaning it is on the darker side of the spectrum, it returns white as the text color.
+If the result is greater than half, it’s on the lighter side of the spectrum and returns black as the text value.</p>
+</div><h5 id="methods_getcontrastcolor_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>bgColor</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="getcontrastcolor-page"><p>Color from which to generate contrast color</p>
+</div></td></tr></tbody></table><h5 id="methods_getcontrastcolor_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="getcontrastcolor-page"><p>Contrast color</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getdefaulttaglist">getDefaultTagList()</h3>
+<div class="getdefaulttaglist"><div class="getdefaulttaglist-page"><p>Return a list of default tag elements used for decorating a device item object.</p>
+</div><h5 id="methods_getdefaulttaglist_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="getdefaulttaglist-page"><p>An array of default tag elements</p>
+</div></td></tr></table><h4 id="methods_getdefaulttaglist_example">Example</h4>
+<div class="example"><div class="getdefaulttaglist-page"><p>Add tag <code>Up</code> to the device template</p>
+<pre class="prettyprint linenums">
+  // HTML
+  &lt;div&gt;
+    &lt;div&gt;
+      {{ctrl1.deviceItemObject.ipAddress}}
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;small ng-repeat="tag in ctrl1.deviceTagList track by $index"&gt;
+        &lt;span ng-if="tag.criteria(item, ctrl1.deviceTagConfig)" class="ov-tag-item {{tag.cssStyleName}} {{dynamicTagClass(item)}}" style="{{tag.cssStyle}}"&gt;
+          {{ tag.statusKey | i18next }}
+        &lt;/span&gt;
+      &lt;/small&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+  // JS
+  ctrl1.deviceItemObject = {
+    idAddress: '10.1.1.1',
+    status: 'Up'
+  };
+
+  ctrl1.deviceTagList = $ovUtility.getDefaultTagList();
+  ctrl1.deviceTagConfig = {
+    showUpDownTag: true
+  };
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_getdefaulttopologyoptions">getDefaultTopologyOptions()</h3>
+<div class="getdefaulttopologyoptions"><div class="getdefaulttopologyoptions-page"><p>Generate default options used when going to Topology application to select devices</p>
+</div><h5 id="methods_getdefaulttopologyoptions_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getdefaulttopologyoptions-page"><p>An object containing default configurations for using Topology as selection tool</p>
+<ul>
+<li><code>availableDeviceIps</code>: Available device IP list used in the app</li>
+<li><code>selectedDeviceIps</code>: Pre-selected device IP list used in the app</li>
+<li><code>selectedDeviceIds</code>: Pre-selected device ID list corresponding to <code>selectedDeviceIps</code></li>
+<li><code>useDownDevice</code>: Allow/disallow to use down devices</li>
+<li><code>limitSelectedDevice</code>: A limit number of devices can be selected</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getimagedata">getImageData(url)</h3>
+<div class="getimagedata"><div class="getimagedata-page"><p>Get image data from url</p>
+</div><h5 id="methods_getimagedata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>url</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="getimagedata-page"><p>image url</p>
+</div></td></tr></tbody></table><h5 id="methods_getimagedata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getimagedata-page"><p>promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getswitchselectionmode">getSwitchSelectionMode()</h3>
+<div class="getswitchselectionmode"><div class="getswitchselectionmode-page"><p>Return a array containing elements used for <a href="api/ov-ov-component.directive:ovUxSelect">ovUxSelect</a> component.
+The array implies device selection modes used within the application</p>
+</div><h5 id="methods_getswitchselectionmode_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="getswitchselectionmode-page"><p>An array containing elements used for ov-ux-select</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getswitchselectionmode">getSwitchSelectionMode()</h3>
+<div class="getswitchselectionmode"><div class="getswitchselectionmode-page"><p>Return a list of device properties
+This list is used in ngOvListBox/ovlistBox on sorting, generating detail information for a device
+Sorting will use name, key of each item in the list
+Generating will use title (if using ovListBoxGetContent function in ovUtilities service), key of each item in the list</p>
+</div><h5 id="methods_getswitchselectionmode_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="getswitchselectionmode-page"><p>An array containing elements used for ov-ux-select</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isempty">isEmpty(value)</h3>
+<div class="isempty"><div class="isempty-page"><p>Check value is empty or null or undefined</p>
+</div><h5 id="methods_isempty_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="isempty-page"><p>Value to check empty</p>
+</div></td></tr></tbody></table><h5 id="methods_isempty_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="isempty-page"><p>Boolean value detects given value is empty or not</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isswitchdown">isSwitchDown(switchObj)</h3>
+<div class="isswitchdown"><div class="isswitchdown-page"><p>Check if status of device is down</p>
+</div><h5 id="methods_isswitchdown_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>switchObj</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="isswitchdown-page"><p>Switch object to be checked</p>
+</div></td></tr></tbody></table><h5 id="methods_isswitchdown_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="isswitchdown-page"><p>True if given object implies a down switch. Otherwise false</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isswitchup">isSwitchUp(switchObj)</h3>
+<div class="isswitchup"><div class="isswitchup-page"><p>Check if status of device is up</p>
+</div><h5 id="methods_isswitchup_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>switchObj</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="isswitchup-page"><p>Switch object to be checked</p>
+</div></td></tr></tbody></table><h5 id="methods_isswitchup_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="isswitchup-page"><p>True if given object implies a up switch. Otherwise false</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_merge">merge(dst, target)</h3>
+<div class="merge"><div class="merge-page"><p>The result keep the same reference with dst</p>
+</div><h5 id="methods_merge_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>dst</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="merge-page"><p>Destination object to merge</p>
+</div></td></tr><tr><td>target</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="merge-page"><p>Target object to use when merging</p>
+</div></td></tr></tbody></table><h5 id="methods_merge_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="merge-page"><p>Reference to dst object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_naturalsort">naturalSort(a, b)</h3>
+<div class="naturalsort"><div class="naturalsort-page"><p>Naturally comparator used within <a>Array.prototype.sort</a> function</p>
+</div><h5 id="methods_naturalsort_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>a</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="naturalsort-page"><p>First value to compare</p>
+</div></td></tr><tr><td>b</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="naturalsort-page"><p>Second value to compare</p>
+</div></td></tr></tbody></table><h5 id="methods_naturalsort_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="naturalsort-page"><ul>
+<li>1: if a comes first</li>
+<li>-1: if a comes later</li>
+<li>0: unchanged</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_opennewtab">openNewTab(url, propName, data)</h3>
+<div class="opennewtab"><div class="opennewtab-page"><p>Open a new tab with given URL and put data into window object of the tab under given property name.
+In case property name is not given then only open new tab without additional data</p>
+</div><h5 id="methods_opennewtab_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>url</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="opennewtab-page"><p>URL to open new tab</p>
+</div></td></tr><tr><td>propName <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="opennewtab-page"><p>Property name to put data</p>
+</div></td></tr><tr><td>data <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="opennewtab-page"><p>Data to put to the window object of new tab</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_ovlistboxgetcontent">ovListBoxGetContent(item, list)</h3>
+<div class="ovlistboxgetcontent"><div class="ovlistboxgetcontent-page"><p>Return a string including key-value pairs of an item object in form <code>key: value</code> separated by semicolons.
+It iterates through the list from the second item to get value of the object</p>
+</div><h5 id="methods_ovlistboxgetcontent_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>item</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ovlistboxgetcontent-page"><p>Item object to get content</p>
+</div></td></tr><tr><td>list</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ovlistboxgetcontent-page"><p>Array of items which each item property <code>key</code> will be used to get value of the item object</p>
+</div></td></tr></tbody></table><h5 id="methods_ovlistboxgetcontent_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ovlistboxgetcontent-page"><p>Content of the object in form of key-value pairs</p>
+</div></td></tr></table><h4 id="methods_ovlistboxgetcontent_example">Example</h4>
+<div class="example"><div class="ovlistboxgetcontent-page"><pre class="prettyprint linenums">
+Input:
+  list: [{key: 'name', title: 'Name'}, {key: 'address', title: 'Address'}, {key: 'detailInfo', title: 'Detail Info'}]
+  item: {
+    name: 'Item 1',
+    address: 'Address 1'
+  }
+
+Output:
+  Name: Item 1; Address: Address 1; Detail Info: N/A
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_ovlistboxgettitle">ovListBoxGetTitle(item, list)</h3>
+<div class="ovlistboxgettitle"><div class="ovlistboxgettitle-page"><p>Return the value of the object regarding to the first item key in the list</p>
+</div><h5 id="methods_ovlistboxgettitle_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>item</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ovlistboxgettitle-page"><p>Item object to get title</p>
+</div></td></tr><tr><td>list</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ovlistboxgettitle-page"><p>Array of items which each item property <code>key</code> will be used to get value of the item object</p>
+</div></td></tr></tbody></table><h5 id="methods_ovlistboxgettitle_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ovlistboxgettitle-page"><p>Value of the object based on the first item key in the list</p>
+</div></td></tr></table><h4 id="methods_ovlistboxgettitle_example">Example</h4>
+<div class="example"><div class="ovlistboxgettitle-page"><pre class="prettyprint linenums">
+Input:
+  list: [{key: 'name', title: 'Name'}, {key: 'address', title: 'Address'}, {key: 'detailInfo', title: 'Detail Info'}]
+  item: {
+    name: 'Item 1',
+    address: 'Address 1'
+  }
+
+Output:
+  Item 1
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_ovprint">ovPrint(templateUrl, headers, rows)</h3>
+<div class="ovprint"><div class="ovprint-page"><p>Open print dialog of a browser. The content of print papers is based upon custom templateUrl, headers, and rows</p>
+</div><h5 id="methods_ovprint_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>templateUrl</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ovprint-page"><p>Custom template URL which uses headers and rows to render print papers</p>
+</div></td></tr><tr><td>headers</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ovprint-page"><p>An array of all headers object</p>
+</div></td></tr><tr><td>rows</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ovprint-page"><p>An array of all items</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_ovprinthtml">ovPrintHtml(html)</h3>
+<div class="ovprinthtml"><div class="ovprinthtml-page"><p>Open print dialog of a browser with the content of print papers is given by the parameter <code>html</code></p>
+</div><h5 id="methods_ovprinthtml_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>html</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ovprinthtml-page"><p>Content of print papers</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_removespacesfromstring">removeSpacesFromString(sourceString)</h3>
+<div class="removespacesfromstring"><div class="removespacesfromstring-page"><p>Remove spaces from string</p>
+</div><h5 id="methods_removespacesfromstring_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>sourceString</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="removespacesfromstring-page"><p>Source space to remove spaces</p>
+</div></td></tr></tbody></table><h5 id="methods_removespacesfromstring_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="removespacesfromstring-page"><p>String after being removed spaces</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_restoreovlistselectedstatus">restoreOvListSelectedStatus(dataArray, selectedArray)</h3>
+<div class="restoreovlistselectedstatus"><div class="restoreovlistselectedstatus-page"><p>Add checked attribute</p>
+</div><h5 id="methods_restoreovlistselectedstatus_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>dataArray</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="restoreovlistselectedstatus-page"><p>Data array to restore</p>
+</div></td></tr><tr><td>selectedArray</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="restoreovlistselectedstatus-page"><p>Selected array to compare</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_strendswith">strEndsWith(str, suffix)</h3>
+<div class="strendswith"><div class="strendswith-page"><p>Detect if a string ends with given suffix</p>
+</div><h5 id="methods_strendswith_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>str</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="strendswith-page"><p>String to detect</p>
+</div></td></tr><tr><td>suffix</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="strendswith-page"><p>Suffix string to detect</p>
+</div></td></tr></tbody></table><h5 id="methods_strendswith_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="strendswith-page"><p>True if given string ends with the prefix. Otherwise false</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_strstartswith">strStartsWith(str, prefix)</h3>
+<div class="strstartswith"><div class="strstartswith-page"><p>Detect if a string starts with given prefix</p>
+</div><h5 id="methods_strstartswith_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>str</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="strstartswith-page"><p>String to detect</p>
+</div></td></tr><tr><td>prefix</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="strstartswith-page"><p>Prefix string to detect</p>
+</div></td></tr></tbody></table><h5 id="methods_strstartswith_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="strstartswith-page"><p>True if given string starts with the prefix. Otherwise false</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_syncsrctodst">syncSrcToDst(srcSCol, srcACol, dstSCol, dstACol, srcField, dstField)</h3>
+<div class="syncsrctodst"><div class="syncsrctodst-page"><p>Using to sync available switch and selected switch depend on existing selected data (selection mode)</p>
+</div><h5 id="methods_syncsrctodst_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>srcSCol</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="syncsrctodst-page"><p>Array of src selected data</p>
+</div></td></tr><tr><td>srcACol</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="syncsrctodst-page"><p>Array of src available data</p>
+</div></td></tr><tr><td>dstSCol</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="syncsrctodst-page"><p>Array of dst selected data</p>
+</div></td></tr><tr><td>dstACol</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="syncsrctodst-page"><p>Array of dst available data</p>
+</div></td></tr><tr><td>srcField</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="syncsrctodst-page"><p>primaryKey of src data (omit when !object)</p>
+</div></td></tr><tr><td>dstField</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="syncsrctodst-page"><p>primaryKey of dst data (omit then !object)</p>
+</div></td></tr></tbody></table><h4 id="methods_syncsrctodst_example">Example</h4>
+<div class="example"><div class="syncsrctodst-page"><pre class="prettyprint linenums">
+Input:
+  srcSCol [1, 5]
+  srcACol null
+  dstSCol: [{key: 1}, {key: 2}, {key: 3}]
+  dstSCol: [{key: 4}, {key: 5}, {key: 6}]
+  srcField: null -&gt; because src data !object
+  dstField: 'key'
+
+Output:
+  dstSCol: [{key: 1}, {key: 6}]
+  dstACol: [{key: 2}, {key: 3}, {key: 4}, {key: 5}]
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_timehelper">timeHelper()</h3>
+<div class="timehelper"><div class="timehelper-page"><p>Provide a helper object involved in time including the following helper functions:</p>
+<ul>
+<li><code>convertTimeUnitsToSec</code>: accepts an object with required structure {day: 1, hour: 1, min: 1, sec: 1} and turns it into seconds</li>
+<li><code>convertSecToTimeUnits</code>: accepts a number of seconds and turns it into object with following structure: {day: 1, hour: 1, min: 1, sec: 1}</li>
+</ul>
+</div><h5 id="methods_timehelper_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="timehelper-page"><p>Time helper object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_validatefunction">validateFunction(func)</h3>
+<div class="validatefunction"><div class="validatefunction-page"><p>Validate func is a function</p>
+</div><h5 id="methods_validatefunction_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>func</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="validatefunction-page"><p>Function to validate</p>
+</div></td></tr></tbody></table><h5 id="methods_validatefunction_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="validatefunction-page"><p>[function=angular.noop]</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_validator">validator()</h3>
+<div class="validator"><div class="validator-page"><p>Provide a helper object involved in validation including the following helper functions:</p>
+<ul>
+<li><code>checkDataExist</code>: Check if given data is defined and not Null</li>
+<li><code>checkStringExist</code>: Check if given data is a string and not empty</li>
+<li><code>isNotEmpty</code>: Check if given data is defined and not empty</li>
+<li><code>isNumber</code>: Check if given data is a number</li>
+<li><code>checkArrayFirstElementExist</code>: Check if given data is a valid array containing at least one element</li>
+</ul>
+</div><h5 id="methods_validator_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="validator-page"><p>Time helper object</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

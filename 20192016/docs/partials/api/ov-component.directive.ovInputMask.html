@@ -1,0 +1,31 @@
+<h1><code ng:non-bindable="">ovInputMask</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovinputmask-page"><p>The <code>ovInputMask</code> limits characters that can be entered into an input field.</p>
+<p>Dictates the format an input field value must follow.</p>
+<p>Removes or preserves the mask syntax hint on an input field.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY ov-input-mask="{string|object}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ovInputMask</td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovinputmask-page"><p>sets the masks of input field.</p>
+<ul>
+<li><strong>string</strong>: there are two types &#39;mac&#39; (mac address only) or &#39;mac<em>&#39; (mac address includes </em> characters).</li>
+<li><strong>object</strong>: config object of jquery-iMask plugin (<a href="https://github.com/zyklus/jQuery-iMask">https://github.com/zyklus/jQuery-iMask</a>).</li>
+</ul>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovinputmask-page"><pre class="prettyprint linenums">
+&lt;!--HTML--&gt;
+  &lt;input type="text" class="macAddress form-control"
+  ov-input-mask="'mac'" ng-model="classification.ruleValue.macAddress"/&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+</pre>
+</div></div>
+</div>

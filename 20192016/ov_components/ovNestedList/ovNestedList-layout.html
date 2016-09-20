@@ -1,0 +1,30 @@
+<div class="ov-nested-list panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">
+      <div class="ov-nl-back-btn">
+        <a href="" class="ov-nested-list-clickBack" ng-show="!!root.parent" ng-click="clickBack()"><span class="fa fa-chevron-left"></span></a>
+      </div>
+      <div class="title-text">
+        {{ root.title }}
+      </div>
+      <div class="ov-nl-aux-btn" >
+        <!--<a href="" ng-click="sbHidden = !sbHidden"><span class="fa fa-reorder"></span></a>-->
+      </div>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="menu">
+      <!--use ng-repeat and $animate (nl-hook-animation) are applied to the same DOM element can lead to $animate.leave delay a little -->
+      <span ng-repeat="menuItem in root.menuItems" ng-if="!menuItem.isHidden()">
+        <a ng-if="!menuItem.separator"
+          id="{{idApp + '-' + menuItem.id}}" nl-hook-animation="left2right" href="" class="item clearfix" ng-class="{'active': menuItem == selected}" ng-click="clickMenuItem(menuItem)">
+          <div class="col-xs-10 {{ getCssClassByItemLevel(menuItem.itemLevel) }}"><span ng-class="menuItem.iconClasses"></span>
+           <span ng-show="menuItem.indent">&nbsp;&nbsp;</span> {{ menuItem.title }}
+          </div>
+          <div class="col-xs-2" ng-if="!!menuItem.menuItems"><span class="fa fa-fw fa-chevron-right"></span></div>
+        </a>
+        <span ng-if="menuItem.separator" class="ov-nl-separator"></span>
+      </span>
+    </div>
+  </div>
+</div>

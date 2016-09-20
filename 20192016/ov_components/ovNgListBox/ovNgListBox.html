@@ -1,0 +1,24 @@
+<div class="ovNgListBox" ng-attr-id="{{ ovNgListBoxId }}">
+  <div class="form-group clearfix" ng-if="checkAddToReport()">
+    <button class="btn btn-default pull-right"
+            ng-attr-id="{{ovNgListBoxId + '-add-to-report'}}"
+            ng-click="config.addToReport()">
+      {{:: 'report.reportConfig.button.addToReport' | i18next}}
+    </button>
+  </div>
+
+  <div class="detail-content">
+    <div ng-if="config.showHeader && config.headerTemplate" class="header {{config.overrideHeaderCss}}"
+         ng-include="config.headerTemplate"></div>
+    <ov-ng-list></ov-ng-list>
+  </div>
+  <div class="paging" ng-if="config.showFooter">
+    <div class="summary">
+      <span ng-if="!config.customFooterText"> {{:: 'ovListBox.total' | i18next}}: {{'ovListBox.page' | i18next: {count: totalPage[0]} }}</span>
+      <span ng-if="config.customFooterText">{{config.customFooterText}}</span>
+    </div>
+    <ov-pagination class="list-pagination" total-pages="totalPage[0]"
+                   current-page="config.currentPage" link-action="setPage" type="textBoxType">
+    </ov-pagination>
+  </div>
+</div>

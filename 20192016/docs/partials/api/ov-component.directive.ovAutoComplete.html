@@ -1,0 +1,50 @@
+<h1><code ng:non-bindable="">ovAutoComplete</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovautocomplete-page"><p>ov-auto-complete is a special input component with a drop-down of all possible matches to a custom query.
+This component allows you to provide real-time suggestions as the user types in the input area</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-auto-complete
+       ng-model="{string}"
+       ov-ng-options="{string}"
+       [placeholder="{string}"]
+       [id="{string}"]
+       [ng-change="{expression}"]
+       [ng-disabled="{expression}"]
+       [ov-auto-focus="{expression}"]&gt;
+&lt;/ov-auto-complete&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ngModel</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovautocomplete-page"><p>Assignable angular expression to data-bind to</p>
+</div></td></tr><tr><td>ovNgOptions</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovautocomplete-page"><p>sets the options that the select is populated with and defines what is set on the model on selection.</p>
+<ul>
+<li><code>modelValue</code> <strong><code>for</code></strong> <code>item</code> <strong><code>in</code></strong> <code>collection</code></li>
+<li><code>modelValue</code> <strong><code>as</code></strong> <code>label</code> <strong><code>for</code></strong> <code>item</code> <strong><code>in</code></strong> <code>collection</code></li>
+</ul>
+</div></td></tr><tr><td>placeholder <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovautocomplete-page"><p>placeholder of input.</p>
+</div></td></tr><tr><td>id <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovautocomplete-page"><p>An ID to be added to the element to support automation test e.g. id=&quot;test&quot;</p>
+</div></td></tr><tr><td>ngChange <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-expression">expression</a></td><td><div class="ov-component-directive-page ov-component-directive-ovautocomplete-page"><p>Angular expression to be executed when selected option(s) changes due to user interaction with the select element.</p>
+</div></td></tr><tr><td>ngDisabled <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-expression">expression</a></td><td><div class="ov-component-directive-page ov-component-directive-ovautocomplete-page"><p>Determines whether or not to disable the component</p>
+</div></td></tr><tr><td>ovAutoFocus <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-expression">expression</a></td><td><div class="ov-component-directive-page ov-component-directive-ovautocomplete-page"><p>Set the focus to the element in HTML form</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovautocomplete-page"><p><strong>Basic Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-auto-complete
+ ng-model="ctrl.model"
+ ov-ng-options="item.value as item.name for item in ctrl.items"&gt;
+ &lt;/ov-auto-complete&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ ctrl.items = [
+ {name: 'One', value: 1},
+ {name: 'Two', value: 2}
+ ];
+ ctrl.model = 1;
+</pre>
+</div></div>
+</div>

@@ -1,0 +1,51 @@
+<div class="clearfix" ng-init="commonId = config.id + '-ov-ng-list-box'">
+  <div class="ov-ng-list-box-sort-wrapper"
+       ng-class="{'small-screen-hidden': config.showSearchGroup || config.searchString !== '',
+        'small-screen-visible': !config.showSearchGroup && config.searchString === '',
+        'small-screen-max-width': config.showSortGroup}">
+    <div class="sticky-checkbox" ng-if="config.showSelectAll && config.multiSelect">
+      <label class="ovNgListBox-checkbox">
+        <input type="checkbox" ng-model="checkAll[0]" ng-change="selectAll()" />
+        <span id="{{commonId +'-check-all'}}"></span>
+      </label>
+    </div>
+
+    <div class="ov-ng-list-box-sort-box-order">
+      <i class="fa fa-sort-alpha-asc prevent-select"
+         id="{{commonId}}-sort-asc"
+         ng-click="sort()"
+         ng-show="asc"></i>
+      <i class="fa fa-sort-alpha-desc prevent-select"
+         id="{{commonId}}-sort-dsc"
+         ng-click="sort()"
+         ng-show="!asc"></i>
+    </div>
+  </div>
+  <div class="ov-ng-list-box-search-wrapper"
+       ng-class="{'small-screen-hidden': config.showSortGroup,
+       'small-screen-visible': !config.showSortGroup}">
+    <div class="ov-ng-list-box-search-min"
+         ng-class="{'small-screen-hidden': config.showSearchGroup || config.searchString !== '',
+          'small-screen-visible': !config.showSearchGroup && config.searchString === ''}"
+         ng-click="config.showSearchGroup = true">
+      <a class="btn btn-default circleButton"
+         id="{{commonId}}-show-search-group">
+        <i class="fa fa-search"></i>
+      </a>
+    </div>
+
+    <div class="ov-ng-list-box-search-box"
+         ng-class="{'small-screen-visible': config.showSearchGroup || config.searchString !== '',
+          'small-screen-hidden': !config.showSearchGroup && config.searchString === ''}">
+      <input type="text" class="search clear-ms-search" ng-if="config.showFilter"
+             id="{{commonId}}-search"
+             placeholder="{{'ovListBox.search' | i18next}}"
+             ng-keyup="onSearch(config.searchString)" ng-model="config.searchString"/>
+      <a ng-class="{'small-screen-visible': config.showSearchGroup}"
+         id="{{commonId}}-clear-search" ng-show="config.searchString !== ''"
+         ng-click='clear(); config.showSearchGroup = false'>
+        <i class="fa fa-times-circle-o"></i>
+      </a>
+    </div>
+  </div>
+</div>

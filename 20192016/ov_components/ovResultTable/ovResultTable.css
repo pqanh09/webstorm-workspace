@@ -1,0 +1,223 @@
+.ov-rs-listbox-wrapper .ov-ng-list-box-item-content-wrapper {
+  padding: 0;
+}
+.ov-rs-listbox-wrapper .ov-result-item-wrapper {
+  height: 70px;
+  padding: 10px;
+}
+.ov-rs-listbox-wrapper .operation-on {
+  font-weight: bold;
+}
+.ov-rs-wrapper .detail-content .list-item .ovNgListBoxItem {
+  border-bottom: none;
+}
+.ov-rs-wrapper .ovNgListBox .detail-content .header.title {
+  border-bottom: 0;
+}
+.header-text > div.pull-left {
+  width: 70%;
+}
+.header-text {
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 40px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: none;
+}
+.ov-result-item-wrapper .icon-group {
+  padding: 12px;
+}
+.ov-result-item-wrapper.detail .time-stamp {
+  padding-top: 8px;
+  color: rgba(0,0,0,0.54);
+}
+.ov-rs-wrapper fieldset legend {
+  height: 45px;
+}
+.ov-rs-wrapper ov-ng-list-box {
+  border: 1px solid #e5e5e5;
+}
+.ov-rs-wrapper .vs-list-search {
+  padding: 0;
+}
+.ov-rs-wrapper .ov-ng-list-box-tag-list {
+  min-height: 0;
+  padding: 0;
+}
+.ov-rs-wrapper .btn-link.show-more {
+  padding-right: 0;
+}
+.ov-rs-wrapper .btn-link,
+.ov-rs-wrapper .btn-link:focus {
+  outline: none;
+}
+.ov-rs-wrapper .text-danger {
+  color: #c62828;
+}
+.ov-rs-wrapper .text-success {
+  color: #4caf50;
+}
+.ov-rs-wrapper .text-warning {
+  color: #fb8c00;
+}
+.vs-repeat-fix-width {
+  width: 100%;
+}
+.ov-rs-wrapper .detail-header {
+  min-height: 30px;
+}
+.ov-rs-wrapper .header-text > .pull-right {
+  margin-top: -8px;
+}
+.ov-rs-listbox-wrapper .detail {
+  position: relative;
+}
+.ov-rs-listbox-wrapper .ov-result-action-wrapper {
+  margin-top: 8px;
+}
+.ov-result-item-wrapper .ov-result-item {
+  width: 80%;
+}
+.ov-rs-listbox-wrapper .detail .ov-result-action-wrapper {
+  position: absolute;
+  right: 8px;
+  top: 20%;
+}
+.ov-rs-listbox-wrapper .description {
+  font-size: 14px;
+}
+.ov-rs-listbox-wrapper .name {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.ov-rs-listbox-wrapper .ov-load-spinner {
+  float: right;
+  width: 0;
+  height: 0;
+  position: initial;
+}
+.ov-rs-listbox-wrapper .ghost-spinner {
+  left: initial;
+  right: 50px;
+}
+.ov-rs-listbox-wrapper .ghost-spinner i {
+  width: 1rem;
+  height: 0.2rem;
+}
+.ov-rs-listbox-wrapper .ghost-spinner i:nth-child(n) {
+  transform: rotate(30deg) translateX(15px);
+  animation-delay: 0.166666666666667s;
+}
+.ov-rs-listbox-wrapper .ghost-spinner i:nth-child(2) {
+  transform: rotate(60deg) translateX(15px);
+  animation-delay: 0.333333333333333s;
+}
+.ov-rs-listbox-wrapper .ghost-spinner i:nth-child(3) {
+  transform: rotate(90deg) translateX(15px);
+  animation-delay: 0.5s;
+}
+.ov-rs-listbox-wrapper .ghost-spinner i:nth-child(4) {
+  transform: rotate(120deg) translateX(15px);
+  animation-delay: 0.666666666666667s;
+}
+.ov-rs-listbox-wrapper .ghost-spinner i:nth-child(5) {
+  transform: rotate(150deg) translateX(15px);
+  animation-delay: 0.833333333333333s;
+}
+.ov-rs-listbox-wrapper .ghost-spinner i:nth-child(6) {
+  transform: rotate(180deg) translateX(15px);
+  animation-delay: 1s;
+}
+.ov-rs-listbox-wrapper .ghost-spinner i:nth-child(7) {
+  transform: rotate(210deg) translateX(15px);
+  animation-delay: 1.166666666666667s;
+}
+.ov-rs-listbox-wrapper .ghost-spinner i:nth-child(8) {
+  transform: rotate(240deg) translateX(15px);
+  animation-delay: 1.333333333333333s;
+}
+.ov-rs-listbox-wrapper .ghost-spinner i:nth-child(9) {
+  transform: rotate(270deg) translateX(15px);
+  animation-delay: 1.5s;
+}
+.ov-rs-listbox-wrapper .ghost-spinner i:nth-child(10) {
+  transform: rotate(300deg) translateX(15px);
+  animation-delay: 1.666666666666667s;
+}
+.ov-rs-listbox-wrapper .ghost-spinner i:nth-child(11) {
+  transform: rotate(330deg) translateX(15px);
+  animation-delay: 1.833333333333333s;
+}
+.ov-rs-listbox-wrapper .ghost-spinner i:nth-child(12) {
+  transform: rotate(360deg) translateX(15px);
+  animation-delay: 2s;
+}
+.ov-rs-margin-right-8 {
+  margin-right: 8px;
+}
+.ov-rs-listbox-wrapper .back-tag {
+  line-height: 0;
+  margin-top: -6px;
+}
+.previous-page-wrapper .ok-button {
+  width: 70px;
+}
+.ov-rs-wrapper .ovNgListBox .ov-ng-list-box-search-box a {
+  top: 1.2rem;
+}
+.ov-rs-wrapper .ovNgListBox .ov-ng-list-box-search-box input.search {
+  height: 3.4rem;
+}
+.ov-rs-wrapper .ovNgListBox .ov-ng-list-box-search-box {
+  width: 100%;
+  padding: 4px;
+  float: left !important;
+}
+.ov-rs-wrapper .ov-ng-list-box-search-wrapper {
+  width: 100%;
+  padding: 0;
+}
+.ov-rs-wrapper .ovNgListBox .detail-content {
+  border: none;
+}
+.ov-rs-wrapper .ovNgListBox .detail-content .header {
+  background-color: #fff;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  min-height: 4.5rem;
+}
+.csv-disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+.custom-detail-template .title-detail-view {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.custom-detail-template .name-delete-item {
+  font-weight: 900;
+}
+.custom-detail-template .accordion-of-dependency-box .vs-list {
+  border: none;
+}
+@media screen and (max-width: 1024px) {
+  .ov-result-item-wrapper .ov-result-item {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ov-result-item-wrapper .ov-result-item {
+    width: 60%;
+  }
+  .ov-result-item-wrapper .icon-group {
+    padding: 6px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .ov-result-item-wrapper .ov-result-item {
+    width: 50%;
+  }
+}

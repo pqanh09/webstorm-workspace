@@ -1,0 +1,7 @@
+<div ng-if="ovAlert.showAlert" id="{{alertWrapperId}}">
+  <div class="alert {{ovAlert.alertType}}" role="alert" ng-if="!ovAlert.alertConfig.isDismissal">{{ovAlert.message | i18next}}</div>
+  <div class="alert {{ovAlert.alertType}} alert-dismissible" role="alert" ng-if="ovAlert.alertConfig.isDismissal">
+    <button type="button" id="{{alertCloseBtnId}}" class="close" ng-click="ovAlert._hideAlert()">&times;</button>
+    {{ovAlert.message | i18next}}
+  </div>
+</div>

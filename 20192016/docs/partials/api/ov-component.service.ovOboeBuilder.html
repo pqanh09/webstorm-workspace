@@ -1,0 +1,133 @@
+<h1><code ng:non-bindable="">ovOboeBuilder</code>
+<div><span class="hint">service in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-service-page ov-component-service-ovoboebuilder-page"><p>Generate ovOboe object providing GET, POST, PUT, and DELETE methods as a replacement of $http
+ovOboe object allows to cancel any pending request</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_build">build(config)</h3>
+<div class="build"><div class="build-page"><p>Generate ovOboe object</p>
+</div><h5 id="methods_build_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="build-page"><p>Custom configuration to build a new ovOboe object.</p>
+</div></td></tr><tr><td>config.successProperty</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="build-page"><p>Property name used to fetch success status of a response</p>
+</div> <p><em>(default: 'enumResponse')</em></p></td></tr><tr><td>config.finalResponseProperty</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="build-page"><p>Property name used to detect if a response is the final response object</p>
+</div> <p><em>(default: 'finalResponse')</em></p></td></tr><tr><td>config.finalResponseValue</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="build-page"><p>Property value used to compare with the value fetched from <code>finalResponseProperty</code> property</p>
+</div> <p><em>(default: true)</em></p></td></tr><tr><td>config.failCompareKey</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="build-page"><p>Property value used to compare with the value fetched from <code>successProperty</code> property</p>
+</div> <p><em>(default: 'fail')</em></p></td></tr><tr><td>config.singleRequest</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="build-page"><p>Imply type of request object, single or multipart</p>
+</div> <p><em>(default: false)</em></p></td></tr><tr><td>config.deepCheck</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="build-page"><p>Apply deeper checking of response status
+<pre class="prettyprint linenums">
+// A sample response object like
+var respObj = {
+  response: {
+    enumResponse: 'fail'
+  }
+}
+
+// with:
+// - successProperty: 'enumResponse'
+// - failCompareKey: 'fail'
+
+// then deeper check will try to retrieve respObj.response.enumResponse value to detect if this is an success of failed response of the request
+// otherwise a success response is the one whose `response` property is NOT null, NOT undefined, and NOT empty
+</pre>
+</div> <p><em>(default: true)</em></p></td></tr></tbody></table><h4 id="methods_build_example">Example</h4>
+<div class="example"><div class="build-page"><p><strong>Multipart request:</strong>
+<pre class="prettyprint linenums">
+ // In JS
+ var multipartReqConfig = {
+   successProperty: 'status',
+   failCompareKey: 'FAIL'
+ };
+
+ // Generate new ovOboe object from the builder
+ var multipartReq = ovOboeBuilder.build(singleReqConfig);
+
+ // Build up and execute POST request with data of null
+ var reqConfig = {
+   requestId: 'your-api-operation'
+ };
+ var reqPromise = multipartReq.post('/your/api', reqConfig).execute(null);
+
+ // Register callbacks to promise
+ reqPromise.then(
+   function successReqHandler() {},
+   function errorReqHandler() {},
+   function notifyReqHandler(respData) {
+     // Real data comes here
+     console.log(respData.response);
+   }
+ );
+
+</pre>
+<p><strong>Single request:</strong>
+<pre class="prettyprint linenums">
+ // In JS
+ var singleReqConfig = {
+   successProperty: 'status',
+   failCompareKey: 'FAIL',
+   singleRequest: true
+ };
+
+ // Generate new ovOboe object from the builder
+ var singleReq = ovOboeBuilder.build(singleReqConfig);
+
+ // Build up and execute GET request
+ var reqConfig = {
+   requestId: 'your-api-operation'
+ };
+ var reqPromise = singleReq.get('/your/api', reqConfig).execute();
+
+ // Register callbacks to promise
+ reqPromise.then(
+   function successReqHandler() {},
+   function errorReqHandler() {},
+   function notifyReqHandler(respData) {
+     // Real data comes here
+     console.log(respData.response);
+   }
+ );
+
+</pre>
+<p><strong>Cancel pending request when application is destroyed:</strong>
+<pre class="prettyprint linenums">
+ var pendingRefreshReq;
+
+ var singleReq = ovOboeBuilder.build({
+   singleRequest: true,
+   successProperty: 'status',
+   failCompareKey: 'FAIL'
+ });
+
+ $ctr1.refresh = function () {
+   pendingRefreshReq = singleReq.get('/your/api/to/refresh', {
+     requestId: 'sample-app-refresh-request'
+   });
+
+   pendingRefreshReq.execute().then(
+     angular.noop,
+     function onFailed() {
+       console.log('Cannot refresh');
+     },
+     function onNotified(respData) {
+       console.log('Refresh data', respData.response);
+     }
+   )
+ };
+
+ function onScopeDestroyed() {
+   if (pendingRefreshReq) {
+     pendingRefreshReq.cancel();
+   }
+ }
+
+ $scope.$on('$destroy', onScopeDestroyed);
+
+</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

@@ -1,0 +1,21 @@
+<div class="layout-row vs-list-item">
+  <!--left-->
+  <!--<div class="flex-none layout align-content-center">-->
+    <!--<input type="checkbox" id="vs-list-checkbox-{{$index}}" class="ov-checkbox" ng-model="item.checked">-->
+    <!--<label for="vs-list-checkbox-{{$index}}" class="ov-label-checkbox pull-left"></label>-->
+  <!--</div>-->
+  <!--center-->
+  <div class="flex layout-column justify-content-center vs-list-item-center">
+    <div class="vs-list-item-heading">{{vm.getName(item)}}</div>
+    <div class="vs-list-item-text">
+      <span ng-repeat="secondary in vm.getSecondary()">{{secondary.name}}: {{item[secondary.key]}}</span>
+    </div>
+  </div>
+  <!--right-->
+  <div class="flex-nogrow layout-row align-content-center">
+    <div ng-if="vm.getChildren(item).length > 0">
+      <i class="fa fa-angle-right fa-lg" ng-if="item.collapsed"></i>
+      <i class="fa fa-angle-down fa-lg" ng-if="!item.collapsed"></i>
+    </div>
+  </div>
+</div>

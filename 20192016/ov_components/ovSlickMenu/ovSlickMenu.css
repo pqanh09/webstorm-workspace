@@ -1,0 +1,123 @@
+/*ovSlick directive*/
+.ov-slick-display-inline-block {
+  display: inline-block;
+}
+.ov-slick-menu-wrapper {
+  position: relative;
+  line-height: 3rem;
+  margin: 0 0.2rem 0 0.2rem;
+}
+.ov-slick-menu-wrapper button i.ov-slick-menu-action-style {
+  bottom: 0;
+}
+.default-toggle-button-icon {
+  position: relative;
+  bottom: 0.2rem;
+}
+.ov-slick-menu-wrapper button {
+  height: 3.4rem;
+}
+.ov-slick-menu-icon {
+  width: 2rem;
+}
+.ov-slick-menu-full-wrapper .ov-slick-menu-icon-bar button {
+  margin-right: 0.5rem;
+}
+.ov-slick-menu-full-wrapper .ov-slick-menu-icon-bar .btn-group button:last-child {
+  margin-right: 0.5rem;
+}
+.ov-slick-menu-full-wrapper .ov-slick-menu-icon-bar .btn-group button:not(:last-child) {
+  margin-right: 0;
+}
+.ov-slick-menu-full-wrapper .ov-slick-menu-icon-bar .btn .active {
+  background-color: #ebebeb;
+}
+.truncate,
+.ov-slick-menu-ul li:not(.ov-slick-menu-header):not(.ov-slick-menu-divider),
+.ov-slick-menu-ul li a {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.ov-slick-menu-ul {
+  z-index: 9999;
+  top: 3.5rem;
+  right: 3rem;
+  list-style-type: none;
+  position: absolute;
+  width: 100%;
+  min-width: 21rem;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 1rem #d3d3d3;
+  box-shadow: 0 0 1rem #d3d3d3;
+}
+.ov-slick-menu-ul li:not(.ov-slick-menu-header):not(.ov-slick-menu-divider) {
+  padding: 0.2rem 1rem;
+  line-height: 2rem;
+  width: 21rem;
+}
+.ov-slick-menu-ul li.ov-slick-menu-divider {
+  padding: 0px;
+}
+.ov-slick-menu-ul li.ov-slick-menu-item-hidden {
+  padding: 0;
+}
+.ov-slick-menu-ul li a {
+  padding: 0.2rem 1rem;
+  line-height: 2.5rem;
+  width: 21rem;
+}
+.ov-slick-menu-ul li,
+.ov-slick-menu-ul a {
+  color: #000;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+.ov-slick-menu-ul li:hover,
+.ov-slick-menu-ul a:hover,
+.ov-slick-menu-ul li:link,
+.ov-slick-menu-ul a:link,
+.ov-slick-menu-ul li:visited,
+.ov-slick-menu-ul a:visited,
+.ov-slick-menu-ul li:active,
+.ov-slick-menu-ul a:active {
+  color: #000;
+  text-decoration: none;
+}
+.ov-slick-menu-ul li.ov-slick-menu-li-group {
+  border-left: 0.5rem solid #e3f2fd;
+  padding-left: 0.5rem;
+}
+.ov-slick-menu-ul li.ov-slick-menu-li-group-selected {
+  border-left: 0.5rem solid #357ebd;
+  padding-left: 0.5rem;
+}
+.ov-slick-menu-header {
+  color: #d3d3d3;
+  font-weight: bold;
+  padding: 0;
+}
+li.ov-slick-menu-header:hover {
+  background-color: transparent !important;
+}
+.ov-slick-menu-ul li:hover {
+  background-color: #f5f5f5;
+}
+a.ov-slick-menu-li-disabled:hover {
+  background: transparent !important;
+}
+li.ov-slick-menu-li-disabled:hover {
+  background: transparent !important;
+}
+.ov-slick-menu-divider {
+  border-bottom: 1px solid #d3d3d3;
+  padding: 0;
+}
+.ov-slick-menu-header .ov-slick-menu-icon {
+  color: #d3d3d3;
+}
+/*end ovSlick directive */

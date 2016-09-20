@@ -1,0 +1,18 @@
+<!--<div>-->
+  <!--<small ng-if="item.disabled" class="ov-tag-item ov-tag-down">-->
+    <!--{{ 'common.deviceStatus.down' | i18next }}-->
+  <!--</small>-->
+  <!--<small ng-if="!item.disabled" class="ov-tag-item ov-tag-up">-->
+    <!--{{ 'common.deviceStatus.up' | i18next }}-->
+  <!--</small>-->
+  <!--<small ng-if="item.assigned && sdlConfig.showAssignedTag" class="ov-tag-item ov-tag-assigned">-->
+    <!--{{ 'common.deviceStatus.assigned' | i18next }}-->
+  <!--</small>-->
+<!--</div>-->
+<div>
+  <small ng-repeat="tag in tagList track by $index">
+    <span ng-if="tag.criteria(item, sdlConfig)" class="ov-tag-item {{tag.cssStyleName}}">
+    {{ tag.statusKey | i18next }}
+    </span>
+  </small>
+</div>

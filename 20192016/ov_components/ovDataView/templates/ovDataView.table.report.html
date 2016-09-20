@@ -1,0 +1,18 @@
+<div>
+  <h4 class="app-heading">{{:: reportOptions.title | i18next}}</h4>
+  <div ng-show="filterData.length">
+    <table border=1 width="100%">
+      <thead>
+      <tr>
+        <th class="ov-data-view-print" ng-repeat='h in ovDataView.tableConfig.gridColumns track by $index'>{{h.name}}</th>
+      </thead>
+      <tbody>
+      <tr ng-repeat='row in filterData track by $index'>
+        <!--Fix data is array [1, 2] to string 1, 2 except null or undefined-->
+        <td class="ov-data-view-print" ng-repeat='h in ovDataView.tableConfig.gridColumns'>{{row[h.field] ? row[h.field] + '' : row[h.field]}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="well well-sm" ng-hide="filterData.length">{{:: 'common.noData' | i18next}}</div>
+</div>

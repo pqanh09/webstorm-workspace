@@ -1,0 +1,21 @@
+<ul class="list-item">
+  <div vs-repeat="70" class="content-view" ng-style="{'max-height':config.maxHeight-85}">
+    <div ng-repeat="(itemIndex,item) in localData" class="vs-repeat-fix-width">
+      <li
+        ng-class="{'selected-item': item.checked && !config.preventSelect, 'ovListEven': !!($index%2), 'ovListOdd': !($index%2), 'none-pointer': config.preventSelect}"
+        class="ovNgListBoxItem list-item-{{$index}} {{item.overrideCss}}"
+        ng-click="onClickItem($index, $event, item)">
+        <div>
+          <div class="ov-ng-list-box-item-content-wrapper">
+            <div ng-include="config.itemTemplate"></div>
+            <div class="ov-ng-list-box-action" ng-if="config.actionList" ng-include="config.actionTemplate"></div>
+          </div>
+          <div class="ov-ng-list-box-tag-list ov-tag-list">
+            <div ng-if="config.showTag" ng-include="config.tagTemplate"></div>
+          </div>
+        </div>
+        <div class="ov-list-blocked-item" ng-if="item.disabled"></div>
+      </li>
+    </div>
+  </div>
+</ul>

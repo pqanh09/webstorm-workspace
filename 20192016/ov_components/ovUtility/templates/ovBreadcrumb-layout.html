@@ -1,0 +1,11 @@
+<ol class="ov-breadcrumb-bs3 breadcrumb">
+  <li ng-repeat="item in navList">
+    <a id="{{idApp + '-' + item.id}}" href="" ng-class="{disabled: item.disabled}" ng-click="onClick(item, $event)"><span ng-class="item.iconClasses"></span> <span>{{ item.title }}</span></a>
+  </li>
+  <li class="active"><span ng-class="current.iconClasses"></span> {{ current.title }}</li>
+
+  <!--<div class="ov-breadcrumb">-->
+  <!--<a href="" ng-repeat="item in navList" ng-click="onClick(item, $event)"><span ng-class="item.iconClasses"></span> <span>{{ item.title }}</span></a>-->
+  <!--<span class="current"><span ng-class="current.iconClasses"></span> {{ current.title }}</span>-->
+  <!--</div>-->
+</ol>
