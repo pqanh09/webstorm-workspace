@@ -1,0 +1,7 @@
+<div>
+  <small ng-repeat="tag in config.tagList track by $index">
+    <span ng-if="tag.criteria(item, config)" class="ov-tag-item {{tag.cssStyleName}} {{dynamicTagClass(item)}}" style="{{tag.cssStyle}}">
+    {{ tag.statusKey | i18next }}
+    </span>
+  </small>
+</div>

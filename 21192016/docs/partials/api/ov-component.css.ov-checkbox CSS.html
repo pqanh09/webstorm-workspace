@@ -1,0 +1,46 @@
+<h1><code ng:non-bindable="">ov-checkbox CSS</code>
+<div><span class="hint">overview in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><div class="ov-component-css-page ov-component-css-ov-checkbox-css-page"><p>Usage of ov-radio CSS set to build a group of radio buttons</p>
+<ul>
+<li><code>.ov-checkbox</code>: checkbox input</li>
+<li><code>.ov-label-checkbox</code>: checkbox label</li>
+</ul>
+</div><h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-css-page ov-component-css-ov-checkbox-css-page"><pre class="prettyprint linenums">
+// HTML
+&lt;div&gt;
+  &lt;div ng-repeat="colorItem in ctrl1.colorPalette.colorList track by $index"&gt;
+    &lt;input type="checkbox" class="ov-checkbox" id="{{:: colorItem.id}}" ng-model="colorItem.selected"&gt;
+    &lt;label class="ov-label-checkbox" for="{{:: colorItem.id}}"&gt;&lt;/label&gt;
+    &lt;label for="{{:: colorItem.id}}"&gt;{{:: colorItem.name}}&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+// JS
+ctrl1 = {
+  colorPalette: {
+    colorList: []
+  }
+};
+
+ctrl1.colorPalette.colorList.push({
+  id: 'color-of-red',
+  name: 'Red',
+  selected: true
+});
+
+ctrl1.colorPalette.colorList.push({
+  id: 'color-of-blue',
+  name: 'Blue',
+  selected: false
+});
+
+// Initialize color
+ctrl1.colorPalette.color = ctrl1.colorPalette.colorList[0].value;
+</pre>
+</div></div>
+</div>

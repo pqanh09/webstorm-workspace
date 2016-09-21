@@ -1,0 +1,10 @@
+<div>
+<span class="ov-validator {{validatorConfig.overrideClass}}"
+      ng-show="!(isProxyValid||validatorConfig.disabled)">{{getErrorMessage() | i18next}}
+</span><div class="ov-validator-fixed-contain"
+       ng-show="!(isProxyValid||validatorConfig.disabled)">
+    <div class="ov-validator-auto-hide-fixed {{validatorConfig.overrideClass}}">
+      {{getErrorMessage() | i18next}}
+    </div>
+  </div>
+</div>

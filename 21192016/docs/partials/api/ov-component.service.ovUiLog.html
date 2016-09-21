@@ -1,0 +1,41 @@
+<h1><code ng:non-bindable="">ovUiLog</code>
+<div><span class="hint">service in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-service-page ov-component-service-ovuilog-page"><p>Manage UI activities logs.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_clearlog">clearLog()</h3>
+<div class="clearlog"><div class="clearlog-page"><p>Clear all current ui logs.</p>
+</div></div>
+</li>
+<li><h3 id="methods_getlogger">getLogger(appName)</h3>
+<div class="getlogger"><div class="getlogger-page"><p>Return logger for a specific app</p>
+</div><h5 id="methods_getlogger_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>appName</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="getlogger-page"><p>Name of the app to get logger</p>
+</div></td></tr></tbody></table><h5 id="methods_getlogger_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="getlogger-page"><p>logger: a logger have .info() and .error() methods (those functions only work in
+debug mode).</p>
+<ul>
+<li>.info(message): write message as info log</li>
+<li>.error(message): write message as error log</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getuilog">getUiLog()</h3>
+<div class="getuilog"><div class="getuilog-page"><p>Return all current ui logs.</p>
+</div><h5 id="methods_getuilog_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="getuilog-page"><p>logs: an array contains all current UI logs</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-service-page ov-component-service-ovuilog-page"><p>Logger for app Discovery
+<pre class="prettyprint linenums">
+//JS
+var logger = ovUiLogService.getLogger('discovery');
+logger.info('this is an information message');
+logger.error('this is an error message');
+</pre>
+</div></div>
+</div>

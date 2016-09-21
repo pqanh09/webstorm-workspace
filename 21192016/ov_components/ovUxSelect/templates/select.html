@@ -1,0 +1,20 @@
+<div class="ov-ux-select btn-group"
+     ng-class="{'btn-block':obj.setting.fullWidth,'btn-non-block':!obj.setting.fullWidth, 'apply-scaling': obj.setting.applyScaling}"
+     tabindex="0" ng-keydown="keyPress($event)">
+  <button ng-if="!obj.setting.shadowInputOverflow" type="button" id ='{{collectionID.btnLeft}}' tabindex="-1" class="btn btn-default btn-ux-select-left" ng-click="toggleSelect()" ng-disabled="disabled" title="{{header}}"  ><i ng-class="selectedItem.model.icon"></i> {{header}}</button>
+  <div class="ov-overflow-shadowed-input" ng-if="obj.setting.shadowInputOverflow" ng-class="{'icon-included': selectedItem.model.icon}">
+    <input readonly ng-id="{{collectionID.btnLeft}}" class="form-control pull-left btn-ux-select-left overflow-input" ng-model="header"
+           ng-click="toggleSelect()" ng-disabled="disabled" title="{{header}}">
+    </input>
+    <span class="overflow-shadow"></span>
+    <i ng-class="selectedItem.model.icon"></i>
+  </div>
+  <button type="button" id='{{collectionID.btnScale}}' tabindex="-1" class="btn btn-default btn-ux-select-scale"
+          ng-click="toggleSelect()" ng-disabled="disabled">
+    <i class="{{ obj.setting.scaledIconClass || 'fa fa-caret-down' }}"></i>
+  </button>
+  <button type="button" id='{{collectionID.btnRight}}' tabindex="-1" class="btn btn-default btn-ux-select-right"
+          ng-click="toggleSelect()" ng-disabled="disabled">
+    <span class="caret"></span>
+  </button>
+</div>

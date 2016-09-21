@@ -1,0 +1,19 @@
+<div class="form-horizontal"
+     ng-init="constant.labelCss = 'col-md-4 control-label';
+     constant.contentCss = 'col-md-8'">
+  <div class="form-group">
+    <label ng-class=":: constant.labelCss">{{:: attrs.name.i18nKey | i18next}}</label>
+
+    <div ng-class="constant.contentCss">
+      <p class="form-control-static">{{selectedList[0][attrs.name.key]}}</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label ng-class=":: constant.labelCss"> {{:: attrs.description.i18nKey | i18next}}</label>
+
+    <div ng-class="constant.contentCss">
+      <p class="form-control-static">{{selectedList[0][attrs.description.key]}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<button ng-attr-id="{{vm.menuConfig.idPrefix}}{{item.id}}"
+        title="{{vm.getButtonTitle(item)}}"
+        ng-click="item.wrappedOnClick();"
+        ng-disabled="!vm.checkPermission(item) || item.disabled || item.checkDisabled()"
+        class="{{item.btnClass}} {{item.groupId}}"
+        ng-hide="item.isHidden()"
+        ng-class="{'active': item.groupActive || item.checkGroupActive()}"
+        slick-menu-finish-render="vm.wrapBtnGroup()" type="button">
+  <i ng-show="vm.isShowIconClass(item, 'largeScreen')" class="{{item.iconClass}}"></i>
+  <span class="ov-slick-menu-icon-title" ng-show="item.name"> {{item.name}}</span>
+</button>

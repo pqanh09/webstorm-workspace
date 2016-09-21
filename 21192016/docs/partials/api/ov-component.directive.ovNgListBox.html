@@ -1,0 +1,86 @@
+<h1><code ng:non-bindable="">ovNgListBox</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovnglistbox-page"><p>Show data in list view</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="api/ov-component.service:$ovDataViewService">$ovDataViewService</a></code>
+</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-ng-list-box
+       list-item="{array}"
+       config="{object}"
+       on-selected-function="{function}"&gt;
+&lt;/ov-ng-list-box&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY ov-ng-list-box
+     list-item="{array}"
+     config="{object}"
+     on-selected-function="{function}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>listItem</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovnglistbox-page"><p>array data</p>
+</div></td></tr><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovnglistbox-page"><p>component config</p>
+<ul>
+<li><strong>id</strong> (optional) string: component id</li>
+<li><strong>selectFieldList</strong> (require) array: array column ex
+<pre class="prettyprint linenums">
+   [
+     {
+       title: 'title1',
+       key: 'key1'
+     }
+   ]
+ </pre></li>
+<li><strong>limitRow</strong> (optional) number: Limit row for pagination default is 5</li>
+<li><strong>showFooter</strong> (optional) boolean: show/hide footer</li>
+<li><strong>showHeader</strong> (optional) boolean: show/hide header</li>
+<li><strong>sortType</strong> (optional) string (ASC/DESC): sort ordering</li>
+<li><strong>currentPage</strong> (optional) number: current page of pagination</li>
+<li><strong>itemTemplate</strong> (optional) string: url to item template</li>
+<li><strong>headerTemplate</strong> (optional) string: url to header template</li>
+<li><strong>multiSelect</strong> (optional) boolean: multiple or single select</li>
+<li><strong>searchString</strong> (optional) string: get/set your search value</li>
+<li><strong>showTag</strong> (optional) boolean: show/hide tag list (ex: up/down for switch)</li>
+<li><strong>showUpDownTag</strong> (optional) boolean: show/hide up/down tag</li>
+<li><strong>maxHeight</strong> (optional) number: component&#39;s max height (overflow with vertical scrollbar)</li>
+</ul>
+</div></td></tr><tr><td>onSelectedFunction</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-directive-page ov-component-directive-ovnglistbox-page"><p>selected callback function</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovnglistbox-page"><pre class="prettyprint linenums">
+&lt;!-- IN HTML --&gt;
+&lt;div ov-ng-list-box
+     list-item="vm.listItem"
+     onSelectedFunction="vm.onSelectedFunction"
+     config="vm.config"&gt;
+&lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+ //IN JS
+ var attrs = {
+     column1: {
+         key: 'key1',
+         i18nKey: 'i18nKey1'
+     },
+     column2: {
+         key: 'key2',
+         i18nKey: 'i18nKey2'
+     }
+ };
+ vm.listItem = [{key1: 'value1', key2: 'value2'}];
+ vm.config = {
+    selectFieldList: ovDataViewService.getColumnList(attrs)
+ };
+ vm.onSelectedFunction = fucntion (indices) {
+     vm.selectedList = [];
+     angular.forEach(indices, function (i) {
+         vm.selectedList.push(vm.listItem[i]);
+     });
+ };
+</pre>
+</div></div>
+</div>

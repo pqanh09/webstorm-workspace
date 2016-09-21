@@ -1,0 +1,46 @@
+<div>
+  <div class="first-header">
+    <div class="ov-ng-list-box-search-wrapper"
+         ng-class="{'small-screen-hidden': config.showSortGroup,
+       'small-screen-visible': !config.showSortGroup}">
+      <div class="ov-ng-list-box-search-min"
+           ng-class="{'small-screen-hidden': config.showSearchGroup || config.searchString !== '',
+          'small-screen-visible': !config.showSearchGroup && config.searchString === ''}"
+           ng-click="config.showSearchGroup = true">
+        <a class="btn btn-default circleButton"
+           id="{{config.id}}-showSearchGroup">
+          <i class="fa fa-search"></i>
+        </a>
+      </div>
+      <div class="clearfix">
+        <div class="ov-ng-list-box-search-box"
+             ng-class="{'small-screen-visible': config.showSearchGroup || config.searchString !== '',
+          'small-screen-hidden': !config.showSearchGroup && config.searchString === ''}">
+          <div class="vs-list-search" ng-if="config.showFilter">
+            <i class="fa fa-search"></i>
+            <input class="form-control" placeholder="Search"
+                   ng-keyup="onSearch(config.searchString)" ng-model="config.searchString"
+                   id="{{config.id}}-search">
+          </div>
+          <!--<input type="text" class="search clear-ms-search" ng-if="config.showFilter"-->
+          <!--id="{{config.id}}-search"-->
+          <!--placeholder="{{'ovListBox.search' | i18next}}"-->
+          <!--ng-keyup="onSearch(config.searchString)" ng-model="config.searchString"/>-->
+          <a ng-class="{'small-screen-visible': config.showSearchGroup}"
+             id="{{config.id}}-clearSearch" ng-show="config.searchString !== ''"
+             ng-click='clear(); config.showSearchGroup = false'>
+            <i class="fa fa-times-circle-o"></i>
+          </a>
+        </div>
+        <!--<div class="csv-field pull-right">-->
+        <!--<div class="pull-right csv-button" ng-class="{'csv-disabled':!config.resultTableExportCsv.enableExportCsv}">-->
+        <!--<ov-export-csv csv-data="config.resultTableExportCsv.data"-->
+        <!--csv-config="config.resultTableExportCsv.config"></ov-export-csv>-->
+        <!--</div>-->
+        <!--</div>-->
+      </div>
+    </div>
+
+  </div>
+  <div class="header-separate"></div>
+</div>

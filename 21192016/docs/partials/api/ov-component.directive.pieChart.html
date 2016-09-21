@@ -1,0 +1,306 @@
+<h1><code ng:non-bindable="">pieChart</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-piechart-page"><p>Displays a Pie Chart based on the given data.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;pie-chart
+       chart-data="{Array}"
+       chart-config="{Object}"
+       [on-click="{Function}"]&gt;
+&lt;/pie-chart&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY pie-chart
+     chart-data="{Array}"
+     chart-config="{Object}"
+     [on-click="{Function}"]&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>chartData</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ov-component-directive-page ov-component-directive-piechart-page"><p>Chart data</p>
+</div></td></tr><tr><td>chartConfig</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ov-component-directive-page ov-component-directive-piechart-page"><p>Chart config.</p>
+<ul>
+<li><strong>properties</strong> <code>object</code>: properties<ul>
+<li><strong>showNoData</strong> (optional) <code>boolean</code>: Display a no-data message if data is empty or all values are 0 (default <code>false</code>)</li>
+<li><strong>width</strong> <code>string</code> or <code>integer</code> : width of the chart by value (px) or percent.</li>
+<li><strong>height</strong> <code>string</code> or <code>integer</code> : height of the chart by value (px) or percent</li>
+<li><strong>innerRadius</strong> <code>integer</code>: set the inner-radius of the chart. Used to draw donut chart</li>
+<li><strong>marginTop</strong> <code>integer</code>: set margin top for the chart</li>
+<li><strong>marginLeft</strong> <code>integer</code>: set margin left for the chart</li>
+<li><strong>colors</strong> (optional) <code>string</code> or <code>array</code>: colors to be used in charts, can be array of color code or d3 colors collection name (default <code>colorScale20</code>)</li>
+<li><strong>duration</strong> (optional) <code>integer</code>: transition duration by milliseconds (default <code>1000</code>)</li>
+</ul>
+</li>
+<li><strong>mapping</strong> <code>object</code>: define map values<ul>
+<li><strong>name</strong> <code>string</code>: property name can be used to get pie-name</li>
+<li><strong>value</strong> <code>string</code>: property name can be used to get pie-value</li>
+</ul>
+</li>
+<li><strong>label</strong> <code>object</code>: define properties for chart&#39;s labels<ul>
+<li><strong>outer</strong> <code>object</code>: options for outer labels<ul>
+<li><strong>show</strong> (optional) <code>boolean</code>: show outer labels or not ( default <code>false</code>)</li>
+<li><strong>format</strong> <code>string</code>: format of the outer labels. Can be <code>percent</code>, <code>count</code> or <code>label</code> ( default <code>percent</code>).</li>
+<li><strong>style</strong> <code>object</code>: define style for label text.</li>
+<li><strong>showWhenLessThanPercentage</strong> <code>integer</code>: Outer labels will be shown when the pie is take less percent then this value</li>
+</ul>
+</li>
+<li><strong>inner</strong> <code>object</code>: options for inner labels<ul>
+<li><strong>show</strong> (optional) <code>boolean</code>: show inner labels or not ( default <code>false</code>)</li>
+<li><strong>format</strong> <code>string</code>: format of the inner labels. Can be <code>percent</code>, <code>count</code> or <code>label</code> ( default <code>percent</code>).</li>
+<li><strong>color</strong> <code>string</code>: color of label text</li>
+<li><strong>style</strong> <code>object</code>: define style for label text.</li>
+<li><strong>hideWhenLessThanPercentage</strong> <code>integer</code>: Inner labels will be hidden when the pie is take less percent then this value</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>tooltip</strong> (optional) <code>object</code>: tooltip options<ul>
+<li><strong>show</strong> <code>boolean</code>: set to <code>true</code> if you want to remove y-axis (default <code>false</code>)</li>
+</ul>
+</li>
+<li><strong>api</strong> <code>object</code>: API provided and assigned by the component<ul>
+<li><strong>updateChart</strong> <code>function</code>: use to update chart with given chart data</li>
+</ul>
+</li>
+</ul>
+</div></td></tr><tr><td>onClick <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="ov-component-directive-page ov-component-directive-piechart-page"><p>callBack function will be called when click on a pie. clicked pie object, pie data, and index will be passed as arguments</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-piechart-page"><p><strong>Basic Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;pie-chart chart-data="ctrl.barChartData" chart-config="ctrl.barChartConfig"&gt;&lt;/pie-chart&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ ctrl.pieChartConfig = {
+    properties: {
+      width: '100%',
+      height: '100%',
+      innerRadius: 0,
+      marginTop: 80,
+      marginLeft: 80,
+      showNoData: true
+    },
+    mapping: {
+      name: 'name',
+      value: 'count'
+    },
+    label: {
+      outer: {
+        show: true,
+        format: 'percent',  // 'percent': 50% or 'count': 7 or 'label',
+        style: {'font': '11px Arial'},
+        showWhenLessThanPercentage: 10
+      },
+      inner: {
+        show: true,
+        format: 'percent',
+        color: 'white',
+        style: {'font': '16px Arial'},
+        hideWhenLessThanPercentage: 10
+      }
+    },
+    tooltip: {
+      show: true
+    }
+  };
+
+ ctrl.pieChartData = [{
+   "name": "Critical",
+   "count": 0,
+   "children": []
+ },
+ {
+   "name": "Major",
+   "count": 0,
+   "children": []
+ },
+ {
+   "name": "Minor",
+   "count": 0,
+   "children": []
+ },
+ {
+   "name": "Warning",
+   "count": 19,
+   "children": [
+     {
+       "name": "0.0.0.0",
+       "count": 19
+     }
+   ]
+ },
+ {
+   "name": "Normal",
+   "count": 116,
+   "children": [
+     {
+       "name": "Others",
+       "count": 22
+     },
+     {
+       "name": "10.1.1.98",
+       "count": 6
+     },
+     {
+       "name": "10.1.4.99",
+       "count": 3
+     },
+     {
+       "name": "10.1.2.97",
+       "count": 3
+     },
+     {
+       "name": "10.1.2.116",
+       "count": 9
+     },
+     {
+       "name": "10.1.1.82",
+       "count": 8
+     },
+     {
+       "name": "10.1.1.93",
+       "count": 4
+     },
+     {
+       "name": "10.1.4.113",
+       "count": 22
+     },
+     {
+       "name": "10.1.4.92",
+       "count": 10
+     },
+     {
+       "name": "10.1.4.100",
+       "count": 24
+     },
+     {
+       "name": "10.1.1.126",
+       "count": 5
+     }
+   ]
+ }];
+
+</pre>
+<p><strong>Go back after drilling down Example:</strong>
+<pre class="prettyprint linenums">
+  // In HTML
+  &lt;div&gt;
+    &lt;button class="btn btn-default" ng-click="ctrl.goBackToParents()"&gt;Back&lt;/button&gt;
+    &lt;pie-chart chart-config="ctrl.pieChartConfig" chart-data="ctrl.pieChartData"&gt;&lt;/pie-chart&gt;
+  &lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+  // In JS
+   var prevPieData = [];
+
+   // Basic config
+   ctrl.pieChartConfig = {
+        properties: {
+          width: '100%',
+          height: '100%'
+        },
+        mapping: {},
+        label: {
+          outer: {
+            show: true
+          },
+          inner: {}
+        },
+        tooltip: {}
+      };
+
+   ctrl.pieChartData = [{
+       "name": "Critical",
+       "count": 0,
+       "children": []
+     },
+   {
+     "name": "Major",
+     "count": 0,
+     "children": []
+   },
+   {
+     "name": "Minor",
+     "count": 0,
+     "children": []
+   },
+   {
+     "name": "Warning",
+     "count": 19,
+     "children": [
+       {
+         "name": "0.0.0.0",
+         "count": 19
+       }
+     ]
+   },
+   {
+     "name": "Normal",
+     "count": 116,
+     "children": [
+       {
+         "name": "Others",
+         "count": 22
+       },
+       {
+         "name": "10.1.1.98",
+         "count": 6
+       },
+       {
+         "name": "10.1.4.99",
+         "count": 3
+       },
+       {
+         "name": "10.1.2.97",
+         "count": 3
+       },
+       {
+         "name": "10.1.2.116",
+         "count": 9
+       },
+       {
+         "name": "10.1.1.82",
+         "count": 8
+       },
+       {
+         "name": "10.1.1.93",
+         "count": 4
+       },
+       {
+         "name": "10.1.4.113",
+         "count": 22
+       },
+       {
+         "name": "10.1.4.92",
+         "count": 10
+       },
+       {
+         "name": "10.1.4.100",
+         "count": 24
+       },
+       {
+         "name": "10.1.1.126",
+         "count": 5
+       }
+     ]
+   }];
+
+   ctrl.onPieClick = function (selectedPie, pieData) {
+       if (selectedPie && angular.isArray(selectedPie.children) && selectedPie.children.length &gt; 0) {
+         prevPieData.push(pieData);
+       }
+     };
+
+   ctrl.goBackToParents = function () {
+       var previousPieData = prevPieData.pop();
+       if (previousPieData) {
+          ctrl.chartConfig.api.updateChart(previousPieData);
+       }
+     };
+
+</pre>
+</div></div>
+</div>

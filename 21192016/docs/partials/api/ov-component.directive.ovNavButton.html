@@ -1,0 +1,47 @@
+<h1><code ng:non-bindable="">ovNavButton</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovnavbutton-page"><p>Render a navigation button under the form of an anchor link. The rendered element contains an arrow icon and followed by a label</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY ov-nav-button
+     direction="{expression|string}"
+     label="{expression|string}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>direction</td><td><a href="" class="label type-hint type-hint-expression">expression</a><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovnavbutton-page"><p>Angular expression or string to be evaluated as the direction of arrow icon. Accepted values:</p>
+<ul>
+<li><code>left</code>: left navigation arrow <code>&lt;</code></li>
+<li><code>right</code>: left navigation arrow <code>&gt;</code></li>
+</ul>
+</div></td></tr><tr><td>label</td><td><a href="" class="label type-hint type-hint-expression">expression</a><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovnavbutton-page"><p>Angular expression or string to be evaluated as a label.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovnavbutton-page"><p><strong>Basic example:</strong>
+<pre class="prettyprint linenums">
+  // HTML
+  &lt;div ov-nav-button
+       direction="left"
+       label="Back"&gt;
+  &lt;/div&gt;
+</pre>
+<p><strong>Using expression:</strong></p>
+<pre class="prettyprint linenums">
+  // HTML
+  &lt;div ov-nav-button
+       direction="{{ctr1.ovNavButton.direction}}"
+       label="{{ctr1.ovNavButton.label}}"&gt;
+  &lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+  // JS
+  ctrl1.ovNavButton = {
+    direction: 'left',
+    label: 'Back'
+  };
+</pre>
+</div></div>
+</div>

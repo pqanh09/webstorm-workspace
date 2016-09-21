@@ -1,0 +1,108 @@
+@import '../../../node_modules/nib'
+
+ov-ng-list
+  display block
+.ovNgListBox .detail-content
+  width 100%
+  padding 0
+  margin 1rem 0 1rem 0
+  list-style none
+  border 1px solid #cccccc
+
+/*Header*/
+.detail-content .header
+  background linear-gradient(to bottom, #fff, #e6e6e6)
+  box-shadow inset 0 1px 1px rgba(0,0,0,0.05)
+  text-align left
+  padding 1.5rem 1rem 1.5rem 1rem
+  height auto
+
+/*CheckBox*/
+.detail-content .sticky-checkbox
+  display inline-block
+  margin-right 1rem
+  height 1.5rem
+  vertical-align middle
+  position relative
+  left 0
+  margin-top 0
+.ovNgListBox-checkbox
+  display inline-block
+  position relative
+.ovNgListBox-checkbox input
+  display none
+.ovNgListBox-checkbox span
+  background-color #fafafa
+  border 1px solid #999
+  padding 0.8rem
+  display inline-block
+  position relative
+  cursor pointer
+  user-select none
+.ovNgListBox-checkbox input:checked + span
+  background-color #fafafa
+  border 1px solid #999
+.ovNgListBox-checkbox input:checked + span:after
+  content '\f00c'
+  color #357ebd
+  left 1px
+  position absolute
+  top 1px
+  font-size 1.4rem
+  line-height 1
+  font-weight normal
+  font-family FontAwesome
+
+/*ov-ng-list*/
+.detail-content
+  .list-item
+    padding 0
+    margin-top 0
+    margin-bottom 0
+    overflow auto
+    width 100%
+    height 100%
+    user-select none
+.detail-content .list-item .ovNgListBoxItem
+  padding 0
+  cursor pointer
+  color black
+  border-bottom 1px solid #dbdbdb
+  list-style none
+  user-select none
+  position relative
+.detail-content div.content-view
+  display block
+  overflow auto
+.ovNgListBox .content-view::before
+  content ''
+.detail-content .list-item .ovNgListBoxItem:hover
+  background-color #e2e7eb
+.detail-content .list-item .ovNgListBoxItem:hover.ovNgListBoxItem.selected-item
+  background-color #5399d7 !important
+.detail-content .list-item .ovNgListBoxItem.selected-item
+  background-color #428bca !important
+  color white !important
+
+.detail-content .checkbox
+  display inline-block
+  margin 2rem
+  padding 0
+
+.detail-content .ovListOdd
+  background white
+
+
+.detail-content .ovListEven
+  background #f0f3f5
+
+//override css for report app
+@media print {
+  .detail-content .ovListOdd {
+    background white !important
+  }
+
+  .detail-content .ovListEven {
+    background #f0f3f5 !important
+  }
+}

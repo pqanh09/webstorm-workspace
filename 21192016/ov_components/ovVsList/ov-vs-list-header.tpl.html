@@ -1,0 +1,33 @@
+<div class="layout-row vs-list-item-header">
+  <!--sort by-->
+  <div class="layout-row">
+    <!--left-->
+    <!--<div class="flex-none layout align-content-center">-->
+    <!--<input type="checkbox" id="vs-list-checkbox-all" class="ov-checkbox" ng-model="vm.checkedAll">-->
+    <!--<label for="vs-list-checkbox-all" class="ov-label-checkbox pull-left"></label>-->
+    <!--</div>-->
+    <!--center-->
+    <div class="flex layout-row align-content-center vs-list-item-center" ng-if="vm.config.sort">
+      <div>{{'button-label.sortBy' | i18next}}</div>
+      <div class="vs-list-sort-by">
+        <ov-ux-select
+          ng-model="vm.cache.primaryKey"
+          ux-select-id="{{vm.config.id}}-sort-by"
+          ov-ng-options="field.key as field.name for field in vm.config.fieldList"></ov-ux-select>
+      </div>
+      <a href ng-attr-id="{{vm.config.id}}-sort" ng-click="vm.sort()">
+        <i class="fa fa-lg" ng-class="{'fa-sort-alpha-asc': vm.cache.sortDesc === false, 'fa-sort-alpha-desc': vm.cache.sortDesc === true, 'fa-arrows-v': vm.cache.sortDesc === undefined}"></i>
+      </a>
+    </div>
+  </div>
+
+  <!--search-->
+  <div class="flex">
+    <div class="vs-list-search">
+      <i class="fa fa-search"></i>
+      <input class="form-control" ng-model="vm.cache.searchText" ng-change="vm.search()"  placeholder="{{'button-label.search' | i18next}}">
+      <a href class="vs-list-search-delete" ng-if="vm.cache.searchText" ng-click="vm.resetSearch()"><i class="fa fa-times"></i></a>
+    </div>
+  </div>
+
+</div>

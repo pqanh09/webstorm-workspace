@@ -1,0 +1,143 @@
+<h1><code ng:non-bindable="">ovSlickDoubleList</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovslickdoublelist-page"><p>The <code>ovSlickDoubleList</code> turns a standard multiple selection box into a side-by-side pick list
+which supports for easily and quickly selecting or removing multiple items.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-slick-double-list
+       input-list="{array}"
+       selected-list="{array}"
+       [sdl-config="{object}"]
+       [input-list-index="{array}"]
+       [selected-list-index="{array}"]
+       [item-id="{string}"]
+       [sdl-id="{string}"]
+       [sdl-disabled="{boolean}"]&gt;
+&lt;/ov-slick-double-list&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY ov-slick-double-list
+     input-list="{array}"
+     selected-list="{array}"
+     [sdl-config="{object}"]
+     [input-list-index="{array}"]
+     [selected-list-index="{array}"]
+     [item-id="{string}"]
+     [sdl-id="{string}"]
+     [sdl-disabled="{boolean}"]&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>inputList</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovslickdoublelist-page"><p>Array of available items, item is a object.</p>
+</div></td></tr><tr><td>selectedList</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovslickdoublelist-page"><p>Array of selected items, item is a object.</p>
+</div></td></tr><tr><td>sdlConfig <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovslickdoublelist-page"><p>he configuration object:</p>
+<ul>
+<li><strong>itemTemplateUrl</strong>: The item template url for the rows.</li>
+<li><strong>tagTemplateUrl</strong>: The tag template url for the tags.</li>
+<li><strong>leftHandSide</strong>: If true, the selected list will be on the left side and vice versa. Default is false.</li>
+<li><strong>showItemTooltip</strong>: If true, an info button will be added on each row which user can click on to show extra info. Default is false.</li>
+<li><strong>sortByList</strong>: A list of sort by objects.</li>
+<li><strong>sortBy</strong>: An object in sortByList.</li>
+<li><strong>sortAsc</strong>: If true, the array of items will be sort in a descending order and vice versa.</li>
+<li><strong>searchBy</strong>: The property of item to search by.</li>
+<li><strong>tagList</strong>: Array of tags object to config tags. Please check default tag list in ovUtility service.</li>
+<li><strong>extendedTagList</strong>: Array of extend tags object to config extend tags.</li>
+<li><strong>showTag</strong>: If true, tags will be shown.</li>
+<li><strong>tagListOverrideCss</strong>: Array of extend tags object to config extend tags.</li>
+</ul>
+<p>The APIs you can use outside via sdlConfig:</p>
+<ul>
+<li><strong>resize</strong>: Trigger slick grid rerender.</li>
+<li><strong>synSelection</strong>: Sync checked item with inputListIndex and selectedListIndex.</li>
+<li><strong>searchString</strong>: This attribute is current search string.</li>
+<li><strong>doSort</strong>: Trigger to sort items by current selected sort by.</li>
+</ul>
+<p>In addition, you are allowed to add more functions to handle item in item template by pass those functions into sldConfig as well.
+By default, this component has 3 functions bellow to handle item display, you can override or add your own:</p>
+<ul>
+<li><strong>getPrimary</strong>: This function was used in default item template, it returns the primary string of item, e.g. &quot;item.name&quot;.</li>
+<li><strong>getSecondary</strong>: The same as getPrimary function.</li>
+<li><strong>getItemTooltip</strong>: This function is used along with showItemTooltip flag, it should return the tooltip for the item.</li>
+</ul>
+</div></td></tr><tr><td>inputListIndex <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovslickdoublelist-page"><p>Array of available checked items indexes.</p>
+</div></td></tr><tr><td>selectedListIndex <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovslickdoublelist-page"><p>Array of selected checked items indexes.</p>
+</div></td></tr><tr><td>itemId <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovslickdoublelist-page"><p>Provide a property of an item which is used for identification.</p>
+</div></td></tr><tr><td>sdlId <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovslickdoublelist-page"><p>Provide unique id of directive for automation test.</p>
+</div></td></tr><tr><td>sdlDisabled <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-directive-page ov-component-directive-ovslickdoublelist-page"><p>If the expression is true, then this directive will be disabled and vice versa.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovslickdoublelist-page"><pre class="prettyprint linenums">
+&lt;!--HTML--&gt;
+   &lt;ov-slick-double-list sdl-config="vm.portSelector.config"
+                         sdl-id="vlan-manager-create-port-selector"
+                         input-list="vm.portSelector.inputList"
+                         selected-list="vm.portSelector.selectedList"&gt;    
+   &lt;/ov-slick-double-list&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+   function getPortDoubleListConfig() {
+     var portFields = [
+       {
+         name: $i18next('common.port'),
+         key: 'port',
+         title: $i18next('common.port')
+       },
+       {
+         name: $i18next('common.description'),
+         key: 'description',
+         title: $i18next('common.description')
+       }
+     ];
+     return {
+       searchString: '',
+       showItemTooltip: true,
+       showTag: true,
+       sortAsc: true,
+       searchBy: _.head(portFields).key,
+       sortBy: _.head(portFields),
+       itemHeight: 50,
+       sortByList: portFields
+     };
+   }
+
+   vm.portSelector = {
+     config: getPortDoubleListConfig(),
+     inputList: [
+       {
+         ifIndex: 1024,
+         port: '1/24',
+         description: 'Alcatel-Lucent 1/24'
+       },
+       {
+         ifIndex: 1001,
+         port: '1/1',
+         description: 'Alcatel-Lucent 1/1'
+       },
+       {
+         ifIndex: 1002,
+         port: '1/2',
+         description: 'Alcatel-Lucent 1/2'
+       },
+       {
+         ifIndex: 1003,
+         port: '1/3',
+         description: 'Alcatel-Lucent 1/3'
+       },
+       {
+         ifIndex: 1004,
+         port: '1/4',
+         description: 'Alcatel-Lucent 1/4'
+       },
+       {
+         ifIndex: 1005,
+         port: '1/5',
+         description: 'Alcatel-Lucent 1/5'
+       }
+     ],
+     selectedList: []
+   };
+</pre>
+</div></div>
+</div>

@@ -1,0 +1,43 @@
+<h1><code ng:non-bindable="">ovNGFilterService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-service-page ov-component-service-ovngfilterservice-page"><p>The simple and convenient service of complex datum queries. It is used in ovDataView directive.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_dongfilter">doNGFilter(data, filterSelected)</h3>
+<div class="dongfilter"><div class="ov-component-service-page ov-component-service-ovngfilterservice-dongfilter-page"><p>Do filter on the data by filter list.</p>
+</div><h5 id="methods_dongfilter_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-service-page ov-component-service-ovngfilterservice-dongfilter-page"><p>Array of data want to filter.</p>
+</div></td></tr><tr><td>filterSelected</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-service-page ov-component-service-ovngfilterservice-dongfilter-page"><p>Array of filters want to apply. Check &quot;showFilterDialog&quot; for more detail about a filter object format.</p>
+</div></td></tr></tbody></table><h5 id="methods_dongfilter_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-service-page ov-component-service-ovngfilterservice-dongfilter-page"><p>Return an array of data was filtered by selected filters.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_showfilterdialog">showFilterDialog(scope, filterInfo, filterCallback)</h3>
+<div class="showfilterdialog"><div class="ov-component-service-page ov-component-service-ovngfilterservice-showfilterdialog-page"><p>Manage filters (create/edit/delete) and filter datum base on selected filters.</p>
+</div><h5 id="methods_showfilterdialog_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-service-page ov-component-service-ovngfilterservice-showfilterdialog-page"><p>The owner scope which calls the service.</p>
+</div></td></tr><tr><td>filterInfo</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-service-page ov-component-service-ovngfilterservice-showfilterdialog-page"><p>This object contains filter information:</p>
+<ul>
+<li><strong>filterList</strong>: All of the filter was created. if there is no filter, this is empty array.</li>
+<li><strong>filterSelected</strong>: All the selected filters which will be applied to filter data.</li>
+<li><strong>filterFields</strong>: Array of attributes on data object that you want to filter.</li>
+<li><strong>filterBackupData</strong>: The original data.</li>
+<li><strong>filterData</strong>: The data after applying selected filters. If there is no selected filter, it is the same as the original data.</li>
+<li><strong>singleSelect</strong>: Set it true if you want only one filter may be selected and vice versa.</li>
+</ul>
+</div></td></tr><tr><td>filterCallback</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-service-page ov-component-service-ovngfilterservice-showfilterdialog-page"><p>This object contains filter callbacks:</p>
+<ul>
+<li><strong>finishCallback</strong>: This function will be called after applying filters on data.</li>
+<li><strong>onAdded</strong>: This function will be called whenever there is one filter was created.</li>
+<li><strong>onEdited</strong>: This function will be called whenever there is one filter was edited.</li>
+<li><strong>onDeleted</strong>: This function will be called whenever there is one filter was deleted.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_showfilterdialog_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-null">null</a></td><td><div class="ov-component-service-page ov-component-service-ovngfilterservice-showfilterdialog-page"><p>This function does not return.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"></div>
+</div>

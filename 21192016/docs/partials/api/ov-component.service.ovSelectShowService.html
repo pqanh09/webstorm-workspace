@@ -1,0 +1,56 @@
+<h1><code ng:non-bindable="">ovSelectShowService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-service-page ov-component-service-ovselectshowservice-page"><p>The service wraps ovSlickDoubleList directive to select show/hide columns/fields of table/list view.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_showlistsetting">showListSetting(scope, viewConfig, [idApp], [finishCb], [cancelCb])</h3>
+<div class="showlistsetting"><div class="ov-component-service-page ov-component-service-ovselectshowservice-showlistsetting-page"><p>This function is a shortcut of &quot;showSelectDlg&quot;, it was customized for &quot;ovDataView&quot; to select show/hide <strong>fields of list</strong> view.
+Instead of passing &#39;config&#39;, &#39;sl&#39;, &#39;hl&#39; param, we just need to pass one object &#39;viewConfig&#39;.
+Please see viewConfig param and check ovDataview directive for more detail.</p>
+</div><h5 id="methods_showlistsetting_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showlistsetting-page"><p>The owner scope which contains table/list.</p>
+</div></td></tr><tr><td>viewConfig</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showlistsetting-page"><p>This object is viewConfig property of ov-data-view object.</p>
+</div></td></tr><tr><td>[idApp]</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showlistsetting-page"><p>Provide unique id of directive for automation test.</p>
+</div></td></tr><tr><td>[finishCb]</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showlistsetting-page"><p>This function will be called when user clicks on ok button.</p>
+</div></td></tr><tr><td>[cancelCb]</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showlistsetting-page"><p>This function will be called when user clicks on cancel button.</p>
+</div></td></tr></tbody></table><h5 id="methods_showlistsetting_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-null">null</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showlistsetting-page"><p>This function does not return.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_showselectdlg">showSelectDlg(scope, config, sl, hl, idApp, finishCb, cancelCb)</h3>
+<div class="showselectdlg"><div class="ov-component-service-page ov-component-service-ovselectshowservice-showselectdlg-page"><p>Provide to user a screen to select show/hide columns/fields of table/list view.</p>
+</div><h5 id="methods_showselectdlg_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showselectdlg-page"><p>The owner scope which contains table/list.</p>
+</div></td></tr><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showselectdlg-page"><p>This is config object:</p>
+<ul>
+<li><strong>title</strong>: title of dialog.</li>
+<li><strong>itemTemplateUrl</strong>: item template url.</li>
+<li><strong>searchBy</strong>: the property items will be searched by.</li>
+</ul>
+<p>In shorthand, it can be empty object, the service will use default config.</p>
+</div></td></tr><tr><td>sl</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showselectdlg-page"><p>An array of show items.</p>
+</div></td></tr><tr><td>hl</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showselectdlg-page"><p>An array of hide items.</p>
+</div></td></tr><tr><td>idApp</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showselectdlg-page"><p>Provide unique id of directive for automation test.</p>
+</div></td></tr><tr><td>finishCb</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showselectdlg-page"><p>This function will be called when user clicks on ok button.</p>
+</div></td></tr><tr><td>cancelCb</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showselectdlg-page"><p>This function will be called when user clicks on cancel button.</p>
+</div></td></tr></tbody></table><h5 id="methods_showselectdlg_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-null">null</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showselectdlg-page"><p>This function does not return.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_showtablesetting">showTableSetting(scope, viewConfig, [idApp], [finishCb], [cancelCb])</h3>
+<div class="showtablesetting"><div class="ov-component-service-page ov-component-service-ovselectshowservice-showtablesetting-page"><p>This function is a shortcut of &quot;showSelectDlg&quot;, it was customized for &quot;ovDataView&quot; to select show/hide <strong>columns of table</strong> view.
+Instead of passing &#39;config&#39;, &#39;sl&#39;, &#39;hl&#39; param, we just need to pass one object &#39;viewConfig&#39;.
+Please see viewConfig param and check ovDataview directive for more detail.</p>
+</div><h5 id="methods_showtablesetting_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showtablesetting-page"><p>The owner scope which contains table/list.</p>
+</div></td></tr><tr><td>viewConfig</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showtablesetting-page"><p>This object is viewConfig property of ov-data-view object.</p>
+</div></td></tr><tr><td>[idApp]</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showtablesetting-page"><p>Provide unique id of directive for automation test.</p>
+</div></td></tr><tr><td>[finishCb]</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showtablesetting-page"><p>This function will be called when user clicks on ok button.</p>
+</div></td></tr><tr><td>[cancelCb]</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showtablesetting-page"><p>This function will be called when user clicks on cancel button.</p>
+</div></td></tr></tbody></table><h5 id="methods_showtablesetting_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-null">null</a></td><td><div class="ov-component-service-page ov-component-service-ovselectshowservice-showtablesetting-page"><p>This function does not return.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"></div>
+</div>

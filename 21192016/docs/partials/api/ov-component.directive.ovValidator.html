@@ -1,0 +1,113 @@
+<h1><code ng:non-bindable="">ovValidator</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovvalidator-page"><p>The <code>ovValidator</code> directive validates with input rules to check user input and show an error if any.
+It also requires ngModel.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY ov-validator="{array}"
+     is-valid="{boolean}"
+     is-proxy-valid="{boolean}"
+     validator-config="{object}"
+     validator-group-id="{string}"
+     css-wrap="{string}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ovValidator</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovvalidator-page"><p>Sets the rules that the model is validated by.
+This is the format of a validate object:
+<pre class="prettyprint linenums">
+   {
+     validator: function (model) {
+       if (!vm.addEdit.showVlanIdInput()) {
+         return true;
+       }
+       return (Number(model) &gt;= 1 && Number(model) &lt;= 4094);
+     },
+     error: 'vlanManager.ipInterface.validation.vlanId.range'
+   }
+</pre>
+</div></td></tr><tr><td>isValid</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-directive-page ov-component-directive-ovvalidator-page"><p>The real valid value. True if it&#39;s valid and vice versa.</p>
+</div></td></tr><tr><td>isProxyValid</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ov-component-directive-page ov-component-directive-ovvalidator-page"><p>This value syncs with the error. If the error was shown, it&#39;s false and vice versa.
+Sometime it&#39;s invalid but you don&#39;t want to show the error, so you call reset service. Then &quot;isProxyValid&quot; will be true even it&#39;s invalid.</p>
+</div></td></tr><tr><td>validatorConfig</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovvalidator-page"><p>The config object, here is the default object:
+<pre class="prettyprint linenums">
+   {
+     invoke: 'watch',//blur, watch,
+     fixed: false,
+     overrideClass: '',
+     autoHasError: true,
+     disabled: false
+   }
+</pre>
+</div></td></tr><tr><td>validatorGroupId</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovvalidator-page"><p>The id of form group which the current input belongs to. All the inputs in the same group will have the same validatorGroupId.</p>
+</div></td></tr><tr><td>cssWrap</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovvalidator-page"><p>The css class name which wraps the input. Default is &quot;form-group&quot;.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovvalidator-page"><p><strong>Validate with available types:</strong>
+<pre class="prettyprint linenums">
+ &lt;!--HTML--&gt;
+
+    &lt;div class="panel-body form-horizontal"&gt;
+
+      &lt;div class="form-group"&gt;
+        &lt;label class="control-label col-md-3" for="{{appId.serviceNameInput}}"&gt;
+{{'vxlans.vxlanService.object.serviceName'|i18next}}&lt;/label&gt;
+
+        &lt;div class="col-xs-11 col-md-6"&gt;
+          &lt;input type="text" class="form-control" auto-focus maxlength="31" ng-disabled="!isAddVxlanService()"
+                 id="{{appId.serviceNameInput}}" ng-model="initial.vxlanServiceObject.serviceName"
+                 ov-validator="vxlanServiceNameRules" is-valid="isValidObject.vxlanServiceNameIsValid"
+                 validator-group-id="validatorGroupId.createVxlanService"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form-group"&gt;
+        &lt;label class="control-label col-md-3"&gt;
+          &lt;i id="{{appId.vnIdInputTooltip}}" class="fa fa-info-circle vxlans-tooltip" ov-tooltip
+             i18n-key="{{initial.vnIdInputTooltip}}"&gt;&lt;/i&gt;
+          {{'vxlans.vxlanService.object.vnId'|i18next}}&lt;/label&gt;
+
+        &lt;div class="col-xs-11 col-md-6"&gt;
+          &lt;ov-spinner sp-config="spVxlanServiceVnId" sp-disabled="!isAddVxlanService()"
+                      sp-value="initial.vxlanServiceObject.vnId" sp-id="{{appId.vnIdInput}}"
+                      placeholder="{{'(0-16777215)'|i18next}}"&gt;&lt;/ov-spinner&gt;
+            &lt;span ng-model="initial.vxlanServiceObject.vnId" ov-validator="vxlanServiceVnIdRules"
+                  is-valid="isValidObject.vxlanServiceVnIdIsValid"
+                  validator-group-id="validatorGroupId.createVxlanService"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+
+    scope.vxlanServiceNameRules = [
+      {
+        validator: function (model) {
+          model = model || '';
+          return (model) ? model.length &lt;= 32 : false;
+        },
+        error: 'vxlans.validator.vxlanService.nameLength'
+      },
+      ovValidatorServices.nameRule,
+      ovValidatorServices.ASCIIRule
+    ];
+    scope.vxlanServiceVnIdRules = [
+      {
+        validator: function (model) {
+          model = model || '';
+          if (model.length === 0 || (!isNaN(model) && +model &gt;= 0 && +model &lt;= 16777215)) {
+            return true;
+          }
+          return false;
+        },
+        error: 'vxlans.validator.vxlanService.vnIdInvalid'
+      }
+    ];
+</pre>
+</div></div>
+</div>

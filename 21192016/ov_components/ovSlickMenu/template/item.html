@@ -1,0 +1,13 @@
+<div ng-hide="item.isHidden() && vm.isShowInSmallScreenMode(item)">
+  <a ng-attr-id="horizontal-{{vm.menuConfig.idPrefix}}{{item.id}}"
+     ng-attr-title="{{item.titleI18key | i18next}}"
+     ng-click="item.wrappedOnClick()"
+     ng-disabled="!vm.checkPermission(item) || item.disabled || item.checkDisabled()"
+     ng-hide="item.isHidden()"
+     ng-class="{'active': item.groupActive || item.checkGroupActive()}"
+     ov-slick-menu-disabled="!vm.checkPermission(item) || item.disabled || item.checkDisabled()">
+    <i ng-show="vm.isShowIconClass(item, 'smallScreen')"
+       class="{{item.iconClass}} ov-slick-menu-icon"></i>
+    <span class="ov-slick-menu-icon-title"> {{item.titleI18key | i18next}}</span>
+  </a>
+</div>

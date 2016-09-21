@@ -1,0 +1,23 @@
+<div ng-init="commonId = config.id + '-ov-data-view-ov-ng-list-box'">
+  <div class="ov-ng-list-box-item-wrapper">
+    <div class="sticky-checkbox" ov-stop-propagation="true"
+         ng-if="config.multiSelect">
+      <label class="ovNgListBox-checkbox">
+        <input type="checkbox"
+               ng-disabled="item.disabled"
+               ng-model="item.checked"
+               ng-change="itemChange($index)" />
+        <span id="{{ commonId }}-check-box-{{ $index }}"></span>
+      </label>
+    </div>
+
+    <div class="ov-ng-list-box-item-content">
+      <p class="ov-ng-list-box-title" ov-ellipsis="{{getTitle(item, config.selectFieldList)}}">
+        {{getTitle(item, config.selectFieldList)}}
+      </p>
+      <small>
+        {{ getContent(item, config.selectFieldList) }}
+      </small>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<h1><code ng:non-bindable="">ov-radio CSS</code>
+<div><span class="hint">overview in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><div class="ov-component-css-page ov-component-css-ov-radio-css-page"><p>Usage of ov-radio CSS set to build a group of radio buttons</p>
+<ul>
+<li><code>.ov-radio-container</code>: radio button composite</li>
+<li><code>.ov-radio-container .ov-radio</code>: input in radio button composite which holds value</li>
+<li><code>.ov-radio-container .ov-state-radio</code>: label in radio button composite which is for selecting</li>
+<li><code>.ov-label-radio</code>: label of radio button</li>
+</ul>
+</div><h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-css-page ov-component-css-ov-radio-css-page"><pre class="prettyprint linenums">
+// HTML
+&lt;div&gt;
+  &lt;div ng-repeat="colorItem in ctrl1.colorPalette.colorList track by $index"&gt;
+    &lt;div class="ov-radio-container"&gt;
+      &lt;input class="ov-radio" id="{{:: colorItem.id}}"
+            type="radio"
+            ng-model="ctrl1.colorPalette.color"
+            ng-value="colorItem.value"&gt;
+      &lt;label class="ov-state-radio" for="{{:: colorItem.id}}"&gt;&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;label class="ov-label-radio" for="{{:: colorItem.id}}"&gt;
+      {{:: colorItem.name}}
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+// JS
+ctrl1 = {
+  colorPalette: {
+    color: '',
+    colorList: []
+  }
+};
+
+ctrl1.colorPalette.colorList.push({
+  id: 'color-of-red',
+  name: 'Red',
+  value: 'red'
+});
+
+ctrl1.colorPalette.colorList.push({
+  id: 'color-of-blue',
+  name: 'Blue',
+  value: 'blue'
+});
+
+// Initialize color
+ctrl1.colorPalette.color = ctrl1.colorPalette.colorList[0].value;
+</pre>
+</div></div>
+</div>

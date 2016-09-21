@@ -1,0 +1,39 @@
+<h1><code ng:non-bindable="">ovSlickMenu</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovslickmenu-page"><p>A menu like toolbar icons which contains horizontally list of buttons. It can be displayed in form of pop-up menu</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-slick-menu
+       menu-data="{array}"
+       menu-config="{object}"&gt;
+&lt;/ov-slick-menu&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY ov-slick-menu
+     menu-data="{array}"
+     menu-config="{object}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>menuData</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovslickmenu-page"><p>List of button objects. Each button object must contain following properties:</p>
+<ul>
+<li><code>id</code>: ID for automation test</li>
+<li><code>onClick</code>: callback function which will be called when the button is clicked</li>
+<li><code>titleI18key</code>: i18n key used for tooltip if name of the button is not specified and full name when the menu is displayed in small mode</li>
+<li><code>name</code>: name of the button displayed when the menu is displayed in large mode and for tooltip</li>
+<li><code>iconClass</code>: kind of Font Awesome CSS class for icon</li>
+<li><code>iconClassShowMode</code>: in which mode the icon class can be used. Acceptable value: &#39;largeScreen&#39; and &#39;smallScreen&#39;</li>
+<li><code>checkDisabled</code>: callback function which is used to detect when the button is disabled. Return true if the button should be disabled</li>
+<li><code>permission</code>: permission key which is used by OV to indicate whether or not user can have permission on this button. If use does not have permission, then disable the button</li>
+<li><code>checkPermission</code>: callback function which is used to indicate whether or not user can have permission on this button. If use does not have permission, then disable the button</li>
+<li><code>disabled</code>: boolean value to disable (if true)/enable (if false) the button</li>
+<li><code>isHidden</code>: callback function which is used to show (if returns false)/hide (if returns true) the button</li>
+<li><code>groupId</code>: string value which declares if the button is joined</li>
+<li><code>checkGroupActive</code>: callback function which declares when the group button is active</li>
+<li><code>btnClass</code>: Custom CSS class of the button</li>
+<li><code>type</code>: Button type. Acceptable types: &#39;header&#39;, &#39;separator&#39;, &#39;button&#39;, &#39;item&#39;, &#39;ovDataView&#39;, and &#39;ovDataViewBtn&#39;</li>
+</ul>
+</div></td></tr><tr><td>menuConfig</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovslickmenu-page"><p>Configuration object which can be generated from <a href="/api/ov-component.service:ovSlickMenuBuilder">ovSlickMenuBuilder</a></p>
+</div></td></tr></tbody></table></div>
+</div>

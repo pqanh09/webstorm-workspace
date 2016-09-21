@@ -1,0 +1,140 @@
+@import '../../../node_modules/nib'
+
+/*theme.styl*/
+.slick-header-column.ui-state-default:hover
+  background-color white
+
+/*main.styl*/
+.slick-cell.selected
+  background #428bca
+  color #fff
+
+.ov-slick-double-list .slick-cell,
+.ovSlickSelect-dropdown-list .slick-cell,
+.ovSlickNestedList .slick-cell
+  line-height 1.6 !important
+
+.ov-select-show .ov-slick-double-list .slick-cell
+  line-height 2 !important
+
+.ov-slick-double-list .slick-cell.active
+  border-bottom solid thin #e2e7eb
+
+.ov-slick-double-list .slick-cell,
+.ov-slick-double-list .slick-headerrow-column
+  border-bottom solid thin #e2e7eb
+
+.show-selected-items .slick-cell.selected
+  background-color #2d6ca2
+
+/*mySlickGrid.css*/
+[slick-grid]
+  border 1px solid #e2e7eb
+
+/*slick.default.theme.css*/
+.slick-header-columns
+  border-bottom none
+
+.slick-group
+  border-bottom 2px solid #e2e7eb
+
+.slick-cell.active
+  border-color transparent
+  border-right-color #e2e7eb
+  border-bottom 1px solid #e2e7eb
+
+.slick-sortable-placeholder
+  background #e2e7eb !important
+
+.slick-row.odd
+  background #f0f3f5
+
+.slick-row:hover
+.slick-row.odd:hover
+  background #dadfe3
+.slick-row:hover .slick-cell.active
+.slick-row.odd:hover .slick-cell.active
+  border-bottom 1px solid #e2e7eb
+
+.slick-row:hover .slick-cell.selected
+  background #469ee1
+.slick-row:hover .slick-cell.active
+  border-bottom 1px solid #e2e7eb
+
+/*slick.grid.css*/
+.slick-header.ui-state-default
+.slick-headerrow.ui-state-default
+  border-bottom-width 2px
+  border-bottom-color #e2e7eb
+  border-top 0px
+
+.slick-header-column.ui-state-default
+  border-right-color #e2e7eb
+
+.slick-sort-indicator
+  width 1.9rem
+  height 1.9rem
+
+.slick-sort-indicator-desc
+  background url(images/sort_desc.png) !important
+
+.slick-sort-indicator-asc
+  background url(images/sort_asc.png) !important
+
+.slick-sortable-placeholder
+  background #e2e7eb
+
+.slick-cell
+.slick-headerrow-column
+  border-right 1px solid #e2e7eb
+  border-bottom-color #e2e7eb
+
+/*slick.grid.bootstrap.css*/
+.slick-header-column.ui-state-default
+  /*px->to fix firefox issue*/
+  height 35px
+
+.slick-resizable-handle
+  border-right 1px solid #e2e7eb
+
+.slick-column-name
+  vertical-align middle
+
+.slick-header-column.ui-state-default
+  background #f7f7f7
+
+.slick-header-column.ui-state-default:hover
+  background white
+
+.slick-sort-indicator
+  top calc(50% - 0.9rem)
+  position absolute
+  right 0
+  left auto
+  background url(images/sort_both.png)
+
+.slick-header-columns .ui-sortable-helper > .slick-sort-indicator
+  top 0.6rem
+
+/*pager control*/
+.custom-slick-pager
+  width 100%
+  border 1px solid #e2e7eb
+  background white
+  border-top 0
+  vertical-align middle
+  padding 0.5rem 1rem
+
+  .custom-slick-pager-status
+  .custom-slick-pager-settings-expanded
+    padding 0.6rem
+    display inline-block
+
+  .custom-slick-pager-nav
+    padding 0.2rem
+
+  .custom-slick-pager-settings *
+    vertical-align middle
+
+  .custom-slick-pager-settings-expanded select
+    padding 0.3rem

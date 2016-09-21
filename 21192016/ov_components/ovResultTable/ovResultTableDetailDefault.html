@@ -1,0 +1,18 @@
+<div class="clearfix ov-result-item-wrapper detail"
+     ng-class="{'text-success':item.status==='success','text-danger':item.status==='error'}">
+  <div class="ov-result-item pull-left"  >
+    <div class="ov-result-description">
+      <div ov-ellipsis="{{item.friendlyName}}">
+        {{item.friendlyName}}
+      </div>
+    </div>
+    <div class="time-stamp">
+      <div ov-ellipsis="{{item.resultTimestampTranslated}}">
+        {{item.resultTimestampTranslated}}
+      </div>
+    </div>
+  </div>
+  <div class="pull-right ov-result-action-wrapper">
+    {{item.status|uppercase}}
+  </div>
+</div>

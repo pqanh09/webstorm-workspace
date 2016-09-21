@@ -1,0 +1,12 @@
+<div class="ov-ng-list-box-item-wrapper">
+  <div class="ov-ng-list-box-result-item clearfix">
+    <div ng-repeat="header in config.selectFieldList"
+         class="ov-ng-list-box-result-col"
+         ng-style="{'width': 100 / config.selectFieldList.length + '%'}">
+      <div class="ov-ng-list-box-min-width">
+        {{header.title}}
+      </div>
+      <div class="ov-ng-list-box-content-min-width">{{findValItem(item, header.key)}}</div>
+    </div>
+  </div>
+</div>

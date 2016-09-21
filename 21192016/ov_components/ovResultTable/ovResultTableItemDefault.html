@@ -1,0 +1,27 @@
+<div class="clearfix ov-result-item-wrapper ">
+  <div class="pull-left" ng-if="!isLoading(item)">
+    <span><i class="icon-group {{getItemIcon(item)}}"></i></span>
+  </div>
+
+
+  <div class="ov-result-item pull-left">
+    <div ov-ellipsis="{{item.friendlyName}}" class="name">{{ item.friendlyName }}</div>
+    <div ov-ellipsis="{{item.description}}" class="description {{getItemCss(item)}}">{{item.description}}</div>
+  </div>
+
+  <div class="ov-result-action-wrapper pull-right">
+    <span ng-click="resultItemClick(item)" ng-show="!isLoading(item)">
+      <span class="ov-nav-btn">
+        <a href class="ov-nav-btn-link">
+          <span class="ov-nav-label">{{'ovResultTable.details'|i18next}}</span>
+          <i class="ov-nav-icon fa fa-2x fa-angle-right"></i>
+        </a>
+      </span>
+    </span>
+
+    <div ng-show="isLoading(item)" class="ov-result-spinner-wrapper">
+      <!--<img src="../../styles/imgs/afnLoading.gif">-->
+      <ov-load-spinner></ov-load-spinner>
+    </div>
+  </div>
+</div>

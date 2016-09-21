@@ -1,0 +1,88 @@
+<h1><code ng:non-bindable="">ovAlert</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovalert-page"><p>Show/Hide alert messages</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY ov-alert="{object}"
+     alert-id="{string}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ovAlert</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovalert-page"><p>show/hide alert.</p>
+</div></td></tr><tr><td>alertId</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovalert-page"><p>An ID to be added to the element to support automation test  e.g. alter-id=&quot;test&quot;</p>
+</div></td></tr></tbody></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods__error">_error(message, config)</h3>
+<div class="_error"><div class="-error-page"><p>if user call this function --&gt; show danger alert type with message that user inject</p>
+</div><h5 id="methods__error_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>message</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="-error-page"><p>that user want to show in alert box</p>
+</div></td></tr><tr><td>config <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="-error-page"><p>include: isDismissal, time out</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods__hidealert">_hideAlert()</h3>
+<div class="_hidealert"><div class="-hidealert-page"><p>Hide Alert</p>
+</div></div>
+</li>
+<li><h3 id="methods__info">_info(message, config)</h3>
+<div class="_info"><div class="-info-page"><p>if user call this function --&gt; show info alert type with message that user inject</p>
+</div><h5 id="methods__info_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>message</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="-info-page"><p>that user want to show in alert box</p>
+</div></td></tr><tr><td>config <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="-info-page"><p>include: isDismissal, time out</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods__success">_success(message, config)</h3>
+<div class="_success"><div class="-success-page"><p>if user call this function --&gt; show success alert type with message that user inject</p>
+</div><h5 id="methods__success_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>message</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="-success-page"><p>that user want to show in alert box</p>
+</div></td></tr><tr><td>config <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="-success-page"><p>include: isDismissal, time out</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods__warning">_warning(message, config)</h3>
+<div class="_warning"><div class="-warning-page"><p>if user call this function --&gt; show warning alert type with message that user inject</p>
+</div><h5 id="methods__warning_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>message</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="-warning-page"><p>that user want to show in alert box</p>
+</div></td></tr><tr><td>config <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="-warning-page"><p>include: isDismissal, time out</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovalert-page"><p><strong>Basic Example:</strong>
+<pre class="prettyprint linenums">
+&lt;!-- HTML --&gt;
+ &lt;div alert-id="wma-sample-alert" ov-alert="ctrl.alert"&gt;&lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ //build alert object
+   ctrl.alert = ovAlertBuilder.getBuilder().build();
+ //show success msg
+   ctrl.alert._success('success msg');
+ //show error msg
+   ctrl.alert._error('error msg');
+ //show warning msg
+   ctrl.alert._warning('warning msg');
+ //show info msg
+   ctrl.alert._info('info msg');
+ //hide alert
+   ctrl.alert._hideAlert();
+</pre>
+<p><strong>Config Example:</strong>
+<pre class="prettyprint linenums">
+&lt;!-- HTML --&gt;
+ &lt;div alert-id="wma-sample-alert" ov-alert="ctrl.alert"&gt;&lt;/div&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ //config for alert
+ var config = {
+    isDismissal: true, //show,hide remove alert button
+    timeout: 1000 // set timeout to auto remove alert
+  };
+ //build alert object
+ ctrl.alert = ovAlertBuilder.getBuilder().build();
+ //show success msg
+ ctrl.alert._success('success msg', config);
+
+</pre>
+</div></div>
+</div>

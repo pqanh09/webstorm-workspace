@@ -1,0 +1,98 @@
+<h1><code ng:non-bindable="">ovLegend</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovlegend-page"><p>Create interactive chart legends to be used along side with charts in apps.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-legend
+       legend-data="{array}"
+       legend-config="{object}"
+       on-click="{function}"&gt;
+&lt;/ov-legend&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY ov-legend
+     legend-data="{array}"
+     legend-config="{object}"
+     on-click="{function}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>legendData</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovlegend-page"><p>legend data</p>
+</div></td></tr><tr><td>legendConfig</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovlegend-page"><p>Legend config.</p>
+<ul>
+<li><strong>width</strong> <code>integer</code> (optional): Legends container width (default <code>100%</code>)</li>
+<li><strong>height</strong> <code>integer</code> (optional): Height of each legend item (default <code>28</code>)</li>
+<li><strong>spacing</strong> <code>integer</code> (optional): Space between each legend item (default <code>3</code>)</li>
+<li><strong>radius</strong> <code>integer</code> (optional): Legend item border radius (default <code>3</code>)</li>
+<li><strong>textStyle</strong> <code>object</code> (optional): Style for legend text (default <code>{&#39;font&#39;: &#39;12px Arial&#39;}</code>)</li>
+<li><strong>colors</strong> <code>string</code> or <code>Array</code> (optional): colors to be used in charts, can be array of color code or d3 colors collection name (default <code>colorScale20</code>).</li>
+<li><strong>fixedColors</strong> <code>object</code> (optional): A mapper to define fixed color for some data items.</li>
+<li><strong>multiSelect</strong> <code>object</code> (optional): Allows select multiple legend items.</li>
+<li><strong>showTooltip</strong> <code>boolean</code> (optional): Show tooltip on click legend item (default <code>true</code>)</li>
+<li><strong>hidePercentage</strong> <code>boolean</code> (optional): Hide percentage value in the tooltip (default <code>false</code>)</li>
+<li><strong>mapping</strong> (optional) <code>object</code>: define map values<ul>
+<li><strong>name</strong> <code>string</code>: property name can be used to get legend item name</li>
+<li><strong>value</strong> <code>string</code>: property name can be used to get legend item value</li>
+</ul>
+</li>
+</ul>
+</div></td></tr><tr><td>onClick</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-directive-page ov-component-directive-ovlegend-page"><p>a callback that will be called when user click on a legend item. 3 arguments will be passed:</p>
+<ul>
+<li><strong>data</strong> <code>object</code>: data of the legend item</li>
+<li><strong>index</strong> <code>integer</code>: index of the legend item</li>
+<li><strong>status</strong> <code>string</code>: Current status of legend item. Have four possible values: &#39;in&#39; (click inside legend item),
+&#39;out&#39; (click outside legend item), &#39;tooltip&#39; (showing tooltip), &#39;toogle&#39; (toogle select legend item, only for multiple select).</li>
+</ul>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovlegend-page"><p><strong>Basic Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-legend legend-config="ctrl.legendConfig" legend-data="ctrl.legendData"&gt;
+ &lt;/ov-legend&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ ctrl.legendConfig = {
+    width: '100%',
+    height: 28,
+    spacing: 3,
+    radius: 3,
+    textStyle: {'font': '12px Arial'},
+    textColor: 'white',
+    colors: 'colorScale20',
+    multiSelect: true,
+    showTooltip: true,
+    hidePercentage: true,
+    mapping: {
+      name: 'displayName',
+      value: 'count'
+    },
+    fixedColors: {
+      Others: '#808080',
+      OTHERS: '#808080'
+    }
+  };
+ ctrl.legendData = [
+ {
+   "displayName": "10.1.4.123",
+   "count": 96,
+   "color": "#9467bd",
+   "checked": false
+ },
+ {
+   "displayName": "10.1.3.72",
+   "count": 281,
+   "color": "#ff9896",
+   "checked": false
+ },
+ {
+   "displayName": "10.1.4.80",
+   "count": 554,
+   "color": "#aec7e8",
+   "checked": false
+ }];
+</pre>
+</div></div>
+</div>

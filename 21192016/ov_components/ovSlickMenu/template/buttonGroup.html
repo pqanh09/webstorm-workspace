@@ -1,0 +1,10 @@
+<div class="btn-group">
+  <button ng-attr-id="{{vm.menuConfig.idPrefix}}{{icon.id}}"
+          ng-attr-title="{{icon.name}}"
+          ng-click="icon.onClick()"
+          ng-disabled="icon.disabled"
+          class="{{icon.btnClass}} {{icon.groupId}}">
+    <i class="{{icon.iconClass}}"></i>
+    <span class="ov-slick-menu-icon-title" ng-show="icon.name"> {{icon.name}}</span>
+  </button>
+</div>

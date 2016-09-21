@@ -1,0 +1,25 @@
+<div class="custom-detail-template" ng-controller="DependencyResultController as vm">
+  <div>
+    <div>
+      <ov-ng-list-box list-item="vm.listBoxData" config="vm.listBoxConfig.config"></ov-ng-list-box>
+    </div>
+
+  </div>
+
+  <div ng-if="item.hasDependency">
+    <div class="ov-accordion accordion-of-dependency-box">
+      <div class="ov-ac-pane panel panel-default">
+        <div class="ov-ac-header" ov-expanded="false">
+          <span>{{'ovResultTable.dependencyPage.dependencyTitle' | i18next}}</span>
+        </div>
+        <div class="ov-ac-body" style="padding: 8px 0">
+          <ov-vs-list list-data="vm.dependencyData" list-config="vm.config"
+                      handler="vm.handler"></ov-vs-list>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

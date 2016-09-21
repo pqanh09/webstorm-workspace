@@ -1,0 +1,9 @@
+.ov-infinity-list {
+  border: 1px solid #ccc;
+}
+.ov-infinity-list .slick-header {
+  display: none !important;
+}
+.ov-infinity-list .slick-viewport {
+  overflow-x: hidden !important;
+}

@@ -1,0 +1,10 @@
+<div>
+  <div
+    ng-class="{'ov-select-checked-item': item.checked,'ov-select-item-hover':(item.hover)&&(!item.model.disabled),'ov-select-checked-item-hover':(item.hover && item.checked)}"
+    ng-mouseenter="itemHover(item.id,$event)" class="ov-select-item"
+    id="item-selected-{{collectionID.dataGrid}}{{$index}}" ng-click="obj.select(item)" title="{{item.label}}">
+    <i ng-class="item.model.icon"></i>{{item.label}}
+  </div>
+  <div class="ov-select-disabled-item" ng-if="item.model.disabled" ng-mouseenter="itemHover(item.id,$event)"
+       ng-class="{'ov-select-item-hover-disabled':(item.hover && item.model.disabled)}"></div>
+</div>

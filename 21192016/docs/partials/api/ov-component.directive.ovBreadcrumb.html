@@ -1,0 +1,46 @@
+<h1><code ng:non-bindable="">ovBreadcrumb</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovbreadcrumb-page"><p>Build up a breadcrumb</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-breadcrumb
+       [id-app="{string}"]
+       nav-list="{array}"
+       current="{object}"
+       on-selected="{function}"&gt;
+&lt;/ov-breadcrumb&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>idApp <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovbreadcrumb-page"><p>A prefix ID for the breadcrumb. ID of the breadcrumb will be idApp followed by <code>-breadcrumb</code>. If idApp not specified, then <code>breadcrumb</code> will be the ID</p>
+</div></td></tr><tr><td>navList</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovbreadcrumb-page"><p>All elements in the breadcrumb (but the last one). Each of it contains a unique ID, an font-awesome icon CSS class, a title, and a url. An element can be clickable if property <code>disable</code> is set to false</p>
+</div></td></tr><tr><td>current</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovbreadcrumb-page"><p>Current/last element of the breadcrumb. It has the same structure of an element in navList</p>
+</div></td></tr><tr><td>onSelected</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ov-component-directive-page ov-component-directive-ovbreadcrumb-page"><p>A callback function invoked whenever a clickable item in the breadcrumb is clicked. The item object itself will be passed to the callback as an parameter</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovbreadcrumb-page"><p><strong>Basic example:</strong>
+<pre class="prettyprint linenums">
+  // HTML
+  &lt;ov-breadcrumb id-app="app1"
+                 nav-list="ctrl1.breadcrumb.navList"
+                 current="ctrl1.breadcrumb.current"
+                 on-selected="ctrl1.breadcrumb.onSelected"&gt;
+  &lt;/ov-breadcrumb&gt;
+</pre>
+<pre class="prettyprint linenums">
+  // JS
+  // Home &gt; Group 1 &gt; Sub Group 1 &gt; App 1
+  ctrl1.breadcrumb = {};
+  ctrl1.breadcrumb.navList = [
+    {id: 'home', icon: 'fa fa-home', title: 'Home', url: '/'},
+    {id: 'group1', icon: '', title: 'Group 1', url: '/', disabled: true},
+    {id: 'subGroup1', icon: '', title: 'Sub Group 1', url: '/group1/subGroup1'}
+  ];
+  ctrl1.breadcrumb.current = {id: 'app1', icon: '', title: 'App 1', url: '/group1/subGroup1/app1'};
+  ctrl1.breadcrumb.onSelected = function (item) {
+    console.log('On click on clickable breadcrumb item', item.title);
+  };
+</pre>
+</div></div>
+</div>

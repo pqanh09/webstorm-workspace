@@ -1,0 +1,117 @@
+<h1><code ng:non-bindable="">ovAppSkeleton</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovappskeleton-page"><p>Provide skeleton for new app. It provides sidebar, breadcrumbs and cached the last visited page.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-app-skeleton
+       app-id="{string}"
+       app-root-url="{string}"
+       app-home="{object}"
+       [redirect-url="{string}"]
+       nav-data="{object}"
+       side-bar-menu="{object}"
+       [content-wrapper-css="{string}"]&gt;
+&lt;/ov-app-skeleton&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;div ov-app-skeleton
+     app-id="{string}"
+     app-root-url="{string}"
+     app-home="{object}"
+     [redirect-url="{string}"]
+     nav-data="{object}"
+     side-bar-menu="{object}"
+     [content-wrapper-css="{string}"]&gt;
+   ...
+&lt;/div&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>appId</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovappskeleton-page"><p>ID used for automation test</p>
+</div></td></tr><tr><td>appRootUrl</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovappskeleton-page"><p>Application root URL</p>
+</div></td></tr><tr><td>appHome</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovappskeleton-page"><p>Sidebar menu item to be selected first time loading</p>
+</div></td></tr><tr><td>redirectUrl <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovappskeleton-page"><p>URL used to redirect when <code>appHome</code> sidebar menu item object cannot be found in <code>sideBarMenu</code></p>
+</div> <p><em>(default: appRootUrl)</em></p></td></tr><tr><td>navData</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovappskeleton-page"><p>Breadcrumb model, but only contains <code>appRouteUrl</code> at the end. Other breadcrumb items from sidebar menu are added automatically by the component.
+It does NOT need to declare <code>current</code> sidebar menu item and <code>onSelected</code> callback function for navData here.
+Refer to <a href="/api/ov-component.directive:ovBreadcrumb">ovBreadCrumb</a> component</p>
+</div></td></tr><tr><td>sideBarMenu</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovappskeleton-page"><p>SideBarMenu Model.
+Only root sidebar menu object is needed to be used
+Refer to <a href="/api/ov-component.directive:ovNestedList">ovNestedList</a></p>
+</div></td></tr><tr><td>contentWrapperCss <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ov-component-directive-page ov-component-directive-ovappskeleton-page"><p>name of wrapper css class name</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovappskeleton-page"><p><strong>Basic example:</strong>
+<pre class="prettyprint linenums">
+  // In HTML
+  &lt;ov-app-skeleton app-id="$ctrl.ovAppSkeleton.appId"
+    app-route-url="$ctrl.ovAppSkeleton.appRouteUrl"
+    app-home="$ctrl.ovAppSkeleton.appHome"
+    nav-data="$ctrl.ovAppSkeleton.navData"
+    side-bar-menu="$ctrl.ovAppSkeleton.sideBarMenu"&gt;
+  &lt;/ov-app-skeleton&gt;
+</pre>
+<pre class="prettyprint linenums">
+ // In JS
+ var SAMPLE_APP_ROUTE = '/sampleApp';
+
+ var sideBarMenu = {
+   id: 'sample-app-root-sidebar-menu',
+   title: $i18next('Sample App'),
+   menuItems: [],
+   disabled: true
+ };
+ var home = {
+   id: 'sample-app-root-sidebar-menu-home',
+   templateUrl: '/path/to/your/sample/app/home/page.html',
+   title: $i18next('Home'),
+   parent: sideBarMenu
+ };
+ var greeting = {
+   id: 'sample-app-root-sidebar-menu-greeting',
+   templateUrl: '/path/to/your/sample/app/greeting/page.html',
+   title: $i18next('Greeting'),
+   parent: sideBarMenu
+ };
+ var operation = {
+   id: 'sample-app-root-sidebar-menu-operation',
+   title: $i18next('Operation'),
+   parent: sideBarMenu,
+   disabled: true,
+   menuItems: []
+ };
+ var copy = {
+   id: 'sample-app-root-sidebar-menu-operation-copy',
+   templateUrl: '/path/to/your/sample/app/operation/copy/page.html',
+   title: $i18next('Copy'),
+   parent: operation
+ };
+ var paste = {
+   id: 'sample-app-root-sidebar-menu-operation-paste',
+   templateUrl: '/path/to/your/sample/app/operation/paste/page.html',
+   title: $i18next('Paste'),
+   parent: operation
+ };
+
+ // Add all operations
+ operation.menuItems.push(copy);
+ operation.menuItems.push(paste);
+
+ // Add all sidebar menu items
+ sideBarMenu.menuItems.push(home);
+ sideBarMenu.menuItems.push(greeting);
+ sideBarMenu.menuItems.push(operation);
+
+ var navData = {};
+ navData.list = [
+   {title:  $i18next('index.menu.groups.home'), iconClasses: 'fa fa-fw fa-home', url: '/'},
+   {title:  $i18next('Sample App'), iconClasses: '', url: SAMPLE_APP_ROUTE}
+ ];
+
+  $ctrl.ovAppSkeleton = {};
+  $ctrl.ovAppSkeleton.appId = 'sample-app-id';
+  $ctrl.ovAppSkeleton.appRouteUrl = SAMPLE_APP_ROUTE;
+  $ctrl.ovAppSkeleton.appHome = home;
+  $ctrl.ovAppSkeleton.sideBarMenu = sideBarMenu;
+  $ctrl.ovAppSkeleton.navData = navData;
+</pre>
+</div></div>
+</div>

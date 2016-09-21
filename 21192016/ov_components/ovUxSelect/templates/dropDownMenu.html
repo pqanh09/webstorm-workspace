@@ -1,0 +1,39 @@
+<div class="dropdown-menu ov-ux-dropdown" ng-class="{'apply-scaling': obj.setting.applyScaling}"
+     ov-spinner-loading="obj.setting.showSpinner">
+  <div class="ov-ux-dropdown-header">
+    <!--search box-->
+    <div class="input-group" ng-if="obj.setting.search">
+      <span class="input-group-addon"><i class="fa fa-search"></i></span>
+      <input type="text" id="{{collectionID.dropdownInputSearch}}" class="form-control" ng-model="obj.searchText"
+             ng-change="obj.filterData()" autofocus placeholder="{{'button-label.search' | i18next}}">
+      <!--sort-->
+    <span ng-if="obj.setting.sort" class="input-group-addon ov-select-btn-sort" id="{{collectionID.dropdownSort}}"
+          ng-click="obj.sort()">
+      <i class="fa"
+         ng-class="{'fa-sort-alpha-asc': obj.sortDesc==false, 'fa-sort-alpha-desc': obj.sortDesc==true, 'fa-sort': obj.sortDesc==undefined}"></i>
+    </span>
+    </div>
+    <!--check button-->
+    <div ng-if="obj.setting.multiple && obj.setting.btnCheckAll">
+      <button id="{{collectionID.dropdownCheckAll}}" class="btn-link btn-small" ng-click="checkAll()"><i
+        class="fa fa-check"></i> {{'button-label.checkAll' | i18next}}
+      </button>
+      <button id="{{collectionID.dropdownUncheckAll}}" class="btn-link btn-small" ng-click="uncheckAll()"><i
+        class="fa fa-times"></i> {{'button-label.unCheckAll' | i18next}}
+      </button>
+    </div>
+  </div>
+  <div class="ov-ux-dropdown-container" ng-style="{'height': height ? height+'rem' : '20rem'}">
+    <div class="ov-ux-data-grid" ux-datagrid="obj.items" options="obj.options">
+      <script type="template/html" template-name="default" template-item="item">
+        <div class="ov-select-item-wraper">
+          <div ng-class="{'ov-select-checked-item': item.checked}" class="ov-select-item"
+               id="item-selected-{{collectionID.dataGrid}}{{$index}}" ng-click="obj.select(item)"><i
+            ng-class="item.model.icon"></i> {{item.label}}
+          </div>
+          <div class="ov-select-disabled-item" ng-if="item.model.disabled"></div>
+        </div>
+      </script>
+    </div>
+  </div>
+</div>

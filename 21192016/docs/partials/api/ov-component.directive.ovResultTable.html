@@ -1,0 +1,240 @@
+<h1><code ng:non-bindable="">ovResultTable</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ov-component</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ov-component-directive-page ov-component-directive-ovresulttable-page"><p>Show result table using task executer</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ov-result-table
+       rs-config:="{object}"
+       rs-list-item:="{Array}"
+       list-box-config="{object}"&gt;
+&lt;/ov-result-table&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY ov-result-table
+     rs-config:="{object}"
+     rs-list-item:="{Array}"
+     list-box-config="{object}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rsConfig:</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovresulttable-page"><p>Assignable angular expression to data-bind to</p>
+<ul>
+<li><strong>config</strong> &#39;object&#39;: contain configs for component</li>
+<li><ul>
+<li><strong>appId</strong> <code>string</code>: Id of apps using component</li>
+</ul>
+</li>
+<li><ul>
+<li><strong>title</strong>  <code>string</code>: Title of progress</li>
+</ul>
+</li>
+<li><ul>
+<li><strong>request</strong>  <code>object</code>: set request api</li>
+</ul>
+</li>
+<li><ul>
+<li><ul>
+<li><strong>url</strong> &#39;string&#39;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ul>
+<li><ul>
+<li><strong>requestBody</strong> &#39;string&#39;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ul>
+<li><ul>
+<li><strong>method</strong>  &#39;string&#39;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ul>
+<li><ul>
+<li><strong>ovOboeBuilderObj</strong>(optional) &#39;string&#39;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ul>
+<li><strong>parseRsListItem</strong> <code>function</code>: parse switches list of your app to switches list of component.</li>
+</ul>
+</li>
+<li><ul>
+<li><strong>responsePromise</strong> (optional) <code>function</code>: replace request (return promise)</li>
+</ul>
+</li>
+<li><ul>
+<li><strong>displayOkButton</strong> (optional) <code>function</code>: show/hide ok button</li>
+</ul>
+</li>
+<li><ul>
+<li><strong>enableDialog</strong> (optional) <code>boolean</code>: show result as a dialog when click &quot;show more&quot;</li>
+</ul>
+</li>
+<li><strong>functionList</strong> &#39;object&#39;: contain functions for component</li>
+<li><ul>
+<li><strong>okCallback</strong>(optional) <code>function</code>: set action for ok button</li>
+</ul>
+</li>
+</ul>
+</div></td></tr><tr><td>rsListItem:</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ov-component-directive-page ov-component-directive-ovresulttable-page"><p>Rows of result displayed on screen</p>
+</div></td></tr><tr><td>listBoxConfig</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ov-component-directive-page ov-component-directive-ovresulttable-page"><p>(optional) : Config for ovNgListBox inside resultTable</p>
+</div></td></tr></tbody></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_displayokbutton">displayOkButton(bool)</h3>
+<div class="displayokbutton"><div class="displayokbutton-page"><p>show/hide &quot;Ok&quot; button</p>
+</div><h5 id="methods_displayokbutton_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>bool</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="displayokbutton-page"><p>default: true</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_enabledialog">enableDialog(bool)</h3>
+<div class="enabledialog"><div class="enabledialog-page"><p>show result as a dialog when click &quot;show more&quot;</p>
+</div><h5 id="methods_enabledialog_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>bool</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="enabledialog-page"><p>default: false</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_okcallback">okCallback(bool)</h3>
+<div class="okcallback"><div class="okcallback-page"><p>set actions for &quot;Ok&quot; button</p>
+</div><h5 id="methods_okcallback_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>bool</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="okcallback-page"><p>default: true</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_clearcache">clearCache(id)</h3>
+<div class="clearcache"><div class="ovresulttableservice-clearcache-page"><p>(in ovResultTableService) reset component cache.</p>
+</div><h5 id="methods_clearcache_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ovresulttableservice-clearcache-page"><p>app id</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_istaskrunning">isTaskRunning(id)</h3>
+<div class="istaskrunning"><div class="ovresulttableservice-istaskrunning-page"><p>(in ovResultTableService)Check task is completed/uncompleted.</p>
+</div><h5 id="methods_istaskrunning_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ovresulttableservice-istaskrunning-page"><p>app id</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_parserslistitem">parseRsListItem(item)</h3>
+<div class="parserslistitem"><div class="parserslistitem-page"><p>parse switches list of your app to switches list of component.</p>
+</div><h5 id="methods_parserslistitem_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>item</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="parserslistitem-page"><p>every item in rsListItem.</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ov-component-directive-page ov-component-directive-ovresulttable-page"><p><strong>Basic Example:</strong>
+<pre class="prettyprint linenums">
+ //HTML
+ &lt;ov-result-table-directive
+ rs-config="vm.rsConfig"
+ rs-list-item="vm.rsListItem"&gt;
+ &lt;/ov-result-table-directive&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ vm.rsConfig = {
+     config:{
+            appId: 'vlan-create',
+            title: 'add 1 vlan',
+            parseRsListItem: function(item){
+                                return {
+                                       targetId:item.deviceId,
+                                       friendlyName:item.friendlyName
+                                        }
+                             }
+            request:{
+                        method: 'POST',
+                        url: '/api/vlanservice/spantree/get/view',
+                        requestBody: {vlanIds:[1]},
+                    }
+    }
+ }
+ vm.rsListItem=[
+ {
+    deviceId:'10101010',
+    friendlyName:'10.10.10.10'
+ },
+ {
+     deviceId:'10101011',
+     friendlyName:'10.10.10.11'
+ }
+ ];
+</pre>
+<strong> Custom detail template Example:</strong>
+<pre class="prettyprint linenums">
+//HTML
+ &lt;ov-result-table-directive
+ rs-config="vm.rsConfig"
+ rs-list-item="vm.rsListItem"
+ list-box-config="vm.listBoxConfig"&gt;
+ &lt;/ov-result-table-directive&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ //vm.rsConfig & vm.rsListItem as basic Example
+ vm.listBoxConfig.config.detailTemplate='ov_components/ovResultTable/customDetailTpl.html'
+</pre>
+<strong> onSelect for detail button Example:</strong>
+<pre class="prettyprint linenums">
+//JS
+ vm.listBoxConfig.onSelected=function(item){
+                             console.log(item);
+                             }
+</pre>
+<strong> set limit row of list box Example:</strong>
+<pre class="prettyprint linenums">
+//JS
+ vm.listBoxConfig.config.limitRow=10;
+</pre>
+<p><strong>Parse response Example:</strong>
+<pre class="prettyprint linenums">
+//JS
+ vm.rsConfig.config.parseResponse=function(response){
+                                    response.translated.messageObjectTranslated=response.operationName+response.translated.messageObjectTranslated;
+                                    return response;
+                                  }
+</pre>
+<p><strong> Hide ok button  Example:</strong>
+<pre class="prettyprint linenums">
+ vm.rsConfig.config.displayOkButton=false
+</pre>
+<p><strong> enable dialog  Example:</strong>
+<pre class="prettyprint linenums">
+ vm.rsConfig.config.enableDialog=true
+</pre>
+<strong> Check done progress  Example:</strong>
+<pre class="prettyprint linenums">
+//HTML
+ &lt;button class="btn btn-primary" ng-disabled="!vm.isDone"&gt;OK&lt;/button&gt;
+</pre>
+<pre class="prettyprint linenums">
+//JS
+ vm.isDone=ovResultTableService.isTaskRunning(appId);
+</pre>
+<p><strong>Assign action to OK button  Example:</strong>
+<pre class="prettyprint linenums">
+ //JS
+ vm.rsConfig.functionList.okCallback=function(){
+                                        backToMainPage();
+                                      }
+</pre>
+<strong>use responsePromise Example:</strong>
+<pre class="prettyprint linenums">
+ //JS
+ vm.rsConfig.functionList.responsePromise= function(){
+                                             var deferred = $q.defer();
+                                             functionAdd().then(angular.noop,
+                                                        function (errorRes) {
+                                                          deferred.reject(errorRes);
+                                                        },
+                                                        function (notifyRes) {
+                                                          deferred.notify(notifyRes);
+                                                        });
+                                              return deferred.promise;
+                                          }
+</pre>
+<strong>clear cache Example:</strong>
+<pre class="prettyprint linenums">
+ //JS
+ ovResultTableService.clearCache('vlan-create');
+</pre>
+</div></div>
+</div>
